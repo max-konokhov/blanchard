@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/simplebar.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Blanchard</title>
@@ -13,7 +14,7 @@
 <body>
     <header class="header">
 
-        <!-- ###################  ВЕРХНИЙ БЛОК ШАПКИ (HD-TOP)  ##################################  -->        
+        <!-- ###############  ВЕРХНИЙ БЛОК ШАПКИ (HD-TOP)  #################  -->        
         <div class="header__top hd-top">
             <div class="container hd-top__container flex">
                 <!-- ххххххххххххх  БУРГЕР-МЕНЮ (BURGER)  хххххххххххххххх  -->
@@ -82,6 +83,26 @@
                         <li class="hd-top__list-item">
                             <a href="#" class="hd-top__menu-link eff-1">Контакты</a>
                         </li>
+
+                        <!-- ПРОВЕРКА на переполнение главного меню -->
+                        <!-- <li class="hd-top__list-item">
+                            <a href="#" class="hd-top__menu-link eff-1">Контакты</a>
+                        </li>
+                        <li class="hd-top__list-item">
+                            <a href="#" class="hd-top__menu-link eff-1">Контакты</a>
+                        </li>
+                        <li class="hd-top__list-item">
+                            <a href="#" class="hd-top__menu-link eff-1">Контакты</a>
+                        </li>
+                        <li class="hd-top__list-item">
+                            <a href="#" class="hd-top__menu-link eff-1">Контакты</a>
+                        </li>
+                        <li class="hd-top__list-item">
+                            <a href="#" class="hd-top__menu-link eff-1">Контакты</a>
+                        </li>
+                        <li class="hd-top__list-item">
+                            <a href="#" class="hd-top__menu-link eff-1">Контакты</a>
+                        </li> -->
                     </ul>
 
                     <!-- Ссылка в личный кабинет -->                    
@@ -101,9 +122,9 @@
             </div>
         </div>
 
-        <!-- ###################  НИЖНИЙ БЛОК ШАПКИ (HD-BOT)  ##################################  -->
+        <!-- #################  НИЖНИЙ БЛОК ШАПКИ (HD-BOT)  ################  -->
         <div class="header__bottom hd-bot">
-            <div class="container hd-bot__container flex">
+            <div class="container hd-bot__container">
 
                 <!-- Нижнее меню шапки -->
                 <nav class="hd-bot__nav flex">
@@ -113,7 +134,7 @@
                         <li class="hd-bot__list-item drop-box">
 
                             <!-- Кнопка вызова выпадающего списка -->
-                            <button class="drop-box__btn-item btn-reset" data-path="one">
+                            <button class="drop-box__btn-item eff-1" data-path="one">
                                 <span class="drop-box__item-title">Реализм</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
@@ -138,7 +159,7 @@
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a href="" class="drop-box__item-link drop-box__item-link--leo">Леонардо</a>
+                                            <a href="" class="drop-box__item-link drop-box__item-link--leonardo">Леонардо</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
@@ -161,8 +182,8 @@
                         <li class="hd-bot__list-item drop-box">
 
                             <!-- Кнопка вызова выпадающего списка -->
-                            <button class="drop-box__btn-item" data-path="two">
-                                <strong class="drop-box__item-title">Импрессионизм</strong>
+                            <button class="drop-box__btn-item eff-1" data-path="two">
+                                <span class="drop-box__item-title">Импрессионизм</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
                             
@@ -209,8 +230,8 @@
                         <li class="hd-bot__list-item drop-box">
 
                             <!-- Кнопка вызова выпадающего списка -->
-                            <button class="drop-box__btn-item" data-path="three">
-                                <strong class="drop-box__item-title">Постимпрессионизм</strong>
+                            <button class="drop-box__btn-item eff-1" data-path="three">
+                                <span class="drop-box__item-title">Постимпрессионизм</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
                             
@@ -234,15 +255,7 @@
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a href="" class="drop-box__item-link drop-box__item-link--leo">Леонардо</a>
-                                        </li>
-                                        <!-- Элемент списка (ссылка) -->
-                                        <li class="drop-box__dropdown-item">
-                                            <a href="" class="drop-box__item-link drop-box__item-link--tintoretto">Тинторрето</a>
-                                        </li>
-                                        <!-- Элемент списка (ссылка) -->
-                                        <li class="drop-box__dropdown-item">
-                                            <a href="" class="drop-box__item-link drop-box__item-link--tintoretto">Тинторрето</a>
+                                            <a href="" class="drop-box__item-link drop-box__item-link--leonardo">Леонардо</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
@@ -257,8 +270,8 @@
                         <li class="hd-bot__list-item drop-box">
 
                             <!-- Кнопка вызова выпадающего списка -->
-                            <button class="drop-box__btn-item" data-path="four">
-                                <strong class="drop-box__item-title">Авангард</strong>
+                            <button class="drop-box__btn-item eff-1" data-path="four">
+                                <span class="drop-box__item-title">Авангард</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
                             
@@ -282,7 +295,7 @@
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a href="" class="drop-box__item-link drop-box__item-link--leo">Леонардо</a>
+                                            <a href="" class="drop-box__item-link drop-box__item-link--leonardo">Леонардо</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
@@ -305,8 +318,8 @@
                         <li class="hd-bot__list-item drop-box">
 
                             <!-- Кнопка вызова выпадающего списка -->
-                            <button class="drop-box__btn-item" data-path="five">
-                                <strong class="drop-box__item-title">Футуризм</strong>
+                            <button class="drop-box__btn-item eff-1" data-path="five">
+                                <span class="drop-box__item-title">Футуризм</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
                             
@@ -330,7 +343,7 @@
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a href="" class="drop-box__item-link drop-box__item-link--leo">Леонардо</a>
+                                            <a href="" class="drop-box__item-link drop-box__item-link--leonardo">Леонардо</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
@@ -352,52 +365,53 @@
 
                         <!-- ПРОВЕРКА на переполнение нижнего меню шапки -->                        
                         <!-- <li class="hd-bot__list-item drop-box">                        
-                            <button class="drop-box__btn-item btn-reset" data-path="one">
+                            <button class="drop-box__btn-item eff-1" data-path="one">
                                 <span class="drop-box__item-title">Реализм</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
                         </li>
                         
                         <li class="hd-bot__list-item drop-box">                            
-                            <button class="drop-box__btn-item btn-reset" data-path="one">
+                            <button class="drop-box__btn-item eff-1" data-path="one">
                                 <span class="drop-box__item-title">Реализм</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
                         </li>
                         
                         <li class="hd-bot__list-item drop-box">                           
-                            <button class="drop-box__btn-item btn-reset" data-path="one">
+                            <button class="drop-box__btn-item eff-1" data-path="one">
                                 <span class="drop-box__item-title">Реализм</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
                         </li>
                         
                         <li class="hd-bot__list-item drop-box">                            
-                            <button class="drop-box__btn-item btn-reset" data-path="one">
+                            <button class="drop-box__btn-item eff-1" data-path="one">
                                 <span class="drop-box__item-title">Реализм</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
                         </li>
                         
                         <li class="hd-bot__list-item drop-box">                            
-                            <button class="drop-box__btn-item btn-reset" data-path="one">
+                            <button class="drop-box__btn-item eff-1" data-path="one">
                                 <span class="drop-box__item-title">Реализм</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
                         </li> -->
 
-                    </ul>    
+                    </ul>
+                    <!-- Форма поиcка в нижней части шапки (search)-->
+                    <form action="" class="hd-bot__form search">
+                        <div class="search__box flex">
+                            <button class="search__btn-sumbmit"></button>
+                            <label>
+                                <input type="text" class="search__input">
+                            </label>
+                        </div>
+                    </form>        
                 </nav>
 
-                <!-- Форма поиcка в нижней части шапки (search)-->
-                <form action="" class="hd-bot__form search">
-                    <div class="search__box flex">
-                        <button class="search__btn-sumbmit"></button>
-                        <label>
-                            <input type="text" class="search__input">
-                        </label>
-                    </div>
-                </form>    
+                
             </div>
         </div>    
     </header>
@@ -405,18 +419,40 @@
 
 
     <main class="main">
-        <section class="hero">
-            <div class="container">
-
+        <!-- ###################  СЕКЦИЯ HERO (HERO)  ######################  -->
+        <section class="hero">            
+            <div class="container hero-box">
+                <h1 class="hero__header">Прикоснитесь к&nbsp;прекрасному</h1>
+                <p class="hero__descr">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+                <a href="#anchor" class="hero__link scroll-to">Подписаться на рассылку</a>
             </div>
 
+            <!-- Слайдер фоновых картинок в Hero -->
+            <div class="swiper hero__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide hero__slide hero__slide--1"></div>
+                    <div class="swiper-slide hero__slide hero__slide--2"></div>
+                    <div class="swiper-slide hero__slide hero__slide--3"></div>
+                </div>
+            </div>
         </section>
 
+
+
+
+
     </main>
+    
 
-
-
+    <footer class="footer">
+        <p id ="anchor">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A aliquam autem soluta sed ipsa itaque et architecto, tenetur pariatur corporis quia nisi consectetur iusto voluptas molestiae. Rerum libero quibusdam atque!
+        Vero sint dicta voluptas itaque, veritatis quis. Est ipsa cumque assumenda delectus at omnis sed, accusamus, ipsum cupiditate laboriosam eveniet quis dolore velit facilis voluptates aperiam debitis incidunt atque officia?
+        Consectetur, repellendus obcaecati sed reiciendis iure, unde quae enim voluptatibus illum facilis culpa omnis explicabo consequatur. Iure inventore nemo dicta alias autem, excepturi, vero et dolores ex ad quibusdam exercitationem!
+        Inventore debitis eligendi dolores nobis, vero illo velit, iusto nam aut voluptatibus asperiores ratione voluptates ex repellendus dolor corporis deleniti dolorum vel nesciunt ullam. Cumque, quasi natus. Eligendi, cum possimus.
+        Provident error veniam ea quidem cupiditate voluptate iste ipsam mollitia, nobis aliquid alias animi id repellendus aperiam voluptas illo corrupti, autem quam. Porro corrupti nulla odit modi natus inventore illum.</p>
+    </footer>
     <script src="js/simplebar.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

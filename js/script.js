@@ -1,3 +1,5 @@
+
+// Скрипт для выпадающего списка в шапке
 const params = {
     btnClassName: "drop-box__btn-item",
     activeClassName: "is-active",
@@ -43,3 +45,33 @@ const params = {
   }
   
   setMenuListener();
+
+  // Скрипт для слайдера в Hero
+  const swiperHero = new Swiper('.hero__swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    allowTouchMove: false,
+    loop: true,
+    speed: 1000,
+    effect: 'fade',
+    autoplay: {
+      delay: 10000,
+    }
+  });
+
+
+  // Плавный переход по якорным ссылкам
+  const anchors = document.querySelectorAll('a.scroll-to')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href')
+    
+    document.querySelector(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
