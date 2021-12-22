@@ -75,3 +75,34 @@ for (let anchor of anchors) {
     })
   })
 }
+
+
+// Бургер
+let burgerBtn = document.querySelector('.hd-top__btn-burger');
+let burgerMenu = document.querySelector('.burger');
+
+
+
+burgerBtn.addEventListener('click', function(){
+  burgerBtn.classList.toggle('active');
+  burgerMenu.classList.toggle('active');
+    
+})
+
+
+
+
+
+
+
+
+
+// Откройте окно полноэкранного поиска
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+// Закройте окно полноэкранного поиска
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}

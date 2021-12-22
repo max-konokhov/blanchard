@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/header/favicon_ico.svg">
     <link rel="stylesheet" href="css/simplebar.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/normalize.css">
@@ -17,11 +18,17 @@
         <!-- ###############  ВЕРХНИЙ БЛОК ШАПКИ (HD-TOP)  #################  -->        
         <div class="header__top hd-top">
             <div class="container hd-top__container flex">
-                <!-- ххххххххххххх  БУРГЕР-МЕНЮ (BURGER)  хххххххххххххххх  -->
-                <button class="hd-top__btn-burger btn-reset"></button>
+
+                <!-- Кнопка-бургер -->
+                <button class="hd-top__btn-burger btn-reset">
+                    <span class="hd-top__burger-line hd-top__burger-line--1"></span>
+                    <span class="hd-top__burger-line hd-top__burger-line--2"></span>
+                    <span class="hd-top__burger-line hd-top__burger-line--3"></span>
+                </button>
+
+                <!-- ххххххххххх   ПОПАП БУРГЕР-МЕНЮ (BURGER)  ххххххххххххх  -->
                 <div class="hd-top__burger-menu burger">
-                    <nav class="burger__nav" aria-label="Бургер меню">
-                        <button class="burger__btn-burger-close"></button>
+                    <nav class="burger__nav container" aria-label="Бургер меню">
                         <ul class="burger__list list-reset flex">
                             <li class="burger__list-item">
                                 <a href="#" class="burger__menu-link">О&nbsp;нас</a> 
@@ -45,10 +52,11 @@
                                 <a href="#" class="burger__menu-link">Контакты</a>
                             </li>
                         </ul>
-                        <button class="burger__btn-ent-lk">Войти</button>                                        
+                        <div class="burger__lk-link-box">
+                            <a href="#" class="burger__lk-link lk-link eff-1">Войти</a>
+                        </div>
                     </nav>
                 </div>
-
                 <!-- хххххххххххххх  ЛОГОТИП  хххххххххххххххххх  -->
                 <a class="hd-top__logo-link">
                     <picture class="hd-top__logo-picture">
@@ -106,19 +114,19 @@
                     </ul>
 
                     <!-- Ссылка в личный кабинет -->                    
-                    <a href="#" class="hd-top__lk-link eff-1">Войти</a>
-                    
-                    <!-- Форма поиска (search)-->
-                    <form action="" class="hd-top__form search">
-                        <button class="search__btn-open"></button>
-                        <div class="search__box">
-                            <button class="search__btn-close"></button>
-                            <label>
-                                <input type="text" class="search__input">
-                            </label>
-                        </div>
-                    </form>
-                </nav>                
+                    <a href="#" class="hd-top__lk-link lk-link eff-1">Войти</a>
+                </nav>
+
+                <!-- Форма поиска (search)-->
+                <form action="" class="hd-top__form search">
+                    <button class="search__btn-open"></button>
+                    <div class="search__box">
+                        <button class="search__btn-close"></button>
+                        <label>
+                            <input type="text" class="search__input">
+                        </label>
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -403,9 +411,9 @@
                     <!-- Форма поиcка в нижней части шапки (search)-->
                     <form action="" class="hd-bot__form search">
                         <div class="search__box flex">
-                            <button class="search__btn-sumbmit"></button>
+                            <button class="search__btn-sumbmit search__btn" tabindex="-1"></button>
                             <label>
-                                <input type="text" class="search__input">
+                                <input type="text" class="search__input" placeholder="Поиск по сайту">
                             </label>
                         </div>
                     </form>        
@@ -415,7 +423,6 @@
             </div>
         </div>    
     </header>
-
 
 
     <main class="main">
@@ -437,11 +444,14 @@
             </div>
         </section>
 
+        
+
 
 
 
 
     </main>
+    
     
 
     <footer class="footer">
