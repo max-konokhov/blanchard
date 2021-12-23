@@ -81,12 +81,29 @@ for (let anchor of anchors) {
 let burgerBtn = document.querySelector('.hd-top__btn-burger');
 let burgerMenu = document.querySelector('.burger');
 
-
-
 burgerBtn.addEventListener('click', function(){
   burgerBtn.classList.toggle('active');
   burgerMenu.classList.toggle('active');
-    
+})
+
+// Открытие формы поиска для экранов ниже 768px
+let searchBtn = document.querySelector('.search__btn-open-form');
+let searchForm = document.querySelector('.hd-top__form');
+let searchCloseBtn = document.querySelector('.search__btn-close-form');
+let serachInput = document.querySelector('.search__input--top');
+
+searchBtn.addEventListener('click', function(){
+  searchBtn.classList.toggle('hidden');
+  searchForm.classList.toggle('active');
+  searchCloseBtn.classList.toggle('active');
+  serachInput.classList.toggle('active');
+})
+
+searchCloseBtn.addEventListener('click', function(){
+  searchBtn.classList.toggle('hidden');
+  searchForm.classList.toggle('active');
+  searchCloseBtn.classList.toggle('active');
+  serachInput.classList.toggle('active');
 })
 
 
@@ -97,12 +114,3 @@ burgerBtn.addEventListener('click', function(){
 
 
 
-// Откройте окно полноэкранного поиска
-function openSearch() {
-  document.getElementById("myOverlay").style.display = "block";
-}
-
-// Закройте окно полноэкранного поиска
-function closeSearch() {
-  document.getElementById("myOverlay").style.display = "none";
-}
