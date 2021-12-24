@@ -40,14 +40,36 @@ const params = {
         } else {
           drop.classList.add(params.disabledClassName);
         }
-      }
-    });
-  }
-  
-  setMenuListener();
+    }
+  });
+}
 
-  // Скрипт для слайдера в Hero
-  const swiperHero = new Swiper('.hero__swiper', {
+setMenuListener();
+
+
+
+//  Скрипт инициализации библиотеки SimpleBar с параметрами для скроллбара
+const scrollBar1 = new SimpleBar(document.getElementById('bar-1'), {
+    scrollbarMaxSize: 28,
+});
+const scrollBar2 = new SimpleBar(document.getElementById('bar-2'), {
+    scrollbarMaxSize: 28,
+});
+const scrollBar3 = new SimpleBar(document.getElementById('bar-3'), {
+    scrollbarMaxSize: 28,
+});
+const scrollBar4 = new SimpleBar(document.getElementById('bar-4'), {
+    scrollbarMaxSize: 28,
+});
+const scrollBar5 = new SimpleBar(document.getElementById('bar-5'), {
+    scrollbarMaxSize: 28,
+});
+
+
+
+
+// Скрипт для слайдера в Hero
+const swiperHero = new Swiper('.hero__swiper', {
     // Optional parameters
     direction: 'horizontal',
     allowTouchMove: false,
@@ -57,7 +79,7 @@ const params = {
     autoplay: {
       delay: 10000,
     }
-  });
+});
 
 
   // Плавный переход по якорным ссылкам
@@ -82,32 +104,38 @@ let burgerBtn = document.querySelector('.hd-top__btn-burger');
 let burgerMenu = document.querySelector('.burger');
 
 burgerBtn.addEventListener('click', function(){
-  burgerBtn.classList.toggle('active');
-  burgerMenu.classList.toggle('active');
+    burgerBtn.classList.toggle('active');
+    burgerMenu.classList.toggle('active');
 })
 
+
 // Открытие формы поиска для экранов ниже 768px
-let searchBtn = document.querySelector('.search__btn-open-form');
+let searchBtn = document.querySelector('.hd-top__btn-open-form');
 let searchForm = document.querySelector('.hd-top__form');
 let searchCloseBtn = document.querySelector('.search__btn-close-form');
 let serachInput = document.querySelector('.search__input--top');
 
 searchBtn.addEventListener('click', function(){
-  searchBtn.classList.toggle('hidden');
-  searchForm.classList.toggle('active');
-  searchCloseBtn.classList.toggle('active');
-  serachInput.classList.toggle('active');
+    searchBtn.classList.toggle('hidden');
+    searchForm.classList.toggle('active');
+    searchCloseBtn.classList.toggle('active');
+    serachInput.classList.toggle('active');
 })
 
 searchCloseBtn.addEventListener('click', function(){
-  searchBtn.classList.toggle('hidden');
-  searchForm.classList.toggle('active');
-  searchCloseBtn.classList.toggle('active');
-  serachInput.classList.toggle('active');
+    searchBtn.classList.toggle('hidden');
+    searchForm.classList.toggle('active');
+    searchCloseBtn.classList.toggle('active');
+    serachInput.classList.toggle('active');
 })
 
 
 
+
+// Переназначем значение атрибута
+// let simplebarLabel = document.querySelector(".simplebar-content-wrapper");
+
+// simplebarLabel.setAttribute("aria-label", "Прокручиваемый список художников");
 
 
 

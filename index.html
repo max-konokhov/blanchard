@@ -20,36 +20,36 @@
             <div class="container hd-top__container flex">
 
                 <!-- Кнопка-бургер -->
-                <button class="hd-top__btn-burger btn-reset">
-                    <span class="hd-top__burger-line hd-top__burger-line--1"></span>
-                    <span class="hd-top__burger-line hd-top__burger-line--2"></span>
-                    <span class="hd-top__burger-line hd-top__burger-line--3"></span>
+                <button class="hd-top__btn-burger btn-reset" aria-label="Открыть/закрыть бургер-меню">
+                    <span class="hd-top__burger-line hd-top__burger-line--1" aria-hidden="true"></span>
+                    <span class="hd-top__burger-line hd-top__burger-line--2" aria-hidden="true"></span>
+                    <span class="hd-top__burger-line hd-top__burger-line--3" aria-hidden="true"></span>
                 </button>
 
                 <!-- ххххххххххх   ПОПАП БУРГЕР-МЕНЮ (BURGER)  ххххххххххххх  -->
                 <div class="hd-top__burger-menu burger">
-                    <nav class="burger__nav container" aria-label="Бургер меню">
+                    <nav class="burger__nav container" aria-label="Бургер-меню">
                         <ul class="burger__list list-reset flex">
                             <li class="burger__list-item">
-                                <a class="burger__menu-link" href="#">О&nbsp;нас</a> 
+                                <a class="burger__menu-link scroll-to" href="#about">О&nbsp;нас</a> 
                             </li>
                             <li class="burger__list-item">
-                                <a class="burger__menu-link" href="#">Галерея</a>   
+                                <a class="burger__menu-link scroll-to" href="#gallery">Галерея</a>   
                             </li>
                             <li class="burger__list-item">
-                                <a class="burger__menu-link" href="#">Каталог</a>   
+                                <a class="burger__menu-link scroll-to" href="#catalog">Каталог</a>   
                             </li>
                             <li class="burger__list-item">
-                                <a class="burger__menu-link" href="#">События</a>
+                                <a class="burger__menu-link scroll-to" href="#events">События</a>
                             </li>
                             <li class="burger__list-item">
-                                <a class="burger__menu-link" href="#">Издания</a>
+                                <a class="burger__menu-link scroll-to" href="#editions">Издания</a>
                             </li>
                             <li class="burger__list-item">
-                                <a class="burger__menu-link" href="#">Проекты</a>
+                                <a class="burger__menu-link scroll-to" href="#projects">Проекты</a>
                             </li>
                             <li class="burger__list-item">
-                                <a class="burger__menu-link" href="#">Контакты</a>
+                                <a class="burger__menu-link scroll-to" href="#contacts">Контакты</a>
                             </li>
                         </ul>
                         <div class="burger__lk-link-box">
@@ -57,6 +57,7 @@
                         </div>
                     </nav>
                 </div>
+
                 <!-- хххххххххххххх  ЛОГОТИП  хххххххххххххххххх  -->
                 <a class="hd-top__logo-link">
                     <picture class="hd-top__logo-picture">
@@ -71,25 +72,25 @@
                 <nav class="hd-top__nav flex">
                     <ul class="hd-top__list list-reset flex">
                         <li class="hd-top__list-item">
-                            <a class="hd-top__menu-link eff-1" href="#">О&nbsp;нас</a>
+                            <a class="hd-top__menu-link eff-1 scroll-to" href="#about">О&nbsp;нас</a>
                         </li>
                         <li class="hd-top__list-item">
-                            <a class="hd-top__menu-link eff-1" href="#">Галерея</a>
+                            <a class="hd-top__menu-link eff-1 scroll-to" href="#gallery">Галерея</a>
                         </li>
                         <li class="hd-top__list-item">
-                            <a class="hd-top__menu-link eff-1" href="#">Каталог</a>
+                            <a class="hd-top__menu-link eff-1 scroll-to" href="#catalog">Каталог</a>
                         </li>
                         <li class="hd-top__list-item">
-                            <a class="hd-top__menu-link eff-1" href="#">События</a>
+                            <a class="hd-top__menu-link eff-1 scroll-to" href="#events">События</a>
                         </li>
                         <li class="hd-top__list-item">
-                            <a class="hd-top__menu-link eff-1" href="#">Издания</a>
+                            <a class="hd-top__menu-link eff-1 scroll-to" href="#editions">Издания</a>
                         </li>
                         <li class="hd-top__list-item">
-                            <a class="hd-top__menu-link eff-1" href="#">Проекты</a>
+                            <a class="hd-top__menu-link eff-1 scroll-to" href="#projects">Проекты</a>
                         </li>
                         <li class="hd-top__list-item">
-                            <a class="hd-top__menu-link eff-1" href="#">Контакты</a>
+                            <a class="hd-top__menu-link eff-1 scroll-to" href="#contacts">Контакты</a>
                         </li>
 
                         <!-- ПРОВЕРКА на переполнение главного меню -->
@@ -116,17 +117,17 @@
                     <!-- Ссылка в личный кабинет -->                    
                     <a class="hd-top__lk-link lk-link eff-1" href="#">Войти</a>
                 </nav>
-                <!-- <span></span> -->
+    
                 <!-- Кнопка открытия формы поиска -->
-                <button class="search__btn-open-form search__btn-sumbmit"></button>
+                <button class="hd-top__btn-open-form search-btn" aria-label="Открыть/закрыть форму поиска"></button>
 
                 <!-- Форма поиска (search)-->
-                <form class="hd-top__form search flex" action>    
-                    <button class="search__btn-sumbmit search__btn-sumbmit--top"></button>
-                    <label class="search__input-label">
+                <form class="hd-top__form search flex" action="https://jsonplaceholder.typicode.com/posts" method="POST">    
+                    <button class="search__btn-submit search-btn search__btn-submit--top" aria-label="Искать"></button>
+                    <label class="search__input-label" aria-label="Поле для ввода запроса">
                         <input class="search__input search__input--top" type="text">
                     </label>
-                    <button class="search__btn-close-form" type="button"></button>
+                    <button class="search__btn-close-form" type="button" aria-label="Закрыть форму поиска"></button>
                 </form>
             </div>
         </div>
@@ -143,7 +144,7 @@
                         <li class="hd-bot__list-item drop-box">
 
                             <!-- Кнопка вызова выпадающего списка -->
-                            <button class="drop-box__btn-item eff-1" data-path="one">
+                            <button class="drop-box__btn-item eff-1" data-path="one" aria-label="Раскрыть/закрыть список художников в стиле реализм">
                                 <span class="drop-box__item-title">Реализм</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
@@ -151,36 +152,36 @@
                             <!-- Контейнер для элементов списка (тело списка) -->
                             <div class="drop-box__dropdown" data-target="one">
                                 <!-- Обвертка для кастомного скролла -->
-                                <div class="drop-box__dropdown-wrap" data-simplebar>
+                                <div class="drop-box__dropdown-wrap" data-simplebar id="bar-1">
                                     
                                     <!-- Список с элементами -->
                                     <ul class="drop-box__drop-list list-reset">
 
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">
                                                 <span class="drop-box__item-text">Тинторрето</span>
                                             </a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--fridrih" href>Фридрих</a>
+                                            <a class="drop-box__item-link drop-box__item-link--fridrih" href="#">Фридрих</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--leonardo" href>Леонардо</a>
+                                            <a class="drop-box__item-link drop-box__item-link--leonardo" href="#">Леонардо</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>Тинторрето</a>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">Тинторрето</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>Тинторрето</a>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">Тинторрето</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>Тинторрето</a>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">Тинторрето</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -191,7 +192,7 @@
                         <li class="hd-bot__list-item drop-box">
 
                             <!-- Кнопка вызова выпадающего списка -->
-                            <button class="drop-box__btn-item eff-1" data-path="two">
+                            <button class="drop-box__btn-item eff-1" data-path="two" aria-label="Раскрыть/закрыть список художников в стиле импрессионизм">
                                 <span class="drop-box__item-title">Импрессионизм</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
@@ -199,36 +200,36 @@
                             <!-- Контейнер для элементов списка -->
                             <div class="drop-box__dropdown" data-target="two">
                                 <!-- Обвертка для кастомного скролла -->
-                                <div class="drop-box__dropdown-wrap" data-simplebar>
+                                <div class="drop-box__dropdown-wrap" data-simplebar id="bar-2">
                                     
                                     <!-- Список с элементами -->
                                     <ul class="drop-box__drop-list">
 
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--mone" href>
+                                            <a class="drop-box__item-link drop-box__item-link--mone" href="#">
                                                 <span class="drop-box__item-text">Моне</span>
                                             </a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--sisley" href>Сислей</a>
+                                            <a class="drop-box__item-link drop-box__item-link--sisley" href="#">Сислей</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--mane" href>Мане</a>
+                                            <a class="drop-box__item-link drop-box__item-link--mane" href="#">Мане</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--renuar" href>Ренуар</a>
+                                            <a class="drop-box__item-link drop-box__item-link--renuar" href="#">Ренуар</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--renuar" href>Ренуар</a>
+                                            <a class="drop-box__item-link drop-box__item-link--renuar" href="#">Ренуар</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--renuar" href>Ренуар</a>
+                                            <a class="drop-box__item-link drop-box__item-link--renuar" href="#">Ренуар</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -239,7 +240,7 @@
                         <li class="hd-bot__list-item drop-box">
 
                             <!-- Кнопка вызова выпадающего списка -->
-                            <button class="drop-box__btn-item eff-1" data-path="three">
+                            <button class="drop-box__btn-item eff-1" data-path="three" aria-label="Раскрыть/закрыть список художников в стиле постимпрессионизм">
                                 <span class="drop-box__item-title">Постимпрессионизм</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
@@ -247,28 +248,28 @@
                             <!-- Контейнер для элементов списка -->
                             <div class="drop-box__dropdown" data-target="three">
                                 <!-- Обвертка для кастомного скролла -->
-                                <div class="drop-box__dropdown-wrap" data-simplebar>
+                                <div class="drop-box__dropdown-wrap" data-simplebar id="bar-3">
                                     
                                     <!-- Список с элементами -->
                                     <ul class="drop-box__drop-list">
 
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">
                                                 <span class="drop-box__item-text">Тинторрето</span>
                                             </a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--fridrih" href>Фридрих</a>
+                                            <a class="drop-box__item-link drop-box__item-link--fridrih" href="#">Фридрих</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--leonardo" href>Леонардо</a>
+                                            <a class="drop-box__item-link drop-box__item-link--leonardo" href="#">Леонардо</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>Тинторрето</a>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">Тинторрето</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -279,7 +280,7 @@
                         <li class="hd-bot__list-item drop-box">
 
                             <!-- Кнопка вызова выпадающего списка -->
-                            <button class="drop-box__btn-item eff-1" data-path="four">
+                            <button class="drop-box__btn-item eff-1" data-path="four" aria-label="Раскрыть/закрыть список художников в стиле авангард">
                                 <span class="drop-box__item-title">Авангард</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
@@ -287,36 +288,36 @@
                             <!-- Контейнер для элементов списка -->
                             <div class="drop-box__dropdown" data-target="four">
                                 <!-- Обвертка для кастомного скролла -->
-                                <div class="drop-box__dropdown-wrap" data-simplebar>
+                                <div class="drop-box__dropdown-wrap" data-simplebar id="bar-4">
                                     
                                     <!-- Список с элементами -->
                                     <ul class="drop-box__drop-list">
 
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">
                                                 <span class="drop-box__item-text">Тинторрето</span>
                                             </a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--fridrih" href>Фридрих</a>
+                                            <a class="drop-box__item-link drop-box__item-link--fridrih" href="#">Фридрих</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--leonardo" href>Леонардо</a>
+                                            <a class="drop-box__item-link drop-box__item-link--leonardo" href="#">Леонардо</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>Тинторрето</a>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">Тинторрето</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>Тинторрето</a>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">Тинторрето</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>Тинторрето</a>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">Тинторрето</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -327,7 +328,7 @@
                         <li class="hd-bot__list-item drop-box">
 
                             <!-- Кнопка вызова выпадающего списка -->
-                            <button class="drop-box__btn-item eff-1" data-path="five">
+                            <button class="drop-box__btn-item eff-1" data-path="five" aria-label="Раскрыть/закрыть список художников в стиле авангард">
                                 <span class="drop-box__item-title">Футуризм</span>
                                 <span class="drop-box__item-icon"></span>
                             </button>
@@ -335,36 +336,36 @@
                             <!-- Контейнер для элементов списка -->
                             <div class="drop-box__dropdown" data-target="five">
                                 <!-- Обвертка для кастомного скролла -->
-                                <div class="drop-box__dropdown-wrap" data-simplebar>
+                                <div class="drop-box__dropdown-wrap" data-simplebar id="bar-5">
                                     
                                     <!-- Список с элементами -->
                                     <ul class="drop-box__drop-list">
 
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">
                                                 <span class="drop-box__item-text">Тинторрето</span>
                                             </a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--fridrih" href>Фридрих</a>
+                                            <a class="drop-box__item-link drop-box__item-link--fridrih" href="#">Фридрих</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--leonardo" href>Леонардо</a>
+                                            <a class="drop-box__item-link drop-box__item-link--leonardo" href="#">Леонардо</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>Тинторрето</a>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">Тинторрето</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>Тинторрето</a>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">Тинторрето</a>
                                         </li>
                                         <!-- Элемент списка (ссылка) -->
                                         <li class="drop-box__dropdown-item">
-                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href>Тинторрето</a>
+                                            <a class="drop-box__item-link drop-box__item-link--tintoretto" href="#">Тинторрето</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -410,10 +411,10 @@
                     </ul>
 
                     <!-- Форма поиcка в нижней части шапки (search)-->
-                    <form class="hd-bot__form search" action>
+                    <form class="hd-bot__form search" action="https://jsonplaceholder.typicode.com/posts" method="POST">
                         <div class="search__box flex">
-                            <button class="search__btn-sumbmit search__btn-sumbmit--bottom" tabindex="-1"></button>
-                            <label>
+                            <button class="search__btn-submit search-btn search__btn-submit--bottom" tabindex="-1" aria-label="Найти"></button>
+                            <label aria-label="Поле для ввода запроса">
                                 <input class="search__input search__input--bottom" type="text" placeholder="Поиск по сайту">
                             </label>
                         </div>
@@ -430,7 +431,7 @@
             <div class="container hero-box">
                 <h1 class="hero__header">Прикоснитесь к&nbsp;прекрасному</h1>
                 <p class="hero__descr">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
-                <a class="hero__link scroll-to" href="#anchor">Подписаться на&nbsp;рассылку</a>
+                <a class="hero__link scroll-to" href="#">Подписаться на&nbsp;рассылку</a>
             </div>
 
             <!-- Слайдер фоновых картинок в Hero -->
@@ -443,29 +444,16 @@
             </div>
         </section>
 
-        <section class="about section">
+        <section class="about section" id="about">
             <div class="container about-box">
                 <h2 class="about__header header-two-lvl">О&nbsp;нас</h2>
                 <p class="about__descr">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.</p>
             </div>
         </section>
-
-        
-
-
-
-
-
     </main>
-    
-    
 
     <footer class="footer">
-        <!-- <p id="anchor">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A aliquam autem soluta sed ipsa itaque et architecto, tenetur pariatur corporis quia nisi consectetur iusto voluptas molestiae. Rerum libero quibusdam atque!
-        Vero sint dicta voluptas itaque, veritatis quis. Est ipsa cumque assumenda delectus at omnis sed, accusamus, ipsum cupiditate laboriosam eveniet quis dolore velit facilis voluptates aperiam debitis incidunt atque officia?
-        Consectetur, repellendus obcaecati sed reiciendis iure, unde quae enim voluptatibus illum facilis culpa omnis explicabo consequatur. Iure inventore nemo dicta alias autem, excepturi, vero et dolores ex ad quibusdam exercitationem!
-        Inventore debitis eligendi dolores nobis, vero illo velit, iusto nam aut voluptatibus asperiores ratione voluptates ex repellendus dolor corporis deleniti dolorum vel nesciunt ullam. Cumque, quasi natus. Eligendi, cum possimus.
-        Provident error veniam ea quidem cupiditate voluptate iste ipsam mollitia, nobis aliquid alias animi id repellendus aperiam voluptas illo corrupti, autem quam. Porro corrupti nulla odit modi natus inventore illum.</p> -->
+    
     </footer>
     <script src="js/simplebar.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
