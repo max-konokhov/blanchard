@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="img/header/favicon_ico.svg" rel="icon">
+    <link href="css/simplebar.min.css" rel="stylesheet">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet">
+    <title>Header</title>
+</head>
+<body>
+    <header class="header">
+
+        <!-- ###############  ВЕРХНИЙ БЛОК ШАПКИ (HD-TOP)  #################  -->        
+        <div class="hd-top">
+            <div class="hd-top__box container flex">
+
+                <!-- хххххххххххххх  ЛОГОТИП  хххххххххххххххххх  -->
+                <a class="hd-top__logo-link">
+                    <picture class="hd-top__logo-picture">
+                        <source media="(max-width: 470px)" srcset="img/header/logo_320.svg">
+                        <source media="(max-width: 1024px)" srcset="img/header/logo_1024.svg">
+                        <source media="(min-width: 1025px)" srcset="img/header/logo_big.svg">
+                        <img class="hd-top__logo-image" src="img/header/logo_1024.svg" alt="Логотип Blanchard">
+                    </picture>                    
+                </a>
+
+                <!-- хххххххххххххх  НАВИГАЦИЯ  хххххххххххххххх  -->
+                <nav class="hd-top__nav flex">
+
+                    <!-- ***********  КНОПКА-БУРГЕР (BURGER) ************* -->
+                    <button class="hd-top__btn-burger btn-reset burger">
+                        <span class="burger__line burger__line--1" aria-hidden="true"></span>
+                        <span class="burger__line burger__line--2" aria-hidden="true"></span>
+                        <span class="burger__line burger__line--3" aria-hidden="true"></span>
+                    </button>
+
+                    <div class="hd-top__menu-wrap flex">
+
+                        <!-- *************  МЕНЮ (MENU) ******************* -->
+                        <ul class="hd-top__list list-reset flex menu">
+                            <li class="menu__item">
+                                <a class="menu__link effect-link-1 scroll-to" href="#about">
+                                    <span class="menu__link-text">О&nbsp;нас</span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link effect-link-1 scroll-to" href="#gallery">
+                                    <span class="menu__link-text">Галерея</span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link effect-link-1 scroll-to" href="#catalog">
+                                    <span class="menu__link-text">Каталог</span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link effect-link-1 scroll-to" href="#events">
+                                    <span class="menu__link-text">События</span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link effect-link-1 scroll-to" href="#editions">
+                                    <span class="menu__link-text">Издания</span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link effect-link-1 scroll-to" href="#projects">
+                                    <span class="menu__link-text">Проекты</span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link effect-link-1 scroll-to" href="#contacts">
+                                    <span class="menu__link-text">Контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- **********  ССЫЛКА В ЛК (LK-LINK) ********** -->
+                        <a class="hd-top__lk-link effect-link-1 scroll-to lk-link" href="#">
+                            <span class="lk-link__text">Войти</span>
+                        </a>
+                    </div>    
+                </nav>
+                
+                <!-- хххххххххххххх  КНОПКА АКТИВАЦИИ ФОРМЫ и ФОРМА ПОИСКА  хххххххххххххххх  -->
+                <button class="hd-top__btn-open-search btn-search btn-reset" type="button" aria-label="Открыть/закрыть форму поиска"></button>
+                <form class="hd-top__form form-search flex" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+                    <button class="form-search__btn-submit btn-search btn-reset" type="submit"></button>
+                    <label class="form-search__input-label" aria-label="Поле для ввода запроса">
+                        <input class="form-search__input form-search__input--top" type="text" placeholder="Искать" name="search">
+                    </label>
+                    <button class="form-search__btn-close btn-reset" type="button"></button>
+                </form>                
+            </div>
+        </div>
+
+        <!-- #################  НИЖНИЙ БЛОК ШАПКИ (HD-BOT)  ################  -->
+        <div class="header__bottom hd-bot">
+            <div class="container hd-bot__container">
+
+                
+            </div>
+        </div>    
+    </header>
+    <section class="about section" id="about">
+        <div class="container about-box">
+            <h2 class="about__header header-two-lvl">О&nbsp;нас</h2>
+            <p class="about__descr">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.</p>
+        </div>
+    </section>
+    <script src="js/simplebar.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script1.js"></script>
+</body>
+</html>
