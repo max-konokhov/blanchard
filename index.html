@@ -81,7 +81,7 @@
                         </ul>
 
                         <!-- **********  ССЫЛКА В ЛК (LK-LINK) ********** -->
-                        <a class="hd-top__lk-link effect-link-1 scroll-to" href="#">
+                        <a class="hd-top__lk-link effect-link-1 lk-link scroll-to" href="#">
                             <span class="lk-link__text">Войти</span>
                         </a>
                     </div>    
@@ -92,11 +92,28 @@
                 <form class="hd-top__form form-search flex" action="https://jsonplaceholder.typicode.com/posts" method="POST">
                     <button class="form-search__btn-submit btn-search btn-reset" type="submit"></button>
                     <label class="form-search__input-label" aria-label="Поле для ввода запроса">
-                        <input class="form-search__input search-input" type="text" placeholder="Поиск по сайту" name="search">
+                        <input class="form-search__input search-input" type="text" name="search">
                     </label>
                     <button class="form-search__btn-close btn-reset" type="button"></button>
-                </form>                
+                </form>
             </div>
+
+            <!-- <section class="hd-top__banner hero">            
+                <div class="container hero-box">
+                    <h1 class="hero__header">Прикоснитесь к&nbsp;прекрасному</h1>
+                    <p class="hero__descr">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+                    <a class="hero__link scroll-to" href="#">Подписаться на&nbsp;рассылку</a>
+                </div> -->
+    
+                <!-- Слайдер фоновых картинок в Hero -->
+                <!-- <div class="swiper hero__swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide hero__slide hero__slide--1"></div>
+                        <div class="swiper-slide hero__slide hero__slide--2"></div>
+                        <div class="swiper-slide hero__slide hero__slide--3"></div>
+                    </div>
+                </div>
+            </section>     -->
         </div>
 
         <!-- #################  НИЖНИЙ БЛОК ШАПКИ (HD-BOT)  ################  -->
@@ -338,43 +355,6 @@
                                 </div>
                             </div>                            
                         </li>
-
-
-                        <!-- ПРОВЕРКА на переполнение нижнего меню шапки -->                        
-                        <!-- <li class="hd-bot__list-item drop-box">                        
-                            <button class="drop-box__btn-item eff-1" data-path="one">
-                                <span class="drop-box__item-title">Реализм</span>
-                                <span class="drop-box__item-icon"></span>
-                            </button>
-                        </li>
-                        
-                        <li class="hd-bot__list-item drop-box">                            
-                            <button class="drop-box__btn-item eff-1" data-path="one">
-                                <span class="drop-box__item-title">Реализм</span>
-                                <span class="drop-box__item-icon"></span>
-                            </button>
-                        </li>
-                        
-                        <li class="hd-bot__list-item drop-box">                           
-                            <button class="drop-box__btn-item eff-1" data-path="one">
-                                <span class="drop-box__item-title">Реализм</span>
-                                <span class="drop-box__item-icon"></span>
-                            </button>
-                        </li>
-                        
-                        <li class="hd-bot__list-item drop-box">                            
-                            <button class="drop-box__btn-item eff-1" data-path="one">
-                                <span class="drop-box__item-title">Реализм</span>
-                                <span class="drop-box__item-icon"></span>
-                            </button>
-                        </li>
-                        
-                        <li class="hd-bot__list-item drop-box">                            
-                            <button class="drop-box__btn-item eff-1" data-path="one">
-                                <span class="drop-box__item-title">Реализм</span>
-                                <span class="drop-box__item-icon"></span>
-                            </button>
-                        </li> -->
                     </ul>
 
                     <!-- Форма поиcка в нижней части шапки (search)-->
@@ -386,13 +366,8 @@
                     </form>
                 </nav>
             </div>
-        </div>    
-    </header>
-
-
-    <main class="main">
-        <!-- ###################  СЕКЦИЯ HERO (HERO)  ######################  -->
-        <section class="hero section">            
+        </div>
+        <section class="hd-top__banner hero">            
             <div class="container hero-box">
                 <h1 class="hero__header">Прикоснитесь к&nbsp;прекрасному</h1>
                 <p class="hero__descr">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
@@ -407,7 +382,28 @@
                     <div class="swiper-slide hero__slide hero__slide--3"></div>
                 </div>
             </div>
-        </section>
+        </section>    
+    </header>
+
+
+    <main class="main">
+        <!-- ###################  СЕКЦИЯ HERO (HERO)  ######################  -->
+        <!-- <section class="hero section">            
+            <div class="container hero-box">
+                <h1 class="hero__header">Прикоснитесь к&nbsp;прекрасному</h1>
+                <p class="hero__descr">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+                <a class="hero__link scroll-to" href="#">Подписаться на&nbsp;рассылку</a>
+            </div> -->
+
+            <!-- Слайдер фоновых картинок в Hero -->
+            <!-- <div class="swiper hero__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide hero__slide hero__slide--1"></div>
+                    <div class="swiper-slide hero__slide hero__slide--2"></div>
+                    <div class="swiper-slide hero__slide hero__slide--3"></div>
+                </div>
+            </div>
+        </section> -->
 
         <section class="about section" id="about">
             <div class="container about-box">
@@ -418,9 +414,7 @@
 
         <section class="catalog section">
             <div class="container catalog-box">
-        
-
-                    
+            
             </div>
         </section>
     </main>

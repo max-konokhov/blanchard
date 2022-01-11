@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setSearch({
         openBtnClass: "hd-top__btn-open-search", // класс кнопки открытия
         closeBtnClass: "form-search__btn-close", // класс кнопки закрытия
-        searchClass: "form-search", // класс формы поиска
+        searchClass: "hd-top__form", // класс формы поиска
         activeClass: "is-opened", // класс открытого состояния
         hiddenClass: "is-closed" // класс закрывающегося состояния (удаляется сразу после закрытия)
     });
