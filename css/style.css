@@ -14,6 +14,8 @@
 	--color-active: #7943A4;
 	--font-color-main: #333;
 	--font-color-alt: #FFF;
+	--border-grey: #999;
+	
 	}
 
 
@@ -1049,6 +1051,7 @@ body {
 
 .about {
 	color: var(--font-color-main);
+	padding-bottom: 71px;
 }
 
 .header-two-lvl {
@@ -1072,6 +1075,344 @@ body {
 
 
 
+
+/* ------- Секция Gallery ------------ */
+
+.gallery {
+	background-color: var(--bg-color-second);
+	background-image: url('/img/gallery/gallery_bg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: var(--font-color-alt);
+	line-height: 32px;
+}
+
+
+
+
+.gallery__content-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+
+.gallery__first-box,
+.gallery__last-box {
+	width: calc(400 / 1600 * 100%);
+}
+
+.gallery__header {
+	margin-bottom: 16px;
+}
+
+/* .gallery__select-box {
+	min-height: 50px;
+	border-radius: 5px;
+	
+} */
+
+
+
+
+/* .gallery__label-select {
+	
+} */
+
+.gallery__caption {
+	display: inline-block;
+	margin-bottom: 10px;
+	font-weight: 600;
+
+}
+/* .gallery__select {
+	padding: 15px;
+} */
+
+.choices__inner {
+	padding: 2px 30px 5px 14px;
+	font-size: 16px;
+	min-height: 40px;
+	line-height: 32px;
+    border: 1px solid var(--bg-color-main);
+    border-radius: 6px;
+	background-color: transparent;
+	
+}
+
+/* Отключаю элемент-плейсхордер (первый опшин) из списка */
+#choices--g-select-item-choice-1 {
+    display: none;
+}
+
+/* Отключаю стрелку из плагина */
+.choices[data-type*=select-one]:after {
+	display: none;
+}
+
+/* Добавляю свою стрелку */
+.choices[data-type*=select-one]::before {
+    content: '';
+    height: 7px;
+    width: 7px;
+    border-left: 1px solid var(--bg-color-main);
+    border-bottom: 1px solid var(--bg-color-main); 
+    position: absolute;
+    right: 14px;
+    top: 43%;
+    transform: rotate(-45deg);
+	transition: transform 0.5s;
+    z-index: 3;
+}
+
+/* Стрелка в активном положении */
+.choices[data-type*=select-one].is-open::before {
+    transform: rotate(135deg);
+}
+
+.choices[data-type*=select-one] .choices__inner {
+	padding-bottom: 0;
+}
+
+.choices__list--dropdown {
+	background-color: transparent;
+	border: 1px solid var(--border-grey);
+	/* border-radius: 6px; */
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	font-size: 16px;
+	line-height: 32px;
+}
+.choices__list--single {
+	padding: 0;
+}
+.choices__list--dropdown .choices__item {
+	font-size: 16px;
+	color: var(--border-grey);
+	padding: 2px 30px 4px 19px;
+	border-bottom: 1px solid var(--border-grey);
+	/* margin-bottom: -1px; */
+	
+}
+
+.is-focused.choices {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-color: var(--bg-color-main);
+	
+}
+
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+.is-open .choices__inner {
+	border-radius: 6px;
+}
+
+.is-open .choices__list--dropdown {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	/* border-color: greenyellow; */
+
+	border-color: var(--border-grey);
+}
+/* .choices__list:last-child {
+	color:red;
+} */
+
+.choices__item:last-of-type {
+	border-color:transparent;
+	/* border-color:greenyellow; */
+}
+
+
+
+.gallery__last-box {
+	position: relative;
+}
+
+.g-last-box__content {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+}
+
+.g-swiper {
+	width: calc(1150 / 1600 * 100%);
+	margin-right: 0;
+}
+
+.g-swiper-box {
+	overflow: hidden;
+}
+
+.g-swiper__navigation {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.g-swiper__pagination {
+	margin-right: 10px;
+	text-align: center;
+	color: #373850;
+}
+
+.g-swiper__btn-nav {
+	position: relative;
+	flex-shrink: 0;
+	width: 26px;
+	height: 26px;
+	background-color: #527590;
+	border-radius: 50%;
+}
+
+.g-swiper__btn-nav::before {
+	content: "";
+	position: absolute;
+	top: calc(50% - 7px / 2);
+	width: 7px;
+	height: 7px;
+	transform: rotate(45deg);
+	transform-origin: center;
+}
+
+.g-btn-prev {
+	margin-right: 10px;
+}
+
+.g-btn-next::before {
+	left: calc(50% - 7px / 2);
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+
+.g-btn-prev::before {
+	left: calc(50% - 7px / 2);
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.g-swiper__link-slide {
+	position: relative;
+	overflow: hidden;
+	background-color: #926B88;
+}
+
+.g-swiper__link-slide::before {
+	content: "";
+	position: relative;
+	z-index: 1;
+	display: block;
+	padding-top: calc(100% - 6px);
+	border: 3px solid transparent;
+	box-sizing: border-box;
+	transition: background-color .3s ease, border-color .3s ease;
+}
+
+.g-swiper__link-slide::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	padding: 25px;
+	box-sizing: border-box;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	background-image: url("https://image.flaticon.com/icons/png/512/545/545752.png");
+	background-repeat: no-repeat;
+	background-size: 100px;
+	background-position: center;
+	background-clip: content-box;
+	transition: opacity .5s ease;
+}
+
+.g-swiper__link-slide:hover::after {
+	opacity: 1;
+}
+
+.g-swiper__link-slide:focus {
+	outline: none;
+}
+
+.g-swiper__link-slide:focus::before {
+	border-color: #7943A4;
+}
+
+.g-swiper__link-slide:active::before {
+	border-color: #D1A9F0;
+	background-color: rgba(194, 131, 243, 0.4);
+}
+
+.g-swiper__slide-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+
+  /* Адаптивная высота слайда регулируется относительно его ширины с помощью padding-top в % для псевдоэлемента ::before */
+
+@media (max-width: 1024px) {
+	.g-swiper__slide-image::before {
+		padding-top: calc(85% - 6px);
+	}
+}
+
+@media (max-width: 768px) {
+	.gallery__first-box,
+	.g-swiper {
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 20px;
+	}
+	
+	.g-last-box {
+		width: 100%;
+	}
+	
+	.g-last-box__content {
+		position: static;
+	}
+	
+	.gallery__select {
+		max-width: 300px;
+	}
+}
+
+	@media (max-width: 440px) {
+	/* .container {
+	  padding-left: 15px;
+	  padding-right: 15px;
+	} */
+	
+	.g-swiper {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	
+	.g-swiper__navigation {
+		align-self: center;
+		margin-top: 20px;
+	}
+	
+	.g-swiper__link-slide::before {
+		padding-top: calc(110% - 6px);
+	}
+}
 
 
 

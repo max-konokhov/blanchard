@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="img/header/favicon_ico.svg" rel="icon">
+    <link href="css/choices.min.css" rel="stylesheet">
     <link href="css/simplebar.min.css" rel="stylesheet">
     <link href="css/swiper-bundle.min.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <title>Blanchard</title>
+    <title>Blanchard - художественная галерея</title>
 </head>
 
 <body>
@@ -461,6 +462,7 @@
 
     <main class="main">
 
+        <!-- ##############  СЕКЦИЯ "О НАС" (ABOUT)  ##############  -->
         <section class="about section" id="about">
             <div class="container about-box">
                 <h2 class="about__header header-two-lvl">О&nbsp;нас</h2>
@@ -468,17 +470,149 @@
             </div>
         </section>
 
-        <!-- <section class="catalog section">
-            <div class="container catalog-box">
-            
+
+
+
+        
+        <!-- Набросок секции -->
+
+        <!-- ##############  СЕКЦИЯ "ГАЛЕРЕЯ" (GALLERY)  ##############  -->
+        <section class="gallery section" id="gallery">
+            <div class="container gallery-box">
+                <div class="gallery__content-wrap">
+
+                    <!-- хххххххххххххх  ЗАГОЛОВОК И ФИЛЬТР  хххххххххххххххх  -->
+                    <div class="gallery__first-box">
+                        <h2 class="gallery__header header-two-lvl">Галерея</h2>
+                        <label class="gallery__label-select">
+                            <span class="gallery__caption">Фильтр:</span>
+                            <select class="gallery__select" name="g-select" id="g-select">
+                                <option value="myplaceholder">Живопись</option>
+                                <option value="drawing">Рисунок</option>
+                                <option value="sculpture">Скульптура</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <!-- хххххххххххххх  СЛАЙДЕР ГАЛЛЕРЕИ (G-SWIPER)  хххххххххххххххх  -->
+                    <div class="gallery__swiper g-swiper">
+                        <div class="g-swiper__navigation">
+                            <button class="g-swiper__btn-nav g-btn-prev btn-reset" aria-label="К предыдущему слайду"></button>
+                            <div class="g-swiper__pagination"></div>
+                            <button class="g-swiper__btn-nav g-btn-next btn-reset" aria-label="К следующему слайду"></button>
+                        </div>
+                        <div class="swiper-container g-swiper-box">
+                            <div class="swiper-wrapper">
+                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
+                                    <picture class="hd-top__logo-picture">
+                                        <source media="(max-width: 500px)" srcset="img/header/logo_320.svg">
+                                        <source media="(max-width: 1024px)" srcset="img/header/logo_1024.svg">
+                                        <source media="(min-width: 1025px)" srcset="img/header/logo_big.svg">
+                                        <img class="hd-top__logo-image" src="img/header/logo_1024.svg" alt="Логотип Blanchard">
+                                    </picture>            
+                                    <picture>
+                                        
+                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
+                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
+                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
+                                        
+                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
+                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+                                    </picture>
+                                </a>
+                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
+                                    <picture>
+                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
+                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
+                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
+                                        
+                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
+                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+                                    </picture>
+                                </a>
+                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
+                                    <picture>
+                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
+                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
+                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
+                                        
+                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
+                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+                                    </picture>
+                                </a>
+                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
+                                    <picture>
+                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
+                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
+                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
+                                        
+                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
+                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+                                    </picture>
+                                </a>
+                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
+                                    <picture>
+                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
+                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
+                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
+                                        
+                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
+                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+                                    </picture>
+                                </a>
+                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
+                                    <picture>
+                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
+                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
+                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
+                                        
+                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
+                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+                                    </picture>
+                                </a>
+                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
+                                    <picture>
+                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
+                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
+                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
+                                        
+                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
+                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+                                    </picture>
+                                </a>
+                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
+                                    <picture>
+                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
+                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
+                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
+                                        
+                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
+                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- хххххххххххххх  БЛОК С ОПИСАНИЕМ  хххххххххххххххх  -->
+                    <div class="gallery__last-box g-last-box">
+        
+                        <div class="g-last-box__content">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum iste assumenda omnis facilis, aperiam quisquam.</p>
+                        </div>
+                    </div>
+                </div>                
             </div>
-        </section> -->
+        </section>
+
+
     </main>
 
     <footer class="footer">
     
     </footer>
     <script src="js/simplebar.min.js"></script>
+    <script src="js/choices.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
