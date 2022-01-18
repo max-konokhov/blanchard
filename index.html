@@ -101,17 +101,33 @@
 
                         <!-- **********  ССЫЛКА В ЛК (LK-LINK) ********** -->
                         <a class="hd-top__lk-link effect-link-1 lk-link scroll-to" href="#">
-                            <span class="lk-link__text">Войти</span>
+                            <span class="lk-link__text lk-link__text--top">
+                                <svg class="lk-link__svg-image-arrow" width="18" height="13" viewbox="0 0 18 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z" fill="currentColor"/>
+                                    </svg>
+                                <span class="lk-link__text">Войти</span>
+                            </span>
                         </a>
                     </div>    
                 </nav>
                 
                 <!-- хххххххххххххх  КНОПКА АКТИВАЦИИ ФОРМЫ и ФОРМА ПОИСКА  хххххххххххххххх  -->
-                <button class="hd-top__btn-open-search btn-search btn-reset" type="button" aria-label="Открыть/закрыть форму поиска"></button>
-                <form class="hd-top__form form-search flex" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-                    <button class="form-search__btn-submit btn-search btn-reset" type="submit"></button>
+                <button class="hd-top__btn-open-search btn-search btn-reset" type="button" aria-label="Открыть/закрыть форму поиска">
+                    <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="currentColor"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="currentColor"/>
+                        </svg>
+                </button>
+
+                <form class="hd-top__form form-search flex" action="/" method="POST">
+                    <button class="form-search__btn-submit btn-search btn-reset" type="submit">
+                        <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="currentColor"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="currentColor"/>
+                            </svg>        
+                    </button>
                     <label class="form-search__input-label" aria-label="Поле для ввода запроса">
-                        <input class="form-search__input search-input" type="text" name="search">
+                        <input class="form-search__input" type="text" name="search" placeholder="Поиск по сайту">
                     </label>
                     <button class="form-search__btn-close btn-reset" type="button"></button>
                 </form>
@@ -120,10 +136,10 @@
 
         <!-- #################  НИЖНИЙ БЛОК ШАПКИ (HD-BOT)  ################  -->
         <div class="header__bottom hd-bot">
-            <div class="container hd-bot__container">
+            <div class="container hd-bot__box">
 
                 <!-- Нижнее меню шапки -->
-                <nav class="hd-bot__nav flex">
+                <nav class="hd-bot__nav">
                     <ul class="hd-bot__list list-reset flex">
 
                         <!-- Контейнеры для списков (Реализм)-->
@@ -427,18 +443,25 @@
                                 </div>
                             </div>                            
                         </li>
+
                     </ul>
 
                     <!-- Форма поиcка в нижней части шапки (search)-->
-                    <form class="hd-bot__form form-search-two flex" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+                    <!-- <form class="hd-bot__form form-search-two flex" action="https://jsonplaceholder.typicode.com/posts" method="POST">
                         <button class="form-search-two__btn-submit btn-search btn-reset" tabindex="-1" aria-label="Найти"></button>
                         <label aria-label="Поле для ввода запроса">
                             <input class="form-search-two__search-input search-input" type="text" placeholder="Поиск по сайту">
                         </label>
-                    </form>
+                    </form> -->
                 </nav>
             </div>
         </div>
+
+        
+    </header>
+
+
+    <main class="main">
 
         <!-- ##############  СЕКЦИЯ HERO (HERO) вынесена в шапку  ##############  -->
         <section class="header__banner hero">            
@@ -457,10 +480,6 @@
                 </div>
             </div>
         </section>    
-    </header>
-
-
-    <main class="main">
 
         <!-- ##############  СЕКЦИЯ "О НАС" (ABOUT)  ##############  -->
         <section class="about section" id="about">
