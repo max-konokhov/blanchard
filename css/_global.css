@@ -10,6 +10,8 @@
     --violet-dark: #7943A4;
     --grey: #999;
     --semi-transparent-black: rgba(0, 0, 0, 0.4);
+	--semi-transparent-black-two: rgba(0, 0, 0, 0.6);
+	
 
 
     
@@ -171,4 +173,28 @@ body {
 
 .effect-link-1:active::before {
     opacity: 0;
+}
+
+.effect-btn-1 {
+	border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+	color: var(--white);
+	transition: color var(--short);
+}
+
+.effect-btn-1:hover {
+	color: var(--violet-light);
+}
+
+.effect-btn-1:focus {
+	outline: 1px solid var(--violet-light);
+	outline-offset: 2px;
+	/* color: var(--violet-light); */
+	/* background-color: var(--violet-light); */
+}
+
+.effect-btn-1:active {
+	color: var(--violet-middle);
 }

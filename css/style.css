@@ -2,6 +2,7 @@
 @import url(_global.css);
 
 @import url(_header.css);
+@import url(_hero.css);
 
 
 
@@ -413,7 +414,7 @@
 	.hd-bot__list-item:not(:last-child) {
 		margin-right: 103px;
 	}
-	.hd-bot__box {
+	.hd-bot__nav {
 		padding-right: 320px;
 	}
 	.form-search__input {
@@ -432,12 +433,28 @@
         display: block;
         order: 3;
     }
-	.btn-search:focus {
+
+	.form-search {
+		position: absolute;
+		top: 50px;
+		right: 50px;
+		display: none;
+		align-items: center;
+		background-color: #18171B;
+		transform: translateY(-50%);
+		transform-origin: right;
+	}
+
+	.btn-search__svg-image {
+		width: 30px;
+		height: 30px;
+	}
+	/* .btn-search:focus {
 		outline: 1px solid var(--color-link-active);
 		outline-offset: 3px;
-	}
+	} */
     .hd-top__logo-link {
-        margin-right: 0;
+        margin-right: 4px;
         order: 2;
     }
     .hd-top__nav {
@@ -454,7 +471,8 @@
 	}
     .hd-top__menu-wrap {
 		display: flex;
-        position: absolute;
+		/* display: none; */
+        position: fixed;
         left: 0;
         top: 0;
 		right: 0;
@@ -462,9 +480,8 @@
 		flex-direction: column;
 		justify-content: space-between;
         z-index: 2;
-        display: none;
         width: 100vw;
-		height: 100%;
+		height: 100vh;
         padding: 96px 50px 50px 48px;
         background-color: rgba(0,0,0, 0.9);
         transform: translateX(-100%);
