@@ -97,6 +97,7 @@ a {
 
 img, svg {
 	max-width: 100%;
+	height: auto;
 }
 
 body {
@@ -189,12 +190,12 @@ body {
 }
 
 .effect-btn-1:focus {
-	outline: 1px solid var(--violet-light);
-	outline-offset: 2px;
-	/* color: var(--violet-light); */
-	/* background-color: var(--violet-light); */
+	outline: none;
+}
+.effect-btn-1:focus:not(:hover):not(:active) {
+	color: var(--violet-middle);
 }
 
 .effect-btn-1:active {
-	color: var(--violet-middle);
+	color: var(--violet-dark);
 }
