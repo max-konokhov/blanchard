@@ -1,0 +1,424 @@
+/* ------- Секция Gallery ------------ */
+
+.gallery {
+	background-color: var(--dark);
+	background-image: url('/img/gallery/gallery_bg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: var(--white);
+	line-height: 32px;
+}
+
+
+
+
+.gallery__content-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+
+.gallery__first-box,
+.gallery__last-box {
+	width: calc(400 / 1600 * 100%);
+}
+
+.gallery__header {
+	margin-bottom: 16px;
+}
+
+
+
+.gallery__caption {
+	display: inline-block;
+	margin-bottom: 10px;
+	font-weight: 600;
+
+}
+
+
+.choices__inner {
+	padding: 2px 30px 5px 14px;
+	font-size: 16px;
+	min-height: 40px;
+	line-height: 32px;
+    border: 1px solid var(--white);
+    border-radius: 6px;
+	background-color: transparent;
+	
+}
+
+/* Отключаю элемент-плейсхордер (первый опшин) из списка */
+#choices--g-select-item-choice-1 {
+    display: none;
+}
+
+/* Отключаю стрелку из плагина */
+.choices[data-type*=select-one]:after {
+	display: none;
+}
+
+/* Добавляю свою стрелку */
+.choices[data-type*=select-one]::before {
+    content: '';
+    height: 7px;
+    width: 7px;
+    border-left: 1px solid var(--white);
+    border-bottom: 1px solid var(--white); 
+    position: absolute;
+    right: 14px;
+    top: 43%;
+    transform: rotate(-45deg);
+	transition: transform 0.5s;
+    z-index: 3;
+}
+
+/* Стрелка в активном положении */
+.choices[data-type*=select-one].is-open::before {
+    transform: rotate(135deg);
+}
+
+.choices[data-type*=select-one] .choices__inner {
+	padding-bottom: 0;
+}
+
+.choices__list--dropdown {
+	background-color: transparent;
+	border: 1px solid var(--grey);
+	/* border-radius: 6px; */
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	font-size: 16px;
+	line-height: 32px;
+}
+.choices__list--single {
+	padding: 0;
+}
+.choices__list--dropdown .choices__item {
+	font-size: 16px;
+	color: var(--grey);
+	padding: 2px 30px 4px 19px;
+	border-bottom: 1px solid var(--grey);
+	/* margin-bottom: -1px; */
+	
+}
+
+.is-focused.choices {
+	background-color: var(--trasparent-grey);
+	border-color: var(--white);
+	
+}
+
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+	background-color: var(--trasparent-grey);
+}
+
+
+
+.is-open .choices__inner {
+	border-radius: 6px;
+}
+
+.is-open .choices__list--dropdown {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	/* border-color: greenyellow; */
+	border-color: var(--grey);
+}
+
+
+.choices__item:last-of-type {
+	border-color:transparent;
+	/* border-color:greenyellow; */
+}
+
+
+.g-swiper {
+	width: calc(1150 / 1600 * 100%);
+	margin-right: 0;
+    padding-top: 17px;
+}
+
+.g-swiper-box {
+	overflow: hidden;
+}
+
+.g-swiper__navigation {
+	display: inline-flex;
+    min-width: 130px;
+	align-items: center;
+	margin-bottom: 28px;
+}
+
+.g-swiper__pagination {
+	margin-right: 10px;
+	text-align: center;
+	
+}
+
+.g-swiper__btn-nav {
+	position: relative;
+	flex-shrink: 0;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+    background-color: var(--grey-dark);
+    transition: background-color var(--short), box-shadow var(--short);
+}
+
+.g-swiper__btn-nav:hover:not(.swiper-button-disabled):not(:active) {
+    background-color: var(--violet-middle);
+}
+
+.g-swiper__btn-nav:focus:not(.swiper-button-disabled) {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--black);
+}
+
+.g-swiper__btn-nav:active {
+    background-color: var(--violet-dark);
+    box-shadow: inset 0 0 0 2px var(--black);
+}
+
+/* не работает стили для своих классов(   */
+
+/* .g-swiper__btn-nav--disabled {
+    background-color: var(--grey-dark-semi-transparent);
+}
+.green {
+    background-color: greenyellow !important;
+} */
+
+.swiper-button-disabled {
+    background-color: var(--grey-dark-semi-transparent);
+}
+
+
+
+.g-swiper__btn-nav::before {
+	content: "";
+	position: absolute;
+	top: calc(50% - 7px / 2);
+	width: 7px;
+	height: 7px;
+	transform: rotate(45deg);
+	transform-origin: center;
+}
+
+.g-swiper__btn-nav--prev {
+	margin-right: 10px;
+}
+
+.g-swiper__btn-nav--next::before {
+	left: calc(50% - 7px / 2);
+	border-top: 1px solid var(--white);
+	border-right: 1px solid var(--white);
+}
+
+.g-swiper__btn-nav--prev::before {
+	left: calc(50% - 7px / 2);
+	border-left: 1px solid var(--white);
+	border-bottom: 1px solid var(--white);
+}
+
+.g-swiper__link-slide {
+	position: relative;
+	overflow: hidden;
+	background-color: var(--violet-dark);
+    font-size: 0;
+    line-height: 0;
+}
+
+.g-swiper__link-slide::before {
+	content: "";
+	position: relative;
+	z-index: 4;
+	display: block;
+	padding-top: calc(100% - 6px);
+	border: 3px solid transparent;
+	box-sizing: border-box;
+	transition: background-color .3s ease, border-color .3s ease;
+}
+
+.g-swiper__link-slide::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	padding: 25px;
+	box-sizing: border-box;
+	opacity: 0;
+	background-color: var(--semi-transparent-black-three);
+	background-image: url('../img/gallery/glass.svg');
+	background-repeat: no-repeat;
+	background-size: 80px;
+	background-position: center;
+	background-clip: content-box;
+	transition: opacity .5s ease;
+}
+
+.g-swiper__link-slide:hover::after {
+	opacity: 1;
+}
+
+.g-swiper__link-slide:focus {
+	outline: none;
+}
+
+.g-swiper__link-slide:focus::before {
+	border-color: var(--violet-dark);
+}
+
+.g-swiper__link-slide:active::before {
+	border-color: var(--violet-super-lite);
+	background-color: var(--semi-transparent-violet);
+}
+
+.g-swiper__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+.gallery__last-box {
+	position: relative;
+}
+
+.filter-century__list {
+	position: absolute;
+    flex-direction: column;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+}
+
+/* .filter-century__list-item {
+    line-height: 0;
+} */
+
+/* .filter-century__list-item:not(:last-child) {
+    margin-bottom: 24px;
+} */
+
+.filter-century__label {
+    position: relative;
+    /* line-height: 16px; */
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+.filter-century__input {
+    display: none;
+}
+
+.filter-century__span {
+    display: inline-block;
+}
+
+.filter-century__span::before {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    left: 0;
+    top: calc(50% - 5px);
+    border: 1px solid var(--white);
+    transition: border-color var(--short);
+}
+
+.filter-century__input:checked + .filter-century__span::before {
+    border: 1px solid var(--violet-light);
+}
+
+.filter-century__span::after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 4px;
+    top: calc(50% - 1px);
+    left: 4px;
+    border-radius: 50%;
+    background-color: var(--violet-light);
+    opacity: 0;
+    transition: opacity 0.3 ease-in-out;
+}
+
+.filter-century__input:checked + .filter-century__span::after {
+    opacity: 1;
+}
+
+.filter-century__input:checked + .filter-century__span {
+    color: var(--violet-light);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Адаптивная высота слайда регулируется относительно его ширины с помощью padding-top в % для псевдоэлемента ::before */
+
+@media (max-width: 1024px) {
+	.g-swiper__slide-image::before {
+		padding-top: calc(85% - 6px);
+	}
+}
+
+@media (max-width: 768px) {
+	.gallery__first-box,
+	.g-swiper {
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 20px;
+	}
+	
+	.g-last-box {
+		width: 100%;
+	}
+	
+	.g-last-box__content {
+		position: static;
+	}
+	
+	.gallery__select {
+		max-width: 300px;
+	}
+}
+
+	@media (max-width: 440px) {
+	
+	
+	.g-swiper {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	
+	.g-swiper__navigation {
+		align-self: center;
+		margin-top: 20px;
+	}
+	
+	.g-swiper__link-slide::before {
+		padding-top: calc(110% - 6px);
+	}
+}

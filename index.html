@@ -453,14 +453,6 @@
                         </li>
 
                     </ul>
-
-                    <!-- Форма поиcка в нижней части шапки (search)-->
-                    <!-- <form class="hd-bot__form form-search-two flex" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-                        <button class="form-search-two__btn-submit btn-search btn-reset" tabindex="-1" aria-label="Найти"></button>
-                        <label aria-label="Поле для ввода запроса">
-                            <input class="form-search-two__search-input search-input" type="text" placeholder="Поиск по сайту">
-                        </label>
-                    </form> -->
                 </nav>
             </div>
         </div>
@@ -524,109 +516,114 @@
                     <!-- хххххххххххххх  СЛАЙДЕР ГАЛЛЕРЕИ (G-SWIPER)  хххххххххххххххх  -->
                     <div class="gallery__swiper g-swiper">
                         <div class="g-swiper__navigation">
-                            <button class="g-swiper__btn-nav g-btn-prev btn-reset" aria-label="К предыдущему слайду"></button>
+                            <button class="g-swiper__btn-nav g-swiper__btn-nav--prev btn-reset" aria-label="К предыдущему слайду"></button>
                             <div class="g-swiper__pagination"></div>
-                            <button class="g-swiper__btn-nav g-btn-next btn-reset" aria-label="К следующему слайду"></button>
+                            <button class="g-swiper__btn-nav g-swiper__btn-nav--next btn-reset" aria-label="К следующему слайду"></button>
                         </div>
                         <div class="swiper-container g-swiper-box">
                             <div class="swiper-wrapper">
+
                                 <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
-                                    <picture class="hd-top__logo-picture">
-                                        <source media="(max-width: 500px)" srcset="img/header/logo_320.svg">
-                                        <source media="(max-width: 1024px)" srcset="img/header/logo_1024.svg">
-                                        <source media="(min-width: 1025px)" srcset="img/header/logo_big.svg">
-                                        <img class="hd-top__logo-image" src="img/header/logo_1024.svg" alt="Логотип Blanchard">
-                                    </picture>            
-                                    <picture>
-                                        
-                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
-                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
-                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
-                                        
-                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
-                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+                                    <picture class="g-swiper__picture">
+                                        <source media="(max-width: 500px)" srcset="img/gallery/image-slide-1_320.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/gallery/image-slide-1_768.jpg">
+                                        <source media="(max-width: 1024px)" srcset="img/gallery/image-slide-1_1024.jpg">
+                                        <source media="(min-width: 1025px)" srcset="img/gallery/image-slide-1_1920.jpg">
+
+                                        <!-- Здесь картинка от 1025 до 1920 и выше -->
+                                        <img class="g-swiper__image" src="img/gallery/image-slide-1_1920.jpg" alt="Картина №1">
                                     </picture>
                                 </a>
-                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
-                                    <picture>
-                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
-                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
-                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
-                                        
-                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
-                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+
+                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--2" href="#">
+                                    <picture class="g-swiper__picture">
+                                        <source media="(max-width: 500px)" srcset="img/gallery/image-slide-2_320.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/gallery/image-slide-2_768.jpg">
+                                        <source media="(max-width: 1024px)" srcset="img/gallery/image-slide-2_1024.jpg">
+                                        <source media="(min-width: 1025px)" srcset="img/gallery/image-slide-2_1920.jpg">
+
+                                        <!-- Здесь картинка от 1025 до 1920 и выше -->
+                                        <img class="g-swiper__image" src="img/gallery/image-slide-2_1920.jpg" alt="Картина №2">
                                     </picture>
                                 </a>
-                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
-                                    <picture>
-                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
-                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
-                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
-                                        
-                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
-                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+
+                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--3" href="#">
+                                    <picture class="g-swiper__picture">
+                                        <source media="(max-width: 500px)" srcset="img/gallery/image-slide-3_320.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/gallery/image-slide-3_768.jpg">
+                                        <source media="(max-width: 1024px)" srcset="img/gallery/image-slide-3_1024.jpg">
+                                        <source media="(min-width: 1025px)" srcset="img/gallery/image-slide-3_1920.jpg">
+
+                                        <!-- Здесь картинка от 1025 до 1920 и выше -->
+                                        <img class="g-swiper__image" src="img/gallery/image-slide-3_1920.jpg" alt="Картина №3">
                                     </picture>
                                 </a>
-                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
-                                    <picture>
-                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
-                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
-                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
-                                        
-                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
-                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+
+                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--4" href="#">
+                                    <picture class="g-swiper__picture">
+                                        <source media="(max-width: 500px)" srcset="img/gallery/image-slide-4_320.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/gallery/image-slide-4_768.jpg">
+                                        <source media="(max-width: 1024px)" srcset="img/gallery/image-slide-4_1024.jpg">
+                                        <source media="(min-width: 1335px)" srcset="img/gallery/image-slide-4_1920.jpg">
+
+                                        <!-- Здесь картинка от 1335 до 1920 и выше -->
+                                        <img class="g-swiper__image" src="img/gallery/image-slide-4_1920.jpg" alt="Картина №4">
                                     </picture>
                                 </a>
-                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
-                                    <picture>
-                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
-                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
-                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
-                                        
-                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
-                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+
+                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--5" href="#">
+                                    <picture class="g-swiper__picture">
+                                        <source media="(max-width: 500px)" srcset="img/gallery/image-slide-5_320.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/gallery/image-slide-5_768.jpg">
+                                        <source media="(max-width: 1024px)" srcset="img/gallery/image-slide-5_1024.jpg">
+                                        <source media="(min-width: 1335px)" srcset="img/gallery/image-slide-5_1920.jpg">
+
+                                        <!-- Здесь картинка от 1335 до 1920 и выше -->
+                                        <img class="g-swiper__image" src="img/gallery/image-slide-5_1920.jpg" alt="Картина №5">
                                     </picture>
                                 </a>
-                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
-                                    <picture>
-                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
-                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
-                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
-                                        
-                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
-                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
+
+                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--6" href="#">
+                                    <picture class="g-swiper__picture">
+                                        <source media="(max-width: 500px)" srcset="img/gallery/image-slide-6_320.jpg">
+                                        <source media="(max-width: 768px)" srcset="img/gallery/image-slide-6_768.jpg">
+                                        <source media="(max-width: 1024px)" srcset="img/gallery/image-slide-6_1024.jpg">
+                                        <source media="(min-width: 1335px)" srcset="img/gallery/image-slide-6_1920.jpg">
+
+                                        <!-- Здесь картинка от 1335 до 1920 и выше -->
+                                        <img class="g-swiper__image" src="img/gallery/image-slide-6_1920.jpg" alt="Картина №6">
                                     </picture>
                                 </a>
-                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
-                                    <picture>
-                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
-                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
-                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
-                                        
-                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
-                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
-                                    </picture>
-                                </a>
-                                <a class="swiper-slide g-swiper__link-slide g-swiper__link-slide--1" href="#">
-                                    <picture>
-                                        <source srcset="https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg" media="(max-width: 580px)">
-                                        <source srcset="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg" media="(max-width: 960px)">
-                                        <source srcset="https://cdn.pixabay.com/photo/2021/11/14/21/14/animals-6795732__340.jpg" media="(max-width: 1360px)">
-                                        
-                                        <!-- Здесь картинка от 1361 до 1920 и выше -->
-                                        <img class="g-swiper__slide-image" src="https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg" alt="">
-                                    </picture>
-                                </a>
+                                
                             </div>
                         </div>
                     </div>
 
-                    <!-- хххххххххххххх  БЛОК С ОПИСАНИЕМ  хххххххххххххххх  -->
-                    <div class="gallery__last-box g-last-box">
-        
-                        <div class="g-last-box__content">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum iste assumenda omnis facilis, aperiam quisquam.</p>
-                        </div>
+                    <!-- хххххххххххххх  БЛОК С ФИЛЬТРОМ ПО ВЕКУ  хххххххххххххххх  -->
+                    <div class="gallery__last-box filter-century">
+                        <ul class="filter-century__list list-reset flex">
+                            <li class="filter-century__list-item">
+                                <label for="century-19" class="filter-century__label">
+                                    <input class="filter-century__input" type="checkbox" name="century-19" id="century-19">                                    
+                                    <span class="filter-century__span">XIX век</span>
+                                </label>
+                            </li>
+
+                            <li class="filter-century__list-item">
+                                <label for="century-20" class="filter-century__label">
+                                    <input class="filter-century__input" type="checkbox" name="century-20" id="century-20">                                    
+                                    <span class="filter-century__span">XX век</span>
+                                </label>
+                            </li>
+
+                            <li class="filter-century__list-item">
+                                <label for="century-21" class="filter-century__label">
+                                    <input class="filter-century__input" type="checkbox" name="century-21" id="century-21">                                    
+                                    <span class="filter-century__span">Современность</span>
+                                </label>
+                            </li>
+                        </ul> 
+                        
                     </div>
                 </div>                
             </div>
@@ -642,5 +639,6 @@
     <script src="js/choices.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+/* ----------------Секция About----------- */
+
+.about {
+	color: var(--font-color-main);
+	padding-bottom: 71px;
+}
+
+.header-two-lvl {
+	margin: 0;
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 65px;
+}
+
+.about__header {
+	margin-bottom: 16px;
+}
+
+.about__descr {
+	margin: 0;
+	max-width: 1080px;
+	line-height: 32px;
+}

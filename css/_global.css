@@ -9,8 +9,13 @@
     --violet-middle: #9D5CD0;
     --violet-dark: #7943A4;
     --grey: #999;
+	--grey-dark: #666;
+	--grey-dark-semi-transparent: rgba(102, 102, 102, 0.5);
     --semi-transparent-black: rgba(0, 0, 0, 0.4);
 	--semi-transparent-black-two: rgba(0, 0, 0, 0.6);
+	--semi-transparent-black-three: rgba(0, 0, 0, 0.5);
+	--semi-transparent-violet: rgba(194, 131, 243, 0.4);
+	--trasparent-grey: rgba(255, 255, 255, 0.2);
 	
 
 
@@ -198,4 +203,13 @@ body {
 
 .effect-btn-1:active {
 	color: var(--violet-dark);
+}
+
+.main {
+	background-color: var(--bg-color-main);
+}
+
+.section {
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
