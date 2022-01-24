@@ -9,6 +9,7 @@
     --violet-middle: #9D5CD0;
     --violet-dark: #7943A4;
     --grey: #999;
+	--grey-light: #969696;
 	--grey-dark: #666;
 	--grey-dark-semi-transparent: rgba(102, 102, 102, 0.5);
     --semi-transparent-black: rgba(0, 0, 0, 0.4);
@@ -213,3 +214,4 @@ body {
 	padding-top: 80px;
 	padding-bottom: 80px;
 }
+
