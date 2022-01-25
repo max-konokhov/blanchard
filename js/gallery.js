@@ -86,47 +86,15 @@
         }
       
     
-    
-       
       });
 
-      // Скрипт на модальное окно
-
-  // const btns = document.querySelectorAll('.btn');
-//   const modalBtns = document.querySelectorAll('.g-swiper__link-slide');
-//   const modalOverlay = document.querySelector('.modal-overlay ');
-//   const modals = document.querySelectorAll('.modal');
-
-  
-//     modalBtns.forEach((el) => {
-// 	el.addEventListener('click', (e) => {
-// 		let path = e.currentTarget.getAttribute('data-path');
-
-// 		modals.forEach((el) => {
-// 			el.classList.remove('modal--visible');
-// 		});
-
-// 		document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
-// 		modalOverlay.classList.add('modal-overlay--visible');
-// 	});
-// });
-
-// modalOverlay.addEventListener('click', (e) => {
-// 	console.log(e.target);
-
-// 	if (e.target == modalOverlay) {
-// 		modalOverlay.classList.remove('modal-overlay--visible');
-// 		modals.forEach((el) => {
-// 			el.classList.remove('modal--visible');
-// 		});
-// 	}
-// });
+      
 
 
 
   // Скрипт на модальное окно в галерее
   const modalBtn = document.querySelectorAll('.g-swiper__link-slide');
-  const modalBtnClose = document.querySelector('.g-popup__btn-close');
+  const modalBtnClose = document.querySelectorAll('.g-popup__btn-close');
   const modalWrap = document.querySelector('.g-popup__wrap');
   const modalBox = document.querySelectorAll('.g-popup__modal');
 
@@ -146,10 +114,13 @@
 	});
 });
 
+  
   // Закрываю попап по кнопке закрыть через удаление класса
-    modalBtnClose.addEventListener('click', function(){
-    modalWrap.classList.remove('g-popup__wrap--visible');
-  })  
+    modalBtnClose.forEach((elem) => {
+      elem.addEventListener('click', function(){
+        modalWrap.classList.remove('g-popup__wrap--visible');
+      });
+    });
 
   // Закрываю попап для клика по обвертке через удаление класса
 modalWrap.addEventListener('click', (e) => {

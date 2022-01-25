@@ -325,7 +325,7 @@
     border-radius: 50%;
     background-color: var(--violet-light);
     opacity: 0;
-    transition: opacity 0.3 ease-in-out;
+    transition: opacity var(--short);
 }
 
 .filter-century__input:checked + .filter-century__span::after {
@@ -341,15 +341,6 @@
 
 
 /* Модалка */
-
-/* .btn {
-	border: none;
-	cursor: pointer;
-	background-color: #000;
-	color: #fff;
-	padding: 10px;
-} */
-
 
 .g-popup {
 	position: relative;
@@ -368,7 +359,6 @@
 	align-items: center;
 	justify-content: center;
 	background-color:var(--semi-transparent-black-two);
-	/* height: 100vh; */
 	opacity: 0;
 	z-index: 5;
 	visibility: hidden;
@@ -386,8 +376,6 @@
 .g-popup__modal {
 	position: relative;
 	display: none;
-	/* justify-content: center; */
-	/* max-width: 900px; */
 	background-color: var(--white);
 }
 
