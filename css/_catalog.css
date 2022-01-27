@@ -1,0 +1,309 @@
+/* ---------Секция Catalog---------- */
+
+.catalog {
+    background-color: var(--white);
+}
+
+.catalog__content-box {
+    justify-content: space-between;
+}
+
+.catalog__header {
+    margin-bottom: 16px;
+}
+
+.catalog__descr {
+    margin: 0;
+}
+
+.catalog__descr--subtitle {
+    margin-bottom: 40px;
+    max-width: 1080px;
+}
+
+.catalog__painter-info{
+    width: 46.875%;
+}
+
+.catalog__painter-info {
+    
+    /* padding-right: 50px; */
+}
+.catalog__painters {
+    width: 50%;
+}
+.catalog__picture {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+
+.catalog__painter-name {
+    margin: 0;
+}
+
+
+.catalog__painter-years {
+    /* display: inline-block;
+    margin-bottom: 4px; */
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--grey-light-two);
+}
+
+
+
+
+
+
+/* Аккордион (список) */
+
+
+.accordion__item {
+    margin-bottom: -1px;
+}
+
+/* Заголовок секции аккордеона */
+.accordion__item-header {
+    margin: 0;
+    font-size: 24px;
+}
+
+
+/* Кнопка открытия вложения */
+.accordion__item-btn {
+    position: relative;
+    width: 100%;
+    padding: 41px 70px 41px 0;
+    font-weight: 600;
+    line-height: 32px;
+    border:none;
+    border-top: 1px solid var(--grey-ultra-light);
+    border-bottom: 1px solid var(--grey-ultra-light);
+    color: var(--dark);
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    transition-property: border-color, color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+}
+
+.accordion__item-btn::before {
+    position: absolute;
+    content: '';
+    right: 0px;
+    top: 32px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--grey-ultra-light-two);
+    transition: background-color var(--short);
+}
+
+.accordion__item-btn:after {
+    position: absolute;
+    content: '';
+    right: 20px;
+    top: 50px;
+    height: 12px;
+    width: 12px;
+    background-color: transparent;
+    border-left: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+    transform: rotate(-45deg);
+	transition: transform 0.5s;
+}
+
+.accordion__item.is-active .accordion__item-btn::after {
+    transform: rotate(135deg);
+}
+
+
+.accordin__header-text {
+    display: inline-block;
+    transition-property: background-color, color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in;
+}
+
+.accordion__item-btn:hover {
+    border-color: var(--violet-middle);
+    color: var(--violet-middle);
+    z-index: 1;
+}
+
+.accordion__item-btn:hover::before {
+    background-color: var(--violet-super-lite);
+}
+
+.accordion__item-btn:focus {
+    outline: none;
+}
+
+.accordion__item-btn:focus::before {
+    background-color: var(--violet-super-lite);
+}
+
+.accordion__item-btn:focus:not(:hover):not(:active) .accordin__header-text {
+    background-color: var(--violet-middle);
+    color: var(--white)
+}
+
+.accordion__item-btn:active {
+    border-color: var(--violet-dark);
+    color: var(--violet-dark);
+    z-index: 1;
+}
+
+.accordion__item-btn:active::before {
+    background-color: var(--violet-super-lite);
+    outline: 2px solid var(--violet-dark);
+}
+
+
+
+/* Список внутри итема */
+.accordion__panel-list {
+    display: flex;
+    flex-direction: column;
+    /* column-count: 3; */
+    max-height: 340px;
+    overflow: hidden;
+    visibility: hidden;
+    transition-property: height, visibility, padding, flex-wrap;
+    /* transition-property: all; */
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+/* Итем списка */
+.ac-panel__item {
+    flex-shrink: 0;
+    /* max-width: 210px; */
+}
+
+
+.accordion__item.is-active .accordion__panel-list {
+    padding: 25px 0;
+    padding-right: calc(1px + (68 - 1) * ((100vw - 1024px)/ (1920 - 1024)));
+    visibility: visible;
+    flex-wrap:wrap;
+}
+
+.ac-panel__link {
+    border-bottom: 1px solid transparent;
+    transition-property: background-color, color, border-color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+}
+.ac-panel__link:hover:not(:active) {
+    color: var(--violet-middle);
+    border-color: var(--violet-middle);
+}
+
+.ac-panel__link:active {
+    color: var(--violet-dark);
+}
+
+.ac-panel__link:focus {
+    outline: none;
+}
+
+.ac-panel__link:focus:not(:hover):not(:active) {
+    color: var(--white);
+    background-color: var(--violet-middle);
+}
+
+.accordion__empty-panel {
+    max-height: 340px;
+    overflow: hidden;
+    visibility: hidden;
+    transition-property: height, visibility, padding;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+.accordion__item.is-active .accordion__empty-panel {
+    padding: 25px 0;
+    visibility: visible;
+}
+
+.ac-panel__content {
+    width: 100%;
+}
+
+.ac-panel__picture-box {
+    min-width: 275px;
+    min-height: 189px;
+    border: 2px solid var(--grey-light-three);
+    padding: 12px;
+}
+
+.ac-panel__picture {
+    background-color: var(--grey-light-three);
+    height: 100%;
+    width: 100%;
+}
+
+.ac-panel__decr-box {
+    padding-left: 24px;
+    align-self: center;
+}
+
+.ac-panel__descr-title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.ac-panel__descr-caption {
+    margin: 0;
+    margin-bottom: 5px;
+    max-width: 275px;
+    line-height: 22px;
+    
+}
+
+.ac-panel__descr-link {
+    font-weight: 600;
+    line-height: 22px;
+    color: var(--violet-middle);
+}
+
+
+
+
+
+
+
+@media (min-width: 1920px) {
+    .accordion__item.is-active .accordion__panel-list {
+        padding-right: 68px;
+    }
+}
+
+
+
+@media(max-width: 1500px) {
+    .accordion__panel-list {
+        max-height: 440px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .catalog__painter-info {
+        width: 47.5%;
+    }
+    .catalog__painters {
+        width: 47.3%;
+    }
+    .accordion__item.is-active .accordion__panel-list {
+        padding-right: 0;
+    }
+}
