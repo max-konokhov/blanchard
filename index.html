@@ -739,22 +739,43 @@
                 <p class="catalog__descr catalog__descr--subtitle">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.</p>
                 <div class="catalog__content-box flex">
                     <div class="catalog__painter-info">
-                        <picture  class="catalog__picture">
-                            <source media="(max-width: 500px)" srcset="img/catalog/girlandayo_320.jpg">
-                            <source media="(max-width: 768px)" srcset="img/catalog/girlandayo_768.jpg">
-                            <source media="(max-width: 1024px)" srcset="img/catalog/girlandayo_1024.jpg">
-                            <source media="(min-width: 1025px)" srcset="img/catalog/girlandayo_1920.jpg">
 
-                            <!-- Здесь картинка от 1025 до 1920 и выше -->
-                            <img class="catalog__painter-info-image" src="img/catalog/girlandayo_1920.jpg" alt="Портрет Доменико Гирландайо">
-                        </picture>
-                        <h3 class="catalog__painter-name header-third-lvl">Доменико Гирландайо</h3>
-                        <span class="catalog__painter-years">
-                            <time datetime="1448-06-02">2&nbsp;июня 1448</time>
-                            —
-                            <time datetime="1494-01-11">11&nbsp;января 1494.</time>
-                        </span>
-                        <p class="catalog__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).</p>
+                        <!-- Таб №1 -->
+                        <div class="catalog__painter-tabs js-tab-content is-active" data-painters-target="girlandayo">
+                            <picture  class="catalog__picture">
+                                <source media="(max-width: 500px)" srcset="img/catalog/girlandayo_320.jpg">
+                                <source media="(max-width: 768px)" srcset="img/catalog/girlandayo_768.jpg">
+                                <source media="(max-width: 1024px)" srcset="img/catalog/girlandayo_1024.jpg">
+                                <source media="(min-width: 1025px)" srcset="img/catalog/girlandayo_1920.jpg">
+    
+                                <!-- Здесь картинка от 1025 до 1920 и выше -->
+                                <img class="catalog__painter-info-image" src="img/catalog/girlandayo_1920.jpg" alt="Портрет Доменико Гирландайо">
+                            </picture>
+                            <h3 class="catalog__painter-name header-third-lvl">Доменико Гирландайо</h3>
+                            <span class="catalog__painter-years">
+                                <time datetime="1448-06-02">2&nbsp;июня 1448</time>
+                                —
+                                <time datetime="1494-01-11">11&nbsp;января 1494.</time>
+                            </span>
+                            <p class="catalog__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).</p>
+                        </div>
+
+                        <!-- Таб №2 -->
+                        <div class="catalog__painter-tabs js-tab-content" data-painters-target="emty">
+                            <picture  class="catalog__picture">
+                                <source media="(max-width: 500px)" srcset="img/catalog/no-painter_320.jpg">
+                                <source media="(max-width: 768px)" srcset="img/catalog/no-painter_768.jpg">
+                                <source media="(max-width: 1024px)" srcset="img/catalog/no-painter_1024.jpg">
+                                <source media="(min-width: 1025px)" srcset="img/catalog/no-painter_1920.jpg">
+    
+                                <!-- Здесь картинка от 1025 до 1920 и выше -->
+                                <img class="catalog__painter-info-image" src="img/catalog/no-painter_1920.jpg" alt="Портрет Доменико Гирландайо">
+                            </picture>
+                            <h3 class="catalog__painter-name header-third-lvl">Что мы о нем знаем?</h3>
+                            <p class="catalog__descr">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+                            <a href="#gallery" class="catalog__painter-link link-in-gallery">В&nbsp;галерею</a>
+                        </div>
+                        
                     </div>
 
 
@@ -774,76 +795,76 @@
                                 <!-- Список художников (ac-panel) -->
                                 <ul class="accordion__panel-list list-reset ac-panel">
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Бенедетто ди&nbsp;Биндо</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Бенедетто ди&nbsp;Биндо</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Бергоньоне, Амброджо</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Бергоньоне, Амброджо</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Биссоло, Франческо</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Биссоло, Франческо</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Больтраффио, Джованни</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Больтраффио, Джованни</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Бонсиньори, Франческо</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Бонсиньори, Франческо</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Боттичини, Рафаэлло</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Боттичини, Рафаэлло</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Брамантино</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Брамантино</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Бреа, Людовико</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Бреа, Людовико</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Бьяджо д&rsquo;Антонио Туччи</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Бьяджо д&rsquo;Антонио Туччи</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Веккьетта</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Веккьетта</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Андреа Верроккьо</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Андреа Верроккьо</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Доменико Гирландайо</a>
+                                        <button class="ac-panel__btn" data-painters-path="girlandayo" type="button">Доменико Гирландайо</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Беноццо Гоццоли</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Беноццо Гоццоли</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Граначчи, Франческо</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Граначчи, Франческо</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Грегорио ди&nbsp;Чекко</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Грегорио ди&nbsp;Чекко</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Джованни да&nbsp;Удине</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Джованни да&nbsp;Удине</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Джованни ди&nbsp;Паоло</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Джованни ди&nbsp;Паоло</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Джорджоне</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Джорджоне</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Парентино, Бернардо</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Парентино, Бернардо</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Пезеллино</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Пезеллино</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Пьетро Перуджино</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Пьетро Перуджино</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Перуцци, Бальдассаре</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Перуцци, Бальдассаре</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Пизанелло</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Пизанелло</button>
                                     </li>
                                     <li class="ac-panel__item">
-                                        <a href="" class="ac-panel__link">Пинтуриккьо</a>
+                                        <button class="ac-panel__btn" data-painters-path="emty" type="button">Пинтуриккьо</button>
                                     </li>
                                 </ul>
                             </li>
@@ -865,7 +886,7 @@
                                         <div class="ac-panel__decr-box">
                                             <p class="ac-panel__descr-title">Здесь пока пусто</p>
                                             <p class="ac-panel__descr-caption">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
-                                            <a href="#gallery" class="ac-panel__descr-link">В&nbsp;галерею</a>
+                                            <a href="#gallery" class="ac-panel__descr-link link-in-gallery">В&nbsp;галерею</a>
                                         </div>
                                     </div>
                                 </div>
@@ -888,7 +909,7 @@
                                         <div class="ac-panel__decr-box">
                                             <p class="ac-panel__descr-title">Здесь пока пусто</p>
                                             <p class="ac-panel__descr-caption">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
-                                            <a href="#gallery" class="ac-panel__descr-link">В&nbsp;галерею</a>
+                                            <a href="#gallery" class="ac-panel__descr-link link-in-gallery">В&nbsp;галерею</a>
                                         </div>
                                     </div>
                                 </div>
@@ -911,7 +932,7 @@
                                         <div class="ac-panel__decr-box">
                                             <p class="ac-panel__descr-title">Здесь пока пусто</p>
                                             <p class="ac-panel__descr-caption">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
-                                            <a href="#gallery" class="ac-panel__descr-link">В&nbsp;галерею</a>
+                                            <a href="#gallery" class="ac-panel__descr-link link-in-gallery">В&nbsp;галерею</a>
                                         </div>
                                     </div>
                                 </div>
@@ -934,7 +955,7 @@
                                         <div class="ac-panel__decr-box">
                                             <p class="ac-panel__descr-title">Здесь пока пусто</p>
                                             <p class="ac-panel__descr-caption">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
-                                            <a href="#gallery" class="ac-panel__descr-link">В&nbsp;галерею</a>
+                                            <a href="#gallery" class="ac-panel__descr-link link-in-gallery">В&nbsp;галерею</a>
                                         </div>
                                     </div>
                                 </div>
@@ -957,7 +978,7 @@
                                         <div class="ac-panel__decr-box">
                                             <p class="ac-panel__descr-title">Здесь пока пусто</p>
                                             <p class="ac-panel__descr-caption">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
-                                            <a href="#gallery" class="ac-panel__descr-link">В&nbsp;галерею</a>
+                                            <a href="#gallery" class="ac-panel__descr-link link-in-gallery">В&nbsp;галерею</a>
                                         </div>
                                     </div>
                                 </div>
@@ -980,7 +1001,7 @@
                                         <div class="ac-panel__decr-box">
                                             <p class="ac-panel__descr-title">Здесь пока пусто</p>
                                             <p class="ac-panel__descr-caption">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
-                                            <a href="#gallery" class="ac-panel__descr-link">В&nbsp;галерею</a>
+                                            <a href="#gallery" class="ac-panel__descr-link link-in-gallery">В&nbsp;галерею</a>
                                         </div>
                                     </div>
                                 </div>

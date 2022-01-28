@@ -25,13 +25,28 @@
     width: 46.875%;
 }
 
-.catalog__painter-info {
-    
-    /* padding-right: 50px; */
+
+.catalog__painter-tabs {
+    display: none;
+    width: 100%;
 }
-.catalog__painters {
-    width: 50%;
+
+.catalog__painter-tabs.is-active {
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .catalog__picture {
     display: inline-block;
     margin-bottom: 20px;
@@ -55,6 +70,9 @@
 
 
 
+.catalog__painters {
+    width: 50%;
+}
 
 /* Аккордион (список) */
 
@@ -120,7 +138,7 @@
 }
 
 
-.accordin__header-text {
+.accordion__header-text {
     display: inline-block;
     transition-property: background-color, color;
     transition-duration: 0.25s;
@@ -145,7 +163,7 @@
     background-color: var(--violet-super-lite);
 }
 
-.accordion__item-btn:focus:not(:hover):not(:active) .accordin__header-text {
+.accordion__item-btn:focus:not(:hover):not(:active) .accordion__header-text {
     background-color: var(--violet-middle);
     color: var(--white)
 }
@@ -193,26 +211,30 @@
     flex-wrap:wrap;
 }
 
-.ac-panel__link {
+.ac-panel__btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
     border-bottom: 1px solid transparent;
     transition-property: background-color, color, border-color;
     transition-duration: 0.25s;
     transition-timing-function: ease;
 }
-.ac-panel__link:hover:not(:active) {
+.ac-panel__btn:hover:not(:active) {
     color: var(--violet-middle);
     border-color: var(--violet-middle);
 }
 
-.ac-panel__link:active {
+.ac-panel__btn:active {
     color: var(--violet-dark);
 }
 
-.ac-panel__link:focus {
+.ac-panel__btn:focus {
     outline: none;
 }
 
-.ac-panel__link:focus:not(:hover):not(:active) {
+.ac-panel__btn:focus:not(:hover):not(:active) {
     color: var(--white);
     background-color: var(--violet-middle);
 }
@@ -270,13 +292,33 @@
     
 }
 
-.ac-panel__descr-link {
+
+.link-in-gallery {
+    display: inline-block;
     font-weight: 600;
     line-height: 22px;
     color: var(--violet-middle);
+    transition-property: color, background-color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
 }
 
+.link-in-gallery:hover:not(:active) {
+    color: var(--violet-light);
+}
 
+.link-in-gallery:focus {
+    outline: none;
+}
+
+.link-in-gallery:focus:not(:hover):not(:active) {
+    color: var(--white);
+    background-color: var(--violet-middle);
+}
+
+.link-in-gallery:active {
+    color: var(--violet-dark);
+}
 
 
 

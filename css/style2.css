@@ -1,0 +1,156 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.container  {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab-btns {
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+.btn.is-active {
+    background-color: navajowhite;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.is-active {
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: .5s;
+}
+
+.second-tabs {
+  width: 30%;
+}
+
+.tab-content-countries.is-active {
+  display: flex;
+  justify-content: space-between;
+}
+
+.questions {
+  width: 65%;
+  list-style: none;
+  padding-left: 0;
+}
+
+.question:first-child {
+  border-top: 1px solid lightgray;
+}
+
+.question {
+  margin-top: -1px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid lightgray;
+  transition: border-color .3s ease;
+}
+
+.heading {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 40px 120px 40px 40px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color .3s ease;
+}
+
+.content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.text {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.question:first-child:hover,
+.question:hover,
+.question:focus-within {
+  border-color: #9D5CD0;
+}
+
+.head-icon {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  transform: translateY(-50%) rotate(-180deg);
+  transition: background-color.3s, .6s ease, transform .3s, .6s ease;
+}
+
+.head-icon-round {
+  transition: fill .5s ease, stroke .5s ease;
+}
+
+.heading:hover,
+.heading:focus {
+  color: #9D5CD0;
+  outline: none;
+}
+
+.heading:hover .head-icon-round,
+.heading:focus .head-icon-round {
+  fill: #D1A9F0;
+  stroke: #D1A9F0;
+}
+
+.heading:hover .head-icon::before,
+.heading:hover .head-icon::after,
+.heading:focus .head-icon::before,
+.heading:focus .head-icon::after {
+  background-color: #fff;
+}
+
+.heading.ui-accordion-header-active .head-icon {
+  transform: translateY(-50%) rotate(0);
+}
+
+.heading.ui-accordion-header-active .head-icon-round {
+  fill: #D1A9F0;
+  stroke: #9D5CD0;
+}
+
+.test-list {
+  column-count: 3;
+  list-style: none;
+  padding-left: 0;
+}
+
+.test-item {
+  width: calc(100% / 3 - 20px);
+}
+
+@media (max-width: 1024px) {
+  .test-item {
+    width: calc(100% / 2 - 30px);
+  }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
