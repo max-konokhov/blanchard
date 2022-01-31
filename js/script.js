@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    // БУРГЕР
 
-  // здесь мы определяем функцию, которая отвеает за работу меню, в ней не нужно ничего менять
+    // здесь мы определяем функцию, которая отвеает за работу меню, в ней не нужно ничего менять
     function setBurger(params) {
         const btn = document.querySelector(`.${params.btnClass}`);
         const menu = document.querySelector(`.${params.menuClass}`);
@@ -37,13 +38,19 @@ document.addEventListener('DOMContentLoaded', function() {
         hiddenClass: "is-closed" // класс закрывающегося состояния (удаляется сразу после закрытия)
     });
 
+
+
+
+
+    // ФОРМА ПОИСКА
+
     function setSearch(params) {
         const openBtn = document.querySelector(`.${params.openBtnClass}`);
         const search = document.querySelector(`.${params.searchClass}`);
         const closeBtn = search.querySelector(`.${params.closeBtnClass}`);
 
         search.addEventListener("animationend", function (evt) {
-            if (this._isOpened) {
+            if (this._isOpened && !openBtn.disabled) {
                 this.classList.remove(params.activeClass);
                 this.classList.remove(params.hiddenClass);
                 this._isOpened = false;

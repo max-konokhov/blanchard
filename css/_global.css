@@ -136,6 +136,30 @@ body {
 	display: flex;
 }
 
+/* Заголовки h1-h6 */
+
+.header-two-lvl {
+	margin: 0;
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 65px;
+}
+
+.header-third-lvl {
+	margin: 0;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 33px;
+}
+
+.header-fourth-lvl {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 22px;
+	
+}
+
 /* ширина контента 1600px + 100 на отступы */
 .container {
 	max-width: var(--container-max);
@@ -219,3 +243,15 @@ body {
 	padding-bottom: 80px;
 }
 
+
+/* Класс для визуального скрытия элементов (для чекбоксов) */
+.visually-hidden {
+    position: absolute;
+    width: 1px;  
+    height: 1px;  
+    margin: -1px;  
+    border: 0;  
+    padding: 0;
+    clip: rect(0, 0, 0, 0);  
+    overflow: hidden;
+}

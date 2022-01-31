@@ -8,25 +8,32 @@
 	background-repeat: no-repeat;
 	color: var(--white);
 	line-height: 32px;
+	padding-bottom: 81px;
 }
 
-.gallery__content-wrap {
+.gallery-box {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: flex-start;
+	/* outline: 1px solid yellow; */
 }
 
-.gallery__first-box,
-.gallery__last-box {
+
+
+/* Левый стобец галереи */
+
+.g-filters {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	width: calc(400 / 1600 * 100%);
 }
 
+/* верхний фильтр */
 .gallery__header {
 	margin-bottom: 16px;
 }
 
-.gallery__caption {
+.g-filters__caption {
 	display: inline-block;
 	margin-bottom: 10px;
 	font-weight: 600;
@@ -122,6 +129,79 @@
 	border-color:transparent;
 }
 
+
+
+/* Фильтр по веку */
+
+.filter-century__list {
+    flex-direction: column;
+}
+
+.filter-century__label {
+    position: relative;
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+.filter-century__span {
+    display: inline-block;
+	transition: color var(--short);
+}
+
+.filter-century__span::before {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    left: 0;
+    top: calc(50% - 5px);
+    border: 1px solid var(--white);
+    transition: border-color var(--short);
+}
+
+.filter-century__input:checked + .filter-century__span::before {
+    border: 1px solid var(--violet-light);
+}
+
+.filter-century__span::after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 4px;
+    top: calc(50% - 1px);
+    left: 4px;
+    border-radius: 50%;
+    background-color: var(--violet-light);
+    opacity: 0;
+    transition: opacity var(--short);
+}
+
+.filter-century__input:checked + .filter-century__span::after {
+    opacity: 1;
+}
+
+.filter-century__input:checked + .filter-century__span {
+    color: var(--violet-light);
+}
+
+/* Состояние focus для скрытого input */
+.filter-century__input:focus + .filter-century__span,
+.filter-century__input:focus + .filter-century__span::before {
+	border-color: var(--violet-light);
+	color: var(--violet-light);
+}
+
+/* Состояние hover для label */
+.filter-century__label:hover .filter-century__span,
+.filter-century__label:hover .filter-century__span::before {
+	border-color: var(--violet-light);
+	color: var(--violet-light);
+}
+
+
+
+/* Правый столбец галереи */
+
 .g-swiper {
 	width: calc(1150 / 1600 * 100%);
 	margin-right: 0;
@@ -136,7 +216,7 @@
 	display: inline-flex;
     min-width: 130px;
 	align-items: center;
-	margin-bottom: 28px;
+	margin-bottom: 29px;
 }
 
 .g-swiper__pagination {
@@ -274,142 +354,6 @@
 }
 
 
-.gallery__last-box {
-	position: relative;
-}
-
-.filter-century__list {
-	position: absolute;
-    flex-direction: column;
-	width: 100%;
-	left: 0;
-	bottom: 0;
-}
-
-.filter-century__label {
-    position: relative;
-    padding-left: 24px;
-    cursor: pointer;
-}
-
-.filter-century__input {
-    display: none;
-}
-
-.filter-century__span {
-    display: inline-block;
-}
-
-.filter-century__span::before {
-    position: absolute;
-    content: '';
-    width: 12px;
-    height: 12px;
-    left: 0;
-    top: calc(50% - 5px);
-    border: 1px solid var(--white);
-    transition: border-color var(--short);
-}
-
-.filter-century__input:checked + .filter-century__span::before {
-    border: 1px solid var(--violet-light);
-}
-
-.filter-century__span::after {
-    position: absolute;
-    content: '';
-    width: 4px;
-    height: 4px;
-    top: calc(50% - 1px);
-    left: 4px;
-    border-radius: 50%;
-    background-color: var(--violet-light);
-    opacity: 0;
-    transition: opacity var(--short);
-}
-
-.filter-century__input:checked + .filter-century__span::after {
-    opacity: 1;
-}
-
-.filter-century__input:checked + .filter-century__span {
-    color: var(--violet-light);
-}
-
-
-
-
-
-/* Модалка */
-
-.g-popup {
-	position: relative;
-	color: var(--dark);
-}
-
-.g-popup__wrap {
-	display: flex;
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100vh;
-	align-items: center;
-	justify-content: center;
-	background-color:var(--semi-transparent-black-two);
-	opacity: 0;
-	z-index: 5;
-	visibility: hidden;
-	transition-property: visibility, opacity;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
-}
-
-.g-popup__wrap--visible {
-	opacity: 1;
-	visibility: visible;
-}
-
-
-.g-popup__modal {
-	position: relative;
-	display: none;
-	background-color: var(--white);
-}
-
-.g-popup__modal--visible {
-	display: flex;
-}
-
-
-.g-popup__image-box {
-	width: 400px;
-	height: 500px;
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: auto 100%;
-}
-
-.g-popup__image-box--1 {
-	background-image: url('../img/gallery/image-slide-1_1920.jpg');
-}
-.g-popup__image-box--2 {
-	background-image: url('../img/gallery/image-slide-2_1920.jpg');
-}
-.g-popup__image-box--3 {
-	background-image: url('../img/gallery/image-slide-3_1920.jpg');
-}
-.g-popup__image-box--4 {
-	background-image: url('../img/gallery/image-slide-4_1920.jpg');
-}
-.g-popup__image-box--5 {
-	background-image: url('../img/gallery/image-slide-5_1920.jpg');
-}
-.g-popup__image-box--6 {
-	background-image: url('../img/gallery/image-slide-6_1920.jpg');
-}
 
 
 
@@ -417,51 +361,6 @@
 
 
 
-
-
-.g-popup__content-box {
-	display: flex;
-	flex-direction: column;
-	padding: 14px 50px 10px;
-	align-self: center;
-	max-width: 500px;
-}
-
-.header-third-lvl {
-	margin: 0;
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 33px;
-}
-
-
-.header-fourth-lvl {
-	margin: 0;
-	font-size: 16px;
-	line-height: 22px;
-	font-weight: 600;
-}
-
-
-
-.g-popup__picture-year {
-	margin: 0;
-	margin-bottom: 33px;
-	font-size: 12px;
-	line-height: 16px;
-	color: var(--grey-light);
-}
-
-.g-popup__descr {
-	margin: 0;
-}
-
-.g-popup__btn-close {
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	color: var(--black);
-}
 
 
 
@@ -479,93 +378,71 @@
 
 
 @media (max-width: 1024px) {
-	.gallery__first-box, .gallery__last-box {
+	.g-filters {
 		width: calc(280 / 924 * 100%);
+	}
+	
+	.filter-century {
+		position: relative;
+	}
+
+	.filter-century__list {
+		position: absolute;
+		left: 0;
+		bottom: 34px;
 	}
 
 	.g-swiper {
 		width: calc(594 / 924 * 100%);
-	}
-
-	.g-swiper__navigation {
-		margin-bottom: 29px;
+		padding-top: 16px;
 	}
 
 	.g-swiper__link-slide::before {
 		padding-top: calc(112.5% - 6px);
-	}
-
-	.filter-century__list {
-		bottom: 35px;
-	}
-	.g-popup__image-box {
-		width: 264px;
-		height: 594px;
-	}
-
-	.g-popup__content-box {
-		max-width: 330px;
 	}
 }
 
 
 
 @media (max-width: 768px) {
-	.gallery__first-box,
-	.g-swiper {
-		width: 100%;
-	}
-
-	.gallery__first-box {
-		margin-bottom: 39px;
-	}
-	.choices {
-		max-width: 280px;
-	}
-
-	.g-swiper {
-		order:1;
+	.gallery {
+		padding-bottom: 80px;
 	}
 	
-	.g-swiper__link-slide::before {
-		padding-top: calc(104.8% - 6px);
+	.gallery-box {
+		flex-direction: column;
 	}
 
-	.gallery__last-box {
+	.g-filters,
+	.g-swiper {
 		width: 100%;
-		margin-bottom: 17px;
+	}
+
+	.g-filters {
+		margin-bottom: 33px;
+	}
+	.g-filters__art-kinds {
+		margin-bottom: 40px;
+	}
+
+	.choices {
+		max-width: 280px;
 	}
 
 	.filter-century__list {
 		position: static;
 	}
-	.g-popup__image-box {
-		
-		width: 301px;
-	}
 
-	.g-popup__content-box {
-		max-width: 367px;
+	.g-swiper {
+		padding: 0;
+	}
+	
+	.g-swiper__link-slide::before {
+		padding-top: calc(104.8% - 6px);
 	}
 }
 
-@media (max-width: 760px) {
-	.g-popup__modal {
-		width: 50vw;
-		min-width: 290px;
-		align-items: center;
-		flex-direction: column;
-	}
-	.g-popup__image-box {
-		width: 100%;
-		height: 25vh;
-		background-size: 100% auto;
-	}
 
-	.g-popup__content-box {
-		padding: 20px;
-	}
-}
 
 
 @media (max-width: 420px) {
@@ -573,16 +450,19 @@
 		padding-bottom: 48px;
 	}
 
-	.gallery__first-box {
+	.g-filters {
 		margin-bottom: 30px;
 	}
 
+	.g-filters__art-kinds {
+		margin-bottom: 29px;
+	}
 	.gallery__header {
 		margin-bottom: 11px;
 	}
 
-	.gallery__caption {
-		margin-bottom: 5px;
+	.g-filters__caption {
+		margin-bottom: 7px;
 	}
 
 	.choices {
@@ -592,7 +472,7 @@
 	.g-swiper {
 		display: flex;
 		flex-direction: column-reverse;
-		padding-top: 13px;
+		padding-top: 0;
 	}
 
 	.g-swiper__navigation {
@@ -603,14 +483,5 @@
 
 	.g-swiper__link-slide::before {
 		padding-top: calc(126.6% - 6px);
-	}
-
-	.g-popup__image-box {
-		height: 200px;
-	}
-
-	.g-popup__btn-close {
-		right: 10px;
-		top: 10px;
 	}
 }

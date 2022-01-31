@@ -17,14 +17,14 @@
 }
 
 .catalog__descr--subtitle {
-    margin-bottom: 40px;
+    margin-bottom: 39px;
     max-width: 1080px;
 }
 
+/* Левый блок с табами */
 .catalog__painter-info{
     width: 46.875%;
 }
-
 
 .catalog__painter-tabs {
     display: none;
@@ -52,15 +52,12 @@
     margin-bottom: 20px;
 }
 
-
 .catalog__painter-name {
     margin: 0;
+    line-height: 30px;
 }
 
-
 .catalog__painter-years {
-    /* display: inline-block;
-    margin-bottom: 4px; */
     font-size: 12px;
     line-height: 16px;
     color: var(--grey-light-two);
@@ -69,13 +66,14 @@
 
 
 
+/* Правый блок с аккордионом */
 
 .catalog__painters {
     width: 50%;
 }
 
-/* Аккордион (список) */
 
+/* Аккордион (список) */
 
 .accordion__item {
     margin-bottom: -1px;
@@ -137,7 +135,6 @@
     transform: rotate(135deg);
 }
 
-
 .accordion__header-text {
     display: inline-block;
     transition-property: background-color, color;
@@ -179,37 +176,42 @@
     outline: 2px solid var(--violet-dark);
 }
 
-
-
-/* Список внутри итема */
-.accordion__panel-list {
-    display: flex;
-    flex-direction: column;
-    /* column-count: 3; */
-    max-height: 340px;
+/* Контейнер (dropdown) */
+.ac-panel {
     overflow: hidden;
     visibility: hidden;
-    transition-property: height, visibility, padding, flex-wrap;
-    /* transition-property: all; */
+    transition-property: height, visibility;
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
 }
 
 
-
-/* Итем списка */
-.ac-panel__item {
-    flex-shrink: 0;
-    /* max-width: 210px; */
-}
-
-
-.accordion__item.is-active .accordion__panel-list {
-    padding: 25px 0;
-    padding-right: calc(1px + (68 - 1) * ((100vw - 1024px)/ (1920 - 1024)));
+.accordion__item.is-active .ac-panel {
     visibility: visible;
-    flex-wrap:wrap;
 }
+
+/* Список художников */
+.ac-panel__list {
+    
+    column-count: 3;
+    /* padding: 25px 0; */
+    padding: 25px 50px 25px 0;
+}
+
+/* .ac-panel__item {
+    width: calc(100% / 3 - 20px);
+} */
+
+/* .ac-panel__btn {
+    width: max-content;
+} */
+
+
+
+
+
+
+
 
 .ac-panel__btn {
     background-color: transparent;
@@ -324,28 +326,60 @@
 
 
 
-@media (min-width: 1920px) {
-    .accordion__item.is-active .accordion__panel-list {
-        padding-right: 68px;
-    }
-}
+
 
 
 
 @media(max-width: 1500px) {
-    .accordion__panel-list {
-        max-height: 440px;
+    /* Прячем элементы заглушки */
+    .ac-panel__item:nth-last-child(-n+3) {
+        display: none;
     }
+
+    /* Выстраиваем список художников в 2 столбца */
+    .ac-panel__list {
+        column-count: 2;
+        padding-right: 0;
+    }
+    
+
 }
 
 @media(max-width: 1024px) {
     .catalog__painter-info {
         width: 47.5%;
     }
+    .catalog__picture {
+        margin-bottom: 22px;
+    }
     .catalog__painters {
         width: 47.3%;
     }
-    .accordion__item.is-active .accordion__panel-list {
-        padding-right: 0;
-    }
 }
+
+@media(max-width: 970px) {
+    .catalog__content-box {
+        flex-direction: column-reverse;
+    }
+
+    .catalog__painter-info,
+    .catalog__painters {
+        width: 100%;
+    }
+
+    .catalog__descr--subtitle {
+        margin-bottom: 19px;
+    }
+    .catalog__painters {
+        margin-bottom: 50px;
+    }
+
+    .ac-panel__list {
+        column-count: 3;
+    }
+
+    /* Прячем элементы заглушки */
+    .ac-panel__item:nth-last-child(-n+3) {
+        display: block;
+    }
+}   

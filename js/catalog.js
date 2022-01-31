@@ -1,5 +1,5 @@
 (() => {
-    
+
     // Функция для табов с параметрами
     function setTabs (dataPath, dataTarget) {
         const painterBtn = document.querySelectorAll(`.ac-panel__btn[${dataPath}]`);
@@ -37,5 +37,19 @@
         duration: 600,
         
     });
+
+
+    // Вырезать
+    
+    // Скрипт для отбора элементов первого столбца списка художников слайдера, учитывая нечетное количество тоже
+
+    // const countItems = document.querySelectorAll('.accordion__panel-list .ac-panel__item').length;
+    // const half = Math.ceil(countItems / 2) - 1;
+    
+    // document.querySelectorAll('.accordion__panel-list .ac-panel__item').forEach((el, index) => {
+    // if(index <= half) {
+    //     el.classList.add("first-column")
+    // }
+    // });
 
 })();

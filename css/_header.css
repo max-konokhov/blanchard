@@ -229,12 +229,9 @@
     }
 }
 
-/* Обвертка инпута */
-.form-search__input-label {
-	order: 2;
-}
 
 .form-search__input {
+	order: 2;
 	width: calc(150px + (218 - 150) * ((100vw - 1024px)/ (1920 - 1024)));
 	padding: 0;
 	background-color: transparent;
@@ -243,7 +240,7 @@
 	color: inherit;
 	font-size: 18px;
 	font-weight: 400;
-	line-height: 32px;
+	line-height: 30px;
 	transition: border-color var(--short);
 }
 
@@ -681,20 +678,21 @@
 		position: absolute;
 		top: 50px;
 		right: 50px;
-		padding-top: 2px;
-		padding-right: 5px;
+		
+		padding-right: 6px;
 		display: none;
 		transform: translateY(-50%);
 		background-color: var(--black);
 	}
 
-	.form-search__input-label {
-		margin-right: 23px;
+	.form-search__btn-submit {
+		margin-right: 9px;
 	}
 
 	.form-search__input {
 		width: calc(120px + (218 - 120) * ((100vw - 768px)/ (1024 - 768)));
-		line-height: 27px;
+		margin-right: 23px;
+		line-height: 30px;
 	}
 
 	.form-search__input::placeholder {
@@ -742,20 +740,17 @@
 		width: 27px;
 	}
 
-    .hd-top__form {
+    .form-search {
         left: 50px;
 		padding-right: 0;
         justify-content: space-between;
         padding-top: 15px;
-        padding-bottom: 15px;
+        padding-bottom: 18px;
         z-index: 3;
         background-color: var(--bg-color-second);
     }
     
-	.form-search__input-label {
-		padding: 0;
-        width: 100%;
-    }
+	
 
 	.form-search__input {
         width: 100%;
@@ -865,7 +860,7 @@
 		right: 0;
 		left: 0;
 		min-height: 75px;
-		padding: 15px 15px 17px 57px;
+		padding: 14px 15px 19px 57px;
 		display: none;
 		align-items: flex-end;
 		background-color: var(--bg-color-second);
@@ -907,13 +902,10 @@
 		}
 	}
 
-	.form-search__input-label {
-		display: inline-flex;
-		padding: 0 9px 2px 0;
-		align-items: flex-end;
-	}
+	
 
 	.form-search__input {
+		margin-right: 32px;
 		padding-right: 2px;
 		padding-left: 2px;
 		font-size: 12px;
