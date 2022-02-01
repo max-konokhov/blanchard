@@ -110,8 +110,8 @@
     content: '';
     right: 0px;
     top: 32px;
-    height: 50px;
-    width: 50px;
+    height: 48px;
+    width: 48px;
     border-radius: 50%;
     background-color: var(--grey-ultra-light-two);
     transition: background-color var(--short);
@@ -120,7 +120,7 @@
 .accordion__item-btn:after {
     position: absolute;
     content: '';
-    right: 20px;
+    right: 19px;
     top: 50px;
     height: 12px;
     width: 12px;
@@ -131,10 +131,6 @@
 	transition: transform 0.5s;
 }
 
-.accordion__item.is-active .accordion__item-btn::after {
-    transform: rotate(135deg);
-}
-
 .accordion__header-text {
     display: inline-block;
     transition-property: background-color, color;
@@ -142,6 +138,36 @@
     transition-timing-function: ease-in;
 }
 
+/* Состояния и эффекты для блоков аккордеона: */
+
+/* Активный блок аккордеона */
+
+ /* цвет заголовка */
+.accordion__item.is-active .accordion__header-text {
+    color: var(--violet-dark);
+    background-color: var(--white);
+}
+
+/* цвет бордеров кнопки */
+.accordion__item.is-active .accordion__item-btn {
+    border-color: var(--violet-dark);
+}
+
+/* цвет обводки и заливки псевдо-кнопки */
+.accordion__item.is-active .accordion__item-btn::before {
+    outline: 2px solid var(--violet-dark);
+    background-color: var(--violet-super-lite);
+}
+
+/* поворот стрелки на псепдо-кнопке */
+.accordion__item.is-active .accordion__item-btn::after {
+    transform: rotate(135deg);
+}
+
+
+
+/* Не активный блок аккордеона */
+/* HOVER (только на не активный блок)*/
 .accordion__item-btn:hover {
     border-color: var(--violet-middle);
     color: var(--violet-middle);
@@ -152,6 +178,7 @@
     background-color: var(--violet-super-lite);
 }
 
+/* FOCUS (частично накладывается на активный блок) */
 .accordion__item-btn:focus {
     outline: none;
 }
@@ -165,6 +192,7 @@
     color: var(--white)
 }
 
+/* ACTIVE (дублирует по сути активное состояние блока) */
 .accordion__item-btn:active {
     border-color: var(--violet-dark);
     color: var(--violet-dark);
@@ -175,6 +203,7 @@
     background-color: var(--violet-super-lite);
     outline: 2px solid var(--violet-dark);
 }
+
 
 /* Контейнер (dropdown) */
 .ac-panel {
@@ -212,7 +241,7 @@
 
 
 
-
+/* кнопка открытия таба с именем художника */
 .ac-panel__btn {
     background-color: transparent;
     border: none;
@@ -223,6 +252,8 @@
     transition-duration: 0.25s;
     transition-timing-function: ease;
 }
+
+/* состояния и эффекты для нее */
 .ac-panel__btn:hover:not(:active) {
     color: var(--violet-middle);
     border-color: var(--violet-middle);
@@ -241,28 +272,17 @@
     background-color: var(--violet-middle);
 }
 
-.accordion__empty-panel {
-    max-height: 340px;
-    overflow: hidden;
-    visibility: hidden;
-    transition-property: height, visibility, padding;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
-}
 
 
 
-.accordion__item.is-active .accordion__empty-panel {
-    padding: 25px 0;
-    visibility: visible;
-}
 
+/* Дропдаун для полупустых блоков аккордиона */
 .ac-panel__content {
-    width: 100%;
+    padding: 25px 0;
 }
 
 .ac-panel__picture-box {
-    min-width: 275px;
+    width: calc(275 * 100% / 800);
     min-height: 189px;
     border: 2px solid var(--grey-light-three);
     padding: 12px;
@@ -329,31 +349,40 @@
 
 
 
+/* Вынужденный брейкпойнт для списка художников
+ в 1-м блоке аккордиона в секции КАТАЛОГ */
 
 @media(max-width: 1500px) {
-    /* Прячем элементы заглушки */
-    .ac-panel__item:nth-last-child(-n+3) {
-        display: none;
-    }
-
     /* Выстраиваем список художников в 2 столбца */
     .ac-panel__list {
         column-count: 2;
         padding-right: 0;
     }
-    
 
+    /* Прячем элементы заглушки */
+    .ac-panel__item:nth-last-child(-n+3) {
+        display: none;
+    }
 }
+
 
 @media(max-width: 1024px) {
     .catalog__painter-info {
         width: 47.5%;
     }
+
     .catalog__picture {
         margin-bottom: 22px;
     }
+
     .catalog__painters {
         width: 47.3%;
+    }
+
+    .ac-panel__picture-box {
+        width: calc(189 * 100% / 437);
+        padding: 8px;
+        min-height: 130px;
     }
 }
 
@@ -371,15 +400,91 @@
         margin-bottom: 19px;
     }
     .catalog__painters {
-        margin-bottom: 50px;
+        margin-bottom: 52px;
     }
 
     .ac-panel__list {
         column-count: 3;
     }
 
-    /* Прячем элементы заглушки */
+    /* Показываем элементы заглушки */
     .ac-panel__item:nth-last-child(-n+3) {
         display: block;
     }
+
+    .ac-panel__picture-box {
+        max-width: 275px;
+        padding: 12px;
+        min-height: 189px;
+    }
 }   
+
+@media(max-width: 760px) {
+    .ac-panel__list {
+        column-count: 2;
+    }
+    /* Прячем элементы заглушки */
+    .ac-panel__item:nth-last-child(-n+3) {
+        display: none;
+    }
+    .ac-panel__btn {
+        letter-spacing: -0.5px;
+    }
+}
+
+@media(max-width: 420px) {
+    .catalog__header {
+        margin-bottom: 12px;
+    }
+
+    .catalog__descr--subtitle {
+        display: none;
+    }
+
+    .catalog__picture {
+        margin-bottom: 13px;
+    }
+
+    .catalog__painter-name {
+        margin-bottom: 5px;
+    }
+    .accordion__item-btn {
+        padding: 19px 40px 19px 0;
+    }
+
+    .accordion__item-btn::before {
+        width: 28px;
+        height: 28px;
+        top: 23px;
+        
+    }
+
+    .accordion__item-btn:after {
+        width: 7px;
+        height: 7px;
+        top: 34px;
+        right: 11px;
+    }
+
+    .accordion__header-text {
+        font-size: 18px;
+    }
+
+    .ac-panel__list {
+        column-count: 1;
+        padding: 20px 0;
+    }
+    .ac-panel__btn {
+        letter-spacing: normal;
+    }
+
+    .ac-panel__picture-box {
+        max-width: 130px;
+        padding: 6px;
+        min-height: 90px;
+    }
+    
+    .ac-panel__descr-title {
+        font-size: 16px;
+    }
+}

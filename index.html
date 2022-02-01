@@ -501,7 +501,7 @@
                         <h2 class="gallery__header header-two-lvl">Галерея</h2>
                         <label class="g-filters__label-select">
                             <span class="g-filters__caption">Фильтр:</span>
-                            <select class="g-filters__select" name="g-select" id="g-select">
+                            <select class="g-filters__select" name="g-select" id="g-select" aria-label="Выбор вида искусства">
                                 <option value="myplaceholder">Живопись</option>
                                 <option value="drawing">Рисунок</option>
                                 <option value="sculpture">Скульптура</option>
@@ -678,7 +678,7 @@
                             <!-- Художники 15-го века -->
                             <li class="accordion__item ac">
                                 <h3 class="accordion__item-header ac-header">
-                                    <button class="accordion__item-btn ac-trigger">
+                                    <button class="accordion__item-btn ac-trigger" aria-label="Открыть вкладку художников 15-го века">
                                         <span class="accordion__header-text">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span> 
                                     </button>
                                 </h3>
@@ -761,13 +761,13 @@
 
                                         <!-- заглушки под макет -->
                                         <li class="ac-panel__item">
-                                            <button class="ac-panel__btn" data-painters-path="emty" type="button" tabindex="-1"></button>
+                                            <button class="ac-panel__btn" data-painters-path="emty" type="button" tabindex="-1" aria-hidden="true"></button>
                                         </li>
                                         <li class="ac-panel__item">
-                                            <button class="ac-panel__btn" data-painters-path="emty" type="button" tabindex="-1"></button>
+                                            <button class="ac-panel__btn" data-painters-path="emty" type="button" tabindex="-1" aria-hidden="true"></button>
                                         </li>
                                         <li class="ac-panel__item">
-                                            <button class="ac-panel__btn" data-painters-path="emty" type="button" tabindex="-1"></button>
+                                            <button class="ac-panel__btn" data-painters-path="emty" type="button" tabindex="-1" aria-hidden="true"></button>
                                         </li>
                                         
                                         
@@ -779,13 +779,13 @@
                             <!-- Художники 16-го века -->
                             <li class="accordion__item ac">
                                 <h3 class="accordion__item-header ac-header">
-                                    <button class="accordion__item-btn ac-trigger">
+                                    <button class="accordion__item-btn ac-trigger" aria-label="Открыть вкладку художников 16-го века">
                                         <span class="accordion__header-text">C&nbsp;1500 по&nbsp;1599&nbsp;гг.</span> 
                                     </button>
                                 </h3>
 
                                 <!-- Список художников (ac-panel) -->
-                                <div class="accordion__empty-panel accordion__empty-panel--16 ac-panel">
+                                <div class="accordion__dropdown ac-panel">
                                     <div class="ac-panel__content flex">
                                         <div class="ac-panel__picture-box">
                                             <div class="ac-panel__picture"></div>
@@ -802,13 +802,13 @@
                             <!-- Художники 17-го века -->
                             <li class="accordion__item ac">
                                 <h3 class="accordion__item-header ac-header">
-                                    <button class="accordion__item-btn ac-trigger">
+                                    <button class="accordion__item-btn ac-trigger" aria-label="Открыть вкладку художников 17-го века">
                                         <span class="accordion__header-text">C&nbsp;1600 по&nbsp;1699&nbsp;гг.</span> 
                                     </button>
                                 </h3>
 
                                 <!-- Список художников (ac-panel) -->
-                                <div class="accordion__empty-panel accordion__empty-panel--17 ac-panel">
+                                <div class="accordion__dropdown ac-panel">
                                     <div class="ac-panel__content flex">
                                         <div class="ac-panel__picture-box">
                                             <div class="ac-panel__picture"></div>
@@ -825,13 +825,13 @@
                             <!-- Художники 18-го века -->
                             <li class="accordion__item ac">
                                 <h3 class="accordion__item-header ac-header">
-                                    <button class="accordion__item-btn ac-trigger">
+                                    <button class="accordion__item-btn ac-trigger" aria-label="Открыть вкладку художников 18-го века">
                                         <span class="accordion__header-text">C&nbsp;1700 по&nbsp;1799&nbsp;гг.</span> 
                                     </button>
                                 </h3>
 
                                 <!-- Список художников (ac-panel) -->
-                                <div class="accordion__empty-panel accordion__empty-panel--18 ac-panel">
+                                <div class="accordion__dropdown ac-panel">
                                     <div class="ac-panel__content flex">
                                         <div class="ac-panel__picture-box">
                                             <div class="ac-panel__picture"></div>
@@ -848,13 +848,13 @@
                             <!-- Художники 19-го века -->
                             <li class="accordion__item ac">
                                 <h3 class="accordion__item-header ac-header">
-                                    <button class="accordion__item-btn ac-trigger">
+                                    <button class="accordion__item-btn ac-trigger" aria-label="Открыть вкладку художников 19-го века">
                                         <span class="accordion__header-text">C&nbsp;1800 по&nbsp;1899&nbsp;гг.</span> 
                                     </button>
                                 </h3>
 
                                 <!-- Список художников (ac-panel) -->
-                                <div class="accordion__empty-panel accordion__empty-panel--19 ac-panel">
+                                <div class="accordion__dropdown ac-panel">
                                     <div class="ac-panel__content flex">
                                         <div class="ac-panel__picture-box">
                                             <div class="ac-panel__picture"></div>
@@ -871,13 +871,13 @@
                             <!-- Художники 20-го века -->
                             <li class="accordion__item ac">
                                 <h3 class="accordion__item-header ac-header">
-                                    <button class="accordion__item-btn ac-trigger">
+                                    <button class="accordion__item-btn ac-trigger" aria-label="Открыть вкладку художников 20-го века">
                                         <span class="accordion__header-text">C&nbsp;1900 по&nbsp;1999&nbsp;гг.</span> 
                                     </button>
                                 </h3>
 
                                 <!-- Список художников (ac-panel) -->
-                                <div class="accordion__empty-panel accordion__empty-panel--20 ac-panel">
+                                <div class="accordion__dropdown ac-panel">
                                     <div class="ac-panel__content flex">
                                         <div class="ac-panel__picture-box">
                                             <div class="ac-panel__picture"></div>
@@ -894,13 +894,13 @@
                             <!-- Художники 21-го века -->
                             <li class="accordion__item ac">
                                 <h3 class="accordion__item-header ac-header">
-                                    <button class="accordion__item-btn ac-trigger">
+                                    <button class="accordion__item-btn ac-trigger" aria-label="Открыть вкладку художников современности">
                                         <span class="accordion__header-text">C&nbsp;2000&nbsp;г.</span> 
                                     </button>
                                 </h3>
 
                                 <!-- Список художников (ac-panel) -->
-                                <div class="accordion__empty-panel accordion__empty-panel--21 ac-panel">
+                                <div class="accordion__dropdown ac-panel">
                                     <div class="ac-panel__content flex">
                                         <div class="ac-panel__picture-box">
                                             <div class="ac-panel__picture"></div>

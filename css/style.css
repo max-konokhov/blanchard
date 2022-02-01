@@ -51,9 +51,11 @@
 	height: 100vh;
 	align-items: center;
 	justify-content: center;
+	overflow-y: auto;
+	overflow-x: hidden;
 	background-color:var(--semi-transparent-black-two);
 	opacity: 0;
-	z-index: 5;
+	z-index: 100;
 	visibility: hidden;
 	transition-property: visibility, opacity;
 	transition-duration: 0.3s;
