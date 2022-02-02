@@ -2,6 +2,7 @@
 
 .catalog {
     background-color: var(--white);
+    padding-bottom: 40px;
 }
 
 .catalog__content-box {
