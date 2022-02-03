@@ -169,6 +169,7 @@ body {
 }
 
 /* Общий класс для состояний ссылок 1-го типа */
+/* поправить по возможности */
 .effect-link-1 {
     position: relative;
     transition: color var(--short);
@@ -210,6 +211,74 @@ body {
     opacity: 0;
 }
 
+/* Общий класс для состояний ссылок 2-го типа */
+.effect-link-2 {
+    position: relative;
+    color: var(--violet-middle);
+	transition: color var(--short);
+}
+
+/* Заливка */
+.effect-link-2::before {
+    position: absolute;
+    content: '';
+    left: -8px;
+    right: -8px;
+    top: -5px;
+    bottom: -8px;
+    background-color: var(--violet-middle);
+    opacity: 0;
+    transition: opacity var(--short);
+}
+
+/* Подчеркивание */
+.effect-link-2::after {
+	position: absolute;
+    content: '';
+	top: 0;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+	border-bottom: 1px solid var(--violet-middle);
+    transition: border-color var(--short);
+}
+
+/* HOVER */
+.effect-link-2:hover {
+    color: var(--violet-dark);
+}
+
+.effect-link-2:hover::after {
+	border-color: var(--violet-dark);
+}
+
+/* FOCUS */
+.effect-link-2:focus {
+    outline: none;
+}
+
+.effect-link-2:focus:not(:hover):not(:active) {
+    color: var(--white);
+}
+
+.effect-link-2:focus:not(:hover):not(:active)::before {
+    opacity: 1;
+}
+
+.effect-link-2:focus:not(:hover):not(:active)::after{
+    border-color: var(--white);;
+}
+
+/* ACTIVE */
+.effect-link-2:active {
+    color: var(--dark);
+}
+.effect-link-2:active::after {
+	border-color: var(--dark);
+}
+
+
+/* Общий класс для состояний кнопок 1-го типа */
 .effect-btn-1 {
 	border: none;
     padding: 0;
@@ -233,6 +302,8 @@ body {
 .effect-btn-1:active {
 	color: var(--violet-dark);
 }
+
+
 
 .main {
 	background-color: var(--bg-color-main);

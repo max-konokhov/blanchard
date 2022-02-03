@@ -13,6 +13,64 @@
     position: relative;
 }
 
+.events__btn-nav {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--grey-ultra-light-two);
+    border: none;
+    transition-property: background-color, outline, opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+}
+
+.events__btn-nav::after {
+    font-size: 22px;
+    color: var(--black);
+}
+.events__btn-nav--prev {
+    left: -25px;
+}
+
+.events__btn-nav--next {
+    right: -25px;
+}
+
+.events__btn-nav:hover {
+    background-color: var(--violet-super-lite);
+}
+
+.events__btn-nav:focus {
+    outline: 2px solid var(--violet-middle);
+}
+
+.events__btn-nav:active {
+    background-color: var(--violet-super-lite);
+    outline: 2px solid var(--violet-middle);
+}
+
+
+
+
+
+/* .events__btn-nav-span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-color: var(--black);
+}
+
+.events__btn-nav-span--prev {
+    border-bottom: 1px solid var(--black);
+    border-left: 1px solid var(--black);
+    transform: rotate(45deg);
+} */
+
+
+
 
 
 
@@ -20,10 +78,17 @@
     overflow: hidden;
 }
 
-.e-slide {
-    
+.events__wrap-list {
+    box-sizing: border-box;
 }
 
+/* .e-slide {
+    min-height: 700px;
+} */
+
+.e-slide:focus {
+    outline: none;
+}
 
 .e-slide__image-box {
     min-height: 300px;
@@ -51,8 +116,8 @@
     min-height: 400px;
     flex-direction: column;
     align-items: start;
-    padding: 13px 50px 41px 50px;
-    box-sizing: border-box;
+    padding: 13px 50px 39px 50px;
+    /* box-sizing: border-box; */
     border:1px solid var(--grey-ultra-light);
     border-top: none;
 }
@@ -82,16 +147,15 @@
     margin: 0;
 }
 
-
-.e-slide__link {
+.e-slide__bottom {
     margin-top: auto;
+    padding-top: 30px;
+}
+
+/* .e-slide__link {
     line-height: 25px;
-    border-bottom: 1px solid var(--violet-middle);
-    color: var(--violet-middle);
-}
+} */
 
-.e-slide__btn-nav--prev,
-.e-slide__btn-nav--next {
-    top: calc(50% + 40px);
+.e-slide__link-text {
+    position: relative;
 }
-

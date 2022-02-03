@@ -17,34 +17,34 @@
         },
 
 
-        a11y: false,
-        keyboard: true, // можно управлять с клавиатуры стрелками влево/вправо
+        // a11y: false,
+        // keyboard: true, // можно управлять с клавиатуры стрелками влево/вправо
         
-        // Дальнейшие надстройки делают слайды вне области видимости не фокусируемыми 
-        watchSlidesProgress: true,
-        watchSlidesVisibility: true,
-        slideVisibleClass: 'slide-visible',
+        // // Дальнейшие надстройки делают слайды вне области видимости не фокусируемыми 
+        // watchSlidesProgress: true,
+        // watchSlidesVisibility: true,
+        // slideVisibleClass: 'slide-visible',
         
-        on: {
-          init: function () {
-            this.slides.forEach(slide => {
-              if (!slide.classList.contains('slide-visible')) {
-                slide.tabIndex = '-1';
-              } else {
-                slide.tabIndex = '';
-              }
-            });
-          },
-          slideChange: function () {
-            this.slides.forEach(slide => {
-              if (!slide.classList.contains('slide-visible')) {
-                slide.tabIndex = '-1';
-              } else {
-                slide.tabIndex = '';
-              }
-            });
-          }
-        }
+        // on: {
+        //   init: function () {
+        //     this.slides.forEach(slide => {
+        //       if (!slide.classList.contains('slide-visible')) {
+        //         slide.tabIndex = '-1';
+        //       } else {
+        //         slide.tabIndex = '';
+        //       }
+        //     });
+        //   },
+        //   slideChange: function () {
+        //     this.slides.forEach(slide => {
+        //       if (!slide.classList.contains('slide-visible')) {
+        //         slide.tabIndex = '-1';
+        //       } else {
+        //         slide.tabIndex = '';
+        //       }
+        //     });
+        //   }
+        // }
     });
 
 })();
