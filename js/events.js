@@ -2,18 +2,57 @@
 
     let eventsSlider = new Swiper(".events__swiper", {
         speed: 400,
-        slidesPerView: 3,
-        spaceBetween: 50,
-        
-        // pagination: {
-        //   el: ".g-swiper__pagination",
-        //   type: "fraction"
-        // },
+        slidesPerView: 1,
+        spaceBetween: 15,
         navigation: {
           nextEl: ".events__btn-nav--next",
           prevEl: ".events__btn-nav--prev",
-          // disabledClass: ".g-swiper__btn-nav--disabled",
-          // disabledClass: ".green"
+        },
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          },
+
+          // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            slidesPerGroup: 1,
+          },
+  
+          // when window width is >= 500px
+          500: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+            slidesPerGroup: 2,
+          },
+  
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 34,
+            slidesPerGroup: 2,
+          },
+  
+          // when window width is >= 1024px
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 27,
+            slidesPerGroup: 3,
+          },
+
+          // when window width is >= 1300px
+          1300: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+            slidesPerGroup: 3,
+          },
+  
+        
+          
         },
 
 
