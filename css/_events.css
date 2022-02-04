@@ -52,28 +52,6 @@
     outline: 2px solid var(--violet-middle);
 }
 
-
-
-
-
-/* .events__btn-nav-span {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-color: var(--black);
-}
-
-.events__btn-nav-span--prev {
-    border-bottom: 1px solid var(--black);
-    border-left: 1px solid var(--black);
-    transform: rotate(45deg);
-} */
-
-
-
-
-
-
 .events__swiper {
     overflow: hidden;
 }
@@ -88,57 +66,62 @@
 
 .e-slide {
     display: flex;
+    position: relative;
+    min-height: 700px;
     height: 100%;
     flex-direction: column;
+    outline: 1px solid var(--grey-ultra-light);
+    outline-offset: -1px;
 }
 
-/* .e-slide:focus {
-    outline: none;
-} */
-
-.e-slide__image-box {
+.e-slide__top {
     min-height: 300px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 1;
+    
 }
-.e-slide__image-box--1 {
+.e-slide__top--1 {
     background-image: url('../img/events/e-slide1_1920.jpg');
 }
-.e-slide__image-box--2 {
+.e-slide__top--2 {
     background-image: url('../img/events/e-slide2_1920.jpg');
 }
-.e-slide__image-box--3 {
+.e-slide__top--3 {
     background-image: url('../img/events/e-slide3_1920.jpg');
 }
-.e-slide__image-box--4 {
+.e-slide__top--4 {
     background-image: url('../img/events/e-slide4_1920.jpg');
 }
-.e-slide__image-box--5 {
+.e-slide__top--5 {
     background-image: url('../img/events/e-slide5_1920.jpg');
 }
 
-.e-slide__content-box {
-    min-height: 400px;
-    height: 100%;
+
+.e-slide__middle {
+    display: flex;
     flex-direction: column;
-    align-items: start;
-    padding: 13px 50px 39px 50px;
-    border:1px solid var(--grey-ultra-light);
-    border-top: none;
+    padding: 13px 50px 0 50px;
+    margin-bottom: 13px;
 }
+
+
 
 .e-slide__label {
     font-size: 12px;
     font-weight: 600;
     line-height: 16px;
-    /* text-align: left; */
     color: var(--grey);
 }
 
-.e-slide__label--time {
-    margin-bottom: 13px;
+.e-slide__bottom {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 0 50px 39px 50px;
 }
+
 
 .e-slide__header {
     margin-bottom: 10px;
@@ -153,7 +136,7 @@
     margin: 0;
 }
 
-.e-slide__bottom {
+.e-slide__link-box {
     margin-top: auto;
     padding-top: 30px;
 }
@@ -178,6 +161,9 @@
     opacity: 1;
 }
 
+.swiper-pagination-bullet:focus {
+    outline: 2px solid var(--violet-dark);
+}
 .swiper-pagination-bullet-active {
     background-color: var(--grey-dark);
 }
@@ -201,43 +187,55 @@
         display: block;
     }
 
-    .e-slide__image-box {
+    .e-slide {
+        min-height: 683px;
+    }
+
+    .e-slide__top {
         min-height: 200px;
     }
     
-    .e-slide__image-box--1 {
+    .e-slide__top--1 {
         background-image: url('../img/events/e-slide1_1024.jpg');
     }
-    .e-slide__image-box--2 {
+    .e-slide__top--2 {
         background-image: url('../img/events/e-slide2_1024.jpg');
     }
-    .e-slide__image-box--3 {
+    .e-slide__top--3 {
         background-image: url('../img/events/e-slide3_1024.jpg');
     }
-    .e-slide__image-box--4 {
+    .e-slide__top--4 {
         background-image: url('../img/events/e-slide4_1024.jpg');
     }
-    .e-slide__image-box--5 {
+    .e-slide__top--5 {
         background-image: url('../img/events/e-slide5_1024.jpg');
     }
 
-    .e-slide__content-box {
-        padding: 14px 34px 49px;
+    .e-slide__middle,
+    .e-slide__bottom {
+        padding-left: 34px;
+        padding-right: 34px;
     }
 
-    .e-slide__content-box--bug {
-        padding-left: 30px;
-        padding-right: 30px;
+    .e-slide__middle {
+        margin-bottom: 3px;
+        padding-top: 15px;
+    }
+
+    .e-slide__bottom {
+        padding-bottom: 49px;
+    }
+
+    .e-slide__bottom--bug {
+        padding-left: 28px;
+        padding-right: 28px;
     }
 
     .e-slide__label {
         align-self: flex-end;
-        
         font-weight: 400;
     }
-    .e-slide__label--time {
-        margin-bottom: 4px;
-    }
+
     .e-slide__header {
         margin-bottom: 5px;
     }
@@ -245,7 +243,96 @@
     .header-layout-bug {
     margin-bottom: 8px;
     }
-    .e-slide__bottom {
+    .e-slide__link-box {
         padding-top: 20px;
     }
 }   
+
+
+
+@media(max-width: 768px) {
+    .events {
+        padding-top: 30px;
+    }
+
+    .e-slide__top--1 {
+        background-image: url('../img/events/e-slide1_768.jpg');
+    }
+    .e-slide__top--2 {
+        background-image: url('../img/events/e-slide2_768.jpg');
+    }
+    .e-slide__top--3 {
+        background-image: url('../img/events/e-slide3_768.jpg');
+    }
+    .e-slide__top--4 {
+        background-image: url('../img/events/e-slide4_768.jpg');
+    }
+    .e-slide__top--5 {
+        background-image: url('../img/events/e-slide5_768.jpg');
+    }
+
+    .e-slide__middle {
+        padding: 15px 18px 0 35px;
+    }
+
+    .e-slide__bottom {
+        padding: 0 37px 49px 37px;
+    }
+    
+    .header-layout-bug {
+        margin-bottom: 5px;
+    }
+
+    .e-slide__link-box {
+        padding-top: 24px;
+    }
+}
+
+@media(max-width: 760px) {
+    .events__header {
+        margin-bottom: 12px;
+    }
+
+    .e-slide__bottom {
+        padding: 0 23px 49px 23px;
+    }
+    
+}
+
+@media(max-width: 420px) {
+    .events {
+        margin-bottom: 9px;
+        padding-top: 11px;
+    }
+
+    .e-slide__top--1 {
+        background-image: url('../img/events/e-slide1_320.jpg');
+    }
+    .e-slide__top--2 {
+        background-image: url('../img/events/e-slide2_320.jpg');
+    }
+    .e-slide__top--3 {
+        background-image: url('../img/events/e-slide3_320.jpg');
+    }
+    .e-slide__top--4 {
+        background-image: url('../img/events/e-slide4_320.jpg');
+    }
+    .e-slide__top--5 {
+        background-image: url('../img/events/e-slide5_320.jpg');
+    }
+    .e-slide__middle {
+        padding-top: 18px;
+        margin-bottom: 9px;
+    }
+    .e-slide__bottom--bug {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    .e-slide__link-box {
+        padding-left: 7px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: -40px;
+    }
+}

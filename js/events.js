@@ -24,7 +24,7 @@
           },
   
           // when window width is >= 500px
-          500: {
+          600: {
             slidesPerView: 2,
             spaceBetween: 15,
             slidesPerGroup: 2,
