@@ -35,21 +35,8 @@
 
     new Accordion('.accordion', {
         duration: 600,
+        openOnInit: [0]
         
     });
-
-
-    // Вырезать
-    
-    // Скрипт для отбора элементов первого столбца списка художников слайдера, учитывая нечетное количество тоже
-
-    // const countItems = document.querySelectorAll('.accordion__panel-list .ac-panel__item').length;
-    // const half = Math.ceil(countItems / 2) - 1;
-    
-    // document.querySelectorAll('.accordion__panel-list .ac-panel__item').forEach((el, index) => {
-    // if(index <= half) {
-    //     el.classList.add("first-column")
-    // }
-    // });
 
 })();

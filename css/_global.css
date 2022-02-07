@@ -278,6 +278,9 @@ body {
 }
 
 
+
+
+
 /* Общий класс для состояний кнопок 1-го типа */
 .effect-btn-1 {
 	border: none;
@@ -302,6 +305,118 @@ body {
 .effect-btn-1:active {
 	color: var(--violet-dark);
 }
+
+
+/* Состояния и эффекты кнопки-тултипа */
+
+.btn-tooltip {
+    position: relative;
+    height: 16px;
+    width: 16px;
+	margin-left: 4px;
+	margin-right: 4px;
+	padding: 0;
+    border:none;
+    border-radius: 50%;
+	text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    outline: 1px solid var(--violet-middle);
+    color: var(--black);
+    background-color: transparent;
+    cursor: pointer;
+	transition-property: color, background-color, outline;
+	transition-duration: 0.25s;
+	transition-timing-function: ease;
+}
+
+.btn-tooltip::before {
+    position: absolute;
+    content: '';
+    max-width: 264px;
+    width: max-content;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    padding: 8px 11px;
+    font-size: 12px;
+	font-weight: 600;
+    line-height: 16px;
+    background-color: var(--violet-middle);
+    color: var(--white);
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+}
+
+.btn-tooltip::after {
+    content: ''; 
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent; 
+    border-top: 10px solid var(--violet-middle);
+	opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 0.25s;
+    transition-timing-function: ease; 
+}
+
+/* HOVER */
+.btn-tooltip:hover {
+	background-color: var(--violet-super-lite);
+}
+
+.btn-tooltip:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* FOCUS */
+.btn-tooltip:focus {
+	background-color: var(--violet-super-lite);
+}
+
+/* ACTIVE */
+.btn-tooltip:active {
+	background-color: var(--violet-middle);
+	outline: none;
+	color: var(--white);
+}
+
+/* Открыть тултип по кнопке */
+
+.btn-tooltip.is-active {
+	background-color: var(--violet-middle);
+	outline: none;
+	color: var(--white);
+}
+
+.btn-tooltip.is-active::before {
+	visibility: visible;
+	opacity: 1;
+}
+
+.btn-tooltip.is-active::after {
+	visibility: visible;
+	opacity: 1;
+}
+
+
+
+
+
 
 
 
