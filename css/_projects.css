@@ -1,6 +1,7 @@
 
 .projects {
     padding-top: 40px;
+    overflow: hidden;
 }
 
 .projects__header {
@@ -11,18 +12,19 @@
     max-width: 1080px;
     margin-top: 0;
     margin-bottom: 20px;
+    
 }
 
 /* Контент тултипов: */
-.projects__btn-tooltip--1::before {
+.projects__tooltip--1::before {
     content: 'Пример современных тенденций - современная методология разработки';
 }
 
-.projects__btn-tooltip--2::before {
+.projects__tooltip--2::before {
     content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции';
 }
 
-.projects__btn-tooltip--3::before {
+.projects__tooltip--3::before {
     content: 'В стремлении повысить качество';
 }
 
@@ -108,14 +110,20 @@
 
 .p-swiper__link {
     display: block;
-    position: relative;
+    height: 100%;
+    width: 100%;
+    outline: 1px solid var(--grey-ultra-light);
+    outline-offset: -1px;
+    transition: outline var(--short);
+}
+
+.p-swiper__link-image {
+    display: block;
     height: 100%;
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto;
-    outline: 1px solid var(--grey-ultra-light);
-    outline-offset: -1px;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -123,70 +131,61 @@
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
     filter: gray; /* IE 6-9 */
-    transition: filter var(--short), outline var(--short);
+    transition: filter var(--short)
 }
 
-
-
-
-.p-swiper__link--1 {
-    background-image: url('/img/projects/slide-img-1.png');
+.p-swiper__link-image--1 {
+    background-image: url('../img/projects/slide-img-full-1.png');
 }
-.p-swiper__link--2 {
-    background-image: url('/img/projects/slide-img-2.png');
+.p-swiper__link-image--2 {
+    background-image: url('../img/projects/slide-img-full-2.png');
 }
-.p-swiper__link--3 {
-    background-image: url('/img/projects/slide-img-3.png');
+.p-swiper__link-image--3 {
+    background-image: url('../img/projects/slide-img-full-3.png');
 }
-.p-swiper__link--4 {
-    background-image: url('/img/projects/slide-img-4.png');
+.p-swiper__link-image--4 {
+    background-image: url('../img/projects/slide-img-full-4.png');
 }
-.p-swiper__link--5 {
-    background-image: url('/img/projects/slide-img-5.png');
+.p-swiper__link-image--5 {
+    background-image: url('../img/projects/slide-img-full-5.png');
 }
-.p-swiper__link--6 {
-    background-image: url('/img/projects/slide-img-6.png');
+.p-swiper__link-image--6 {
+    background-image: url('../img/projects/slide-img-full-6.png');
 }
-.p-swiper__link--7 {
-    background-image: url('/img/projects/slide-img-7.png');
+.p-swiper__link-image--7 {
+    background-image: url('../img/projects/slide-img-full-7.png');
 }
-.p-swiper__link--8 {
-    background-image: url('/img/projects/slide-img-8.png');
+.p-swiper__link-image--8 {
+    background-image: url('../img/projects/slide-img-full-8.png');
 }
-.p-swiper__link--9 {
-    background-image: url('/img/projects/slide-img-9.png');
+.p-swiper__link-image--9 {
+    background-image: url('../img/projects/slide-img-full-9.png');
 }
 
-/* .p-swiper__link:before {
-    filter: unset;
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 1px;
-    border: 5px solid var(--violet-middle);
-    opacity: 0;
-    transition: opacity var(--short);
-} */
-
-
+/* Hover */
 .p-swiper__link:hover {
-    filter: grayscale(0);
-}
-
-.p-swiper__link:focus {
     outline: none;
 }
 
+.p-swiper__link:hover .p-swiper__link-image {
+    filter: grayscale(0);
+}
+
+/* Focus */
 .p-swiper__link:focus:not(:hover) {
     outline: 1px solid var(--violet-middle);
 }
 
+/* Active */
 .p-swiper__link:active {
-    filter: grayscale(0);
     outline: 1px solid var(--violet-middle);
 }
+
+.p-swiper__link:active .p-swiper__link-image {
+    filter: grayscale(0);
+}
+
+
 
 
 
@@ -238,14 +237,14 @@
     .p-swiper {
         height: 128px;
     }
-    .p-swiper__link {
-        background-size: auto 42%;
+    .p-swiper__link-image {
+        background-size: auto 100%;
     }
 }
 
 @media(max-width: 970px) {
-    .p-swiper__link {
-        background-size: 80% auto;
+    .p-swiper__link-image {
+        background-size: 100% auto;
     }
 }
 
@@ -260,4 +259,85 @@
     .p-swiper {
         height: 106px;
     }
+    .p-swiper__link-image {
+        background-position: center;
+        background-size: 80% auto;
+    }
+    .p-swiper__link-image--1 {
+        background-image: url('../img/projects/slide-img-1.png');
+    }
+    .p-swiper__link-image--2 {
+        background-image: url('../img/projects/slide-img-2.png');
+    }
+    .p-swiper__link-image--3 {
+        background-image: url('../img/projects/slide-img-3.png');
+    }
+    .p-swiper__link-image--4 {
+        background-image: url('../img/projects/slide-img-4.png');
+    }
+    .p-swiper__link-image--5 {
+        background-image: url('../img/projects/slide-img-5.png');
+    }
+    .p-swiper__link-image--6 {
+        background-image: url('../img/projects/slide-img-6.png');
+    }
+    .p-swiper__link-image--7 {
+        background-image: url('../img/projects/slide-img-7.png');
+    }
+    .p-swiper__link-image--8 {
+        background-image: url('../img/projects/slide-img-8.png');
+    }
+    .p-swiper__link-image--9 {
+        background-image: url('../img/projects/slide-img-9.png');
+    }
 }
+
+@media(max-width: 600px) {
+    .p-swiper__link-image {
+        background-size:  auto 50%;
+    }
+}
+
+
+
+
+@media(max-width: 420px) {
+    .projects {
+        padding-bottom: 25px;
+    }
+
+    .projects__header {
+        margin-bottom: 12px;
+    }
+
+    .projects__descr {
+        margin-bottom: 9px;
+        letter-spacing: -0.25px;
+    }
+
+    .projects__partners-header {
+        margin-bottom: 11px;
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: 600;
+    }
+
+    .projects__btn-nav {
+        top: 60%;
+    }
+
+    .projects__swiper-box {
+        padding-left: 47px;
+        padding-right: 47px;
+    }
+
+    .p-swiper {
+        height: 65px;
+    }
+
+    .p-swiper__link-image {
+        background-size: auto 42%;
+    }
+}
+
+

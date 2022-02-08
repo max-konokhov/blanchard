@@ -307,31 +307,28 @@ body {
 }
 
 
-/* Состояния и эффекты кнопки-тултипа */
+/* Состояния и эффекты тултипа */
 
-.btn-tooltip {
+.tooltip-marker {
+	display: inline-block;
     position: relative;
     height: 16px;
     width: 16px;
-	margin-left: 4px;
-	margin-right: 4px;
-	padding: 0;
-    border:none;
+	vertical-align: middle;
     border-radius: 50%;
-	text-align: center;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 14px;
     outline: 1px solid var(--violet-middle);
-    color: var(--black);
     background-color: transparent;
     cursor: pointer;
-	transition-property: color, background-color, outline;
+	background-image: url('../img/projects/i.svg');
+	background-position: center;
+	background-size: auto;
+	background-repeat: no-repeat;
+	transition-property: background-image, background-color, outline;
 	transition-duration: 0.25s;
 	transition-timing-function: ease;
 }
 
-.btn-tooltip::before {
+.tooltip-marker::before {
     position: absolute;
     content: '';
     max-width: 264px;
@@ -353,7 +350,7 @@ body {
     transition-timing-function: ease;
 }
 
-.btn-tooltip::after {
+.tooltip-marker::after {
     content: ''; 
     position: absolute;
     top: -15px;
@@ -368,50 +365,28 @@ body {
     transition-timing-function: ease; 
 }
 
-/* HOVER */
-.btn-tooltip:hover {
+/* HOVER & FOCUS */
+.tooltip-marker:hover,
+.tooltip-marker:focus:not(:active){
 	background-color: var(--violet-super-lite);
 }
 
-.btn-tooltip:hover::before {
+.tooltip-marker:hover::before,
+.tooltip-marker:focus::before,
+.tooltip-marker:hover::after,
+.tooltip-marker:focus::after {
     opacity: 1;
     visibility: visible;
-}
-
-.btn-tooltip:hover::after {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* FOCUS */
-.btn-tooltip:focus {
-	background-color: var(--violet-super-lite);
 }
 
 /* ACTIVE */
-.btn-tooltip:active {
+.tooltip-marker:active {
 	background-color: var(--violet-middle);
 	outline: none;
-	color: var(--white);
+	background-image: url('../img/projects/i_white.svg');
 }
 
-/* Открыть тултип по кнопке */
 
-.btn-tooltip.is-active {
-	background-color: var(--violet-middle);
-	outline: none;
-	color: var(--white);
-}
-
-.btn-tooltip.is-active::before {
-	visibility: visible;
-	opacity: 1;
-}
-
-.btn-tooltip.is-active::after {
-	visibility: visible;
-	opacity: 1;
-}
 
 
 

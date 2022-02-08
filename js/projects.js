@@ -1,16 +1,5 @@
 (() => {
 
-    const btnTooltip = document.querySelectorAll('.btn-tooltip');
-
-    btnTooltip.forEach((btn) => {
-        btn.addEventListener('click', function () {
-            btn.classList.toggle('is-active');
-        });
-    });
-
-
-
-
     let projectsSlider = new Swiper(".p-swiper", {
         speed: 400,
         slidesPerView: 1,
@@ -19,8 +8,6 @@
           nextEl: ".projects__btn-nav--next",
           prevEl: ".projects__btn-nav--prev",
         },
-
-       
 
           // Responsive breakpoints
         breakpoints: {
