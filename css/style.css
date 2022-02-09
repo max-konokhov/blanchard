@@ -1,6 +1,5 @@
 /* Подключаю глобальные стили */
 @import url(_global.css);
-
 @import url(_header.css);
 @import url(_hero.css);
 @import url(_about.css);
@@ -8,8 +7,18 @@
 @import url(_catalog.css);
 @import url(_events.css);
 @import url(_projects.css);
+@import url(_contacts.css);
 
 
 
-@import url(_g-popup.css);	
+@import url(_g-popup.css);
+
+
+
+
+
+.footer {
+    height: 300px;
+    background-color: var(--black);
+}
 

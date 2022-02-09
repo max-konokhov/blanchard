@@ -1,0 +1,125 @@
+
+.contacts  {
+    padding-top: 39px;
+    padding-bottom: 0;
+}
+
+.contacts__top {
+    border: 1px solid var(--grey-ultra-light);
+}
+
+.contacts__top-box {
+    display: flex;
+    min-height: 155px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacts__address-box {
+    min-width: 150px;
+}
+
+.contacts__header-address {
+    line-height: 32px;
+    margin-bottom: 3px;
+}
+
+.contacts__address-text {
+    font-style: normal;
+}
+
+.contacts__form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 20px;
+    align-items: center;
+}
+
+.contacts__input {
+    /* min-width: 270px; */
+    min-width: 200px;
+    width: calc(270 * 100vw / 1920);
+    max-width: 270px;
+    padding: 8px 24px;
+    line-height: 32px;
+    color: var(--dark);
+    border-radius: 100px;
+    border: 1px solid var(--black);
+}
+
+.contacts__btn-submit {
+    padding: 10px 34px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    border: 2px solid var(--violet-middle);
+    color: var(--violet-middle);
+    border-radius: 100px;
+}
+
+
+
+
+
+
+.contacts__link-box {
+    flex-shrink: 0;
+    /* outline: 1px solid orange; */
+}
+
+.s-links-header {
+    line-height: 32px;
+    margin-bottom: 6px;
+}
+
+.s-links__list {
+    font-size: 0;
+}
+
+.s-links__list-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.s-links__link {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+    /* outline: 1px solid blue; */
+}
+
+.s-links__link--whatsapp {
+    background-image: url('../img/contacts/Whatsapp-Icon.svg');
+}
+.s-links__link--telegram {
+    background-image: url('../img/contacts/Telegram_icon.svg');
+}
+
+
+@media(max-width: 1024px) {
+    .contacts__top-box {
+        padding-top: 43px;
+        padding-bottom: 43px;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 30px;
+    }
+    .contacts__form {
+        margin: 0;
+    }
+    .contacts__input {
+        width: 270px
+
+    }
+    .contacts__btn-submit {
+        padding: 10px 40px;
+    }
+        
+    
+}
