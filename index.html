@@ -1121,28 +1121,41 @@
                     </div>
 
                     <!-- Форма -->
-                    <form action="" class="contacts__form">
-                        <input
-                            class="contacts__input contacts__input--name"
-                            type="text"
-                            name="name"
-                            aria-label="Введите имя"
-                            required=""
-                            placeholder="Имя*"
-                            autocomplete="off"
-                            data-validate-field="name"
-                        >
-                        <input 
-                            class="contacts__input contacts__input--tel"
-                            type="tel"
-                            name="tel"
-                            aria-label="Введите телефон"
-                            required=""
-                            placeholder="Телефон*"
-                            autocomplete="off"
-                            data-validate-field="tel"
-                        >
-                        <button class="contacts__btn-submit btn-reset">Заказать обратный звонок</button>
+                    <form class="contacts__form" action="https://jsonplaceholder.typicode.com/posts" method="POST" aria-label="Форма заказа">
+                        <!-- <div class="contacts__input-box"> -->
+                            <label class="contacts__input-label">
+                                <input
+                                    class="contacts__input contacts__input--name"
+                                    type="text"
+                                    name="name"
+                                    aria-label="Введите имя"
+                                    required=""
+                                    placeholder="Имя*"
+                                    autocomplete="off"
+                                    data-validate-field="name"
+                                    id="name"
+                                >
+                            </label>
+                            
+                            <label class="contacts__input-label">
+                                <input 
+                                    class="contacts__input contacts__input--tel"
+                                    type="tel"
+                                    name="tel"
+                                    aria-label="Введите телефон"
+                                    required=""
+                                    placeholder="Телефон*"
+                                    autocomplete="off"
+                                    data-validate-field="tel"
+                                    id="tel"
+                                >
+                            </label>
+                        <!-- </div> -->
+                        
+                        
+                        <button class="contacts__btn-submit btn-reset">
+                            <span class="contacts__btn-submit-text">Заказать обратный звонок</span>
+                        </button>
                     </form>
 
                     <!-- Блок ссылок для связи (S-LINKS)-->
@@ -1274,10 +1287,14 @@
         </div>
     </div>
 
+
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/just-validate.min.js"></script>
     <script src="js/simplebar.min.js"></script>
     <script src="js/choices.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/accordion.min.js"></script>
+
     <script src="js/script.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/catalog.js"></script>
