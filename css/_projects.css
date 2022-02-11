@@ -39,6 +39,7 @@
 
 .projects__link-text {
     position: relative;
+    white-space: nowrap; 
 }
 
 .projects__link::before {

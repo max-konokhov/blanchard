@@ -157,11 +157,28 @@
     display: inline-block;
     height: 40px;
     width: 40px;
+    border-radius: 50%;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 0;
-    /* outline: 1px solid blue; */
+    opacity: 1;
+    outline-offset: -1px;
+    transition: opacity var(--short), outline var(--short);
 }
+
+.s-links__link:focus {
+    outline: none;
+}
+
+.s-links__link:hover:not(:active),
+.s-links__link:focus:not(:active) {
+    opacity: 0.5;
+}
+
+.s-links__link:active {
+    outline: 1px solid var(--violet-dark);
+}
+
 
 .s-links__link--whatsapp {
     background-image: url('../img/contacts/Whatsapp-Icon.svg');
@@ -169,6 +186,9 @@
 .s-links__link--telegram {
     background-image: url('../img/contacts/Telegram_icon.svg');
 }
+
+
+
 
 
 @media(max-width: 1024px) {
@@ -222,4 +242,95 @@
     }
     
     
+}
+
+@media(max-width: 600px) {
+    .contacts__form {
+        flex-direction: column;
+        gap: unset;
+        min-width: 0;
+        width: 100%;
+        max-width: none;
+    }
+
+    .contacts__input-label {
+        min-width: 290px;
+        margin-bottom: 20px;
+    }
+
+    .contacts__btn-submit {
+        width: 128px;
+        padding-left: 33px;
+        padding-right: 33px;
+        text-align: center;
+    }
+
+    .contacts__btn-submit-text {
+        display: inline-block;
+        width: 58px;
+        height: 16px;
+        font-size: 12px;
+        line-height: 16px;
+        overflow: hidden;
+    }
+}
+
+@media(max-width: 420px) {
+    .contacts {
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    .contacts__top {
+        border: none;
+    }
+
+    .contacts__top-box {
+        padding-top: 0;
+        gap: unset;
+    }
+
+    .contacts__address-box {
+        margin-bottom: 15px;
+    }
+
+    .contacts__header-address {
+        margin-bottom: 0;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .contacts__address-text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .contacts__form {
+        margin-bottom: 20px;
+    }
+
+    .contacts__input-label {
+        width: 100%;
+    }
+
+    .contacts__input {
+        min-width: 0;
+        padding: 3px 23px;
+    }
+
+    .contacts__btn-submit {
+        padding-top: 7px;
+        padding-bottom: 4px;
+    }
+
+    .s-links-header {
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: 400;
+    }
+
+    .s-links__link {
+        height: 50px;
+        width: 50px;
+    }
 }
