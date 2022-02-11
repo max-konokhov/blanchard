@@ -194,7 +194,7 @@
     /* max-width: 1920px;
     margin-left: auto;
     margin-right: auto; */
-    height: 855px;
+    height: 700px;
 }
 
 /* Делаю карту черно-белой */
@@ -224,10 +224,6 @@
 
     .contacts__btn-submit {
         padding: 10px 40px;
-    }
-
-    .map-box {
-        height: 700px;
     }
 }
 
@@ -289,11 +285,18 @@
         line-height: 16px;
         overflow: hidden;
     }
+
+    .map-box {
+        height: 320px;
+    }
 }
 
 @media(max-width: 420px) {
     .contacts {
         padding-top: 25px;
+    }
+
+    .contacts__top-box {
         padding-bottom: 20px;
     }
 
@@ -354,9 +357,5 @@
     .s-links__link {
         height: 50px;
         width: 50px;
-    }
-
-    .map-box {
-        height: 320px;
     }
 }
