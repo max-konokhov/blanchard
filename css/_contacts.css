@@ -188,7 +188,19 @@
 }
 
 
+/* Карта */
+.map-box {
+    width: 100%;
+    /* max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto; */
+    height: 855px;
+}
 
+/* Делаю карту черно-белой */
+[class*="ground-pane"] {
+    filter: grayscale(1);
+}
 
 
 @media(max-width: 1024px) {
@@ -212,6 +224,10 @@
 
     .contacts__btn-submit {
         padding: 10px 40px;
+    }
+
+    .map-box {
+        height: 700px;
     }
 }
 
@@ -310,12 +326,18 @@
     }
 
     .contacts__input-label {
-        width: 100%;
+        min-width: 100%;
+        /* width: 100%; */
     }
 
     .contacts__input {
         min-width: 0;
         padding: 3px 23px;
+    }
+
+    .js-validate-error-label {
+        font-size: 10px;
+        line-height: 12px;
     }
 
     .contacts__btn-submit {
@@ -332,5 +354,9 @@
     .s-links__link {
         height: 50px;
         width: 50px;
+    }
+
+    .map-box {
+        height: 320px;
     }
 }
