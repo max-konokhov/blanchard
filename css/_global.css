@@ -1,14 +1,14 @@
 /* ---ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ--- */
 :root {
-    /* Colors: */
-    --dark: #333333;
-    --black: #000000;
-    --white: #FFF;
-    --violet-super-lite:#D1A9F0;
-    --violet-light: #C283F3;
-    --violet-middle: #9D5CD0;
-    --violet-dark: #7943A4;
-    --grey: #999;
+  /* Colors: */
+  --dark: #333333;
+  --black: #000000;
+  --white: #FFF;
+  --violet-super-lite:#D1A9F0;
+  --violet-light: #C283F3;
+  --violet-middle: #9D5CD0;
+  --violet-dark: #7943A4;
+  --grey: #999;
 	--grey-ultra-light: #CACACA;
 	--grey-ultra-light-two: #ECECEC;
 	--grey-ultra-light-three: #EAEAEA;
@@ -18,12 +18,11 @@
 	--grey-dark: #666;
 	--red--dark: #D11616;
 	--grey-dark-semi-transparent: rgba(102, 102, 102, 0.5);
-    --semi-transparent-black: rgba(0, 0, 0, 0.4);
+  --semi-transparent-black: rgba(0, 0, 0, 0.4);
 	--semi-transparent-black-two: rgba(0, 0, 0, 0.6);
 	--semi-transparent-black-three: rgba(0, 0, 0, 0.5);
 	--semi-transparent-violet: rgba(194, 131, 243, 0.4);
 	--trasparent-grey: rgba(255, 255, 255, 0.2);
-	
 
 
     /* Старые переменные, вырежу попозже */
@@ -40,20 +39,20 @@
 	--font-color-alt: #FFF;
 	--border-grey: #999;
 
-    /* Sizes: */
-    --container-max: 1700px;
-    --container-padding: 50px;
+  /* Sizes: */
+  --container-max: 1700px;
+  --container-padding: 50px;
 
-    /* Transitions: */
-    --short: 0.25s ease;
+  /* Transitions: */
+  --short: 0.25s ease;
 	}
 
 /*  ---------ШРИФТЫ--------- */
 @font-face {
 	font-family: 'Open Sans';
-	src: local('Open Sans'),       
+	src: local('Open Sans'),
 		url('../fonts/OpenSans-Regular.woff2') format('woff2'),
-		url('../fonts/OpenSans-Regular.woff') format('woff');     
+		url('../fonts/OpenSans-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -61,9 +60,9 @@
 
 @font-face {
 	font-family: 'Open Sans';
-	src: local('Open Sans'),       
+	src: local('Open Sans'),
 		url('../fonts/OpenSans-Italic.woff2') format('woff2'),
-		url('../fonts/OpenSans-Italic.woff') format('woff');     
+		url('../fonts/OpenSans-Italic.woff') format('woff');
 	font-weight: 400;
 	font-style: italic;
 	font-display: swap;
@@ -71,9 +70,9 @@
 
 @font-face {
 	font-family: 'Open Sans';
-	src: local('Open Sans'),       
+	src: local('Open Sans'),
 		url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
-		url('../fonts/OpenSans-SemiBold.woff') format('woff');     
+		url('../fonts/OpenSans-SemiBold.woff') format('woff');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -81,9 +80,9 @@
 
 @font-face {
 	font-family: 'Open Sans';
-	src: local('Open Sans'),       
+	src: local('Open Sans'),
 		url('../fonts/OpenSans-Bold.woff2') format('woff2'),
-		url('../fonts/OpenSans-Bold.woff') format('woff');     
+		url('../fonts/OpenSans-Bold.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -115,8 +114,8 @@ img, svg {
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
-    line-height: 2;
-    color: var(--dark);
+  line-height: 2;
+  color: var(--dark);
 }
 
 .list-reset {
@@ -126,10 +125,10 @@ body {
 }
 
 .btn-reset {
-    border: none;
-    padding: 0;
-    background-color: transparent;
-    cursor: pointer;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .flex {
@@ -159,7 +158,6 @@ body {
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 22px;
-	
 }
 
 /* ширина контента 1600px + 100 на отступы */
@@ -170,86 +168,86 @@ body {
 	padding-right: var(--container-padding);
 }
 
+
 /* Общий класс для состояний ссылок 1-го типа */
 /* поправить по возможности */
 .effect-link-1 {
-    position: relative;
-    transition: color var(--short);
+  position: relative;
+  transition: color var(--short);
 }
 
 .effect-link-1:hover {
-    color: var(--violet-light);
+  color: var(--violet-light);
 }
 
 .effect-link-1:focus {
-    outline: none;
+  outline: none;
 }
 
 .effect-link-1:active {
-    color: var(--violet-middle);
+  color: var(--violet-middle);
 }
 
 .effect-link-1::before {
-    position: absolute;
-    content: '';
-    left: -5px;
-    right: -5px;
-    top: -1px;
-    bottom: -1px;
-    background-color: var(--violet-dark);
-    opacity: 0;
-    transition: opacity var(--short);
+  position: absolute;
+  content: '';
+  left: -5px;
+  right: -5px;
+  top: -1px;
+  bottom: -1px;
+  background-color: var(--violet-dark);
+  opacity: 0;
+  transition: opacity var(--short);
 }
 
 .effect-link-1:focus::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .effect-link-1:hover::before {
-    opacity: 0;
+  opacity: 0;
 }
 
 .effect-link-1:active::before {
-    opacity: 0;
+  opacity: 0;
 }
 
 /* Общий класс для состояний ссылок 2-го типа */
 .effect-link-2 {
-    position: relative;
-    color: var(--violet-middle);
+  position: relative;
+  color: var(--violet-middle);
 	transition: color var(--short);
 }
 
 /* Заливка */
 .effect-link-2::before {
-    position: absolute;
-    content: '';
-    left: -8px;
-    right: -8px;
-    top: -5px;
-    bottom: -8px;
-    background-color: var(--violet-middle);
-    opacity: 0;
-    transition: opacity var(--short);
+  position: absolute;
+  content: '';
+  left: -8px;
+  right: -8px;
+  top: -5px;
+  bottom: -8px;
+  background-color: var(--violet-middle);
+  opacity: 0;
+  transition: opacity var(--short);
 }
 
 /* Подчеркивание */
 .effect-link-2::after {
 	position: absolute;
-    content: '';
+  content: '';
 	top: 0;
-    left: 0;
-    right: 0;
-    bottom: -3px;
+  left: 0;
+  right: 0;
+  bottom: -3px;
 	border-bottom: 1px solid var(--violet-middle);
-    transition: border-color var(--short);
+  transition: border-color var(--short);
 }
 
 /* HOVER */
 .effect-link-2:hover {
     color: var(--violet-dark);
 }
-
 .effect-link-2:hover::after {
 	border-color: var(--violet-dark);
 }
@@ -258,15 +256,12 @@ body {
 .effect-link-2:focus {
     outline: none;
 }
-
 .effect-link-2:focus:not(:hover):not(:active) {
     color: var(--white);
 }
-
 .effect-link-2:focus:not(:hover):not(:active)::before {
     opacity: 1;
 }
-
 .effect-link-2:focus:not(:hover):not(:active)::after{
     border-color: var(--white);;
 }
@@ -281,14 +276,12 @@ body {
 
 
 
-
-
 /* Общий класс для состояний кнопок 1-го типа */
 .effect-btn-1 {
 	border: none;
-    padding: 0;
-    background-color: transparent;
-    cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
 	color: var(--white);
 	transition: color var(--short);
 }
@@ -309,18 +302,19 @@ body {
 }
 
 
-/* Состояния и эффекты тултипа */
 
-.tooltip-marker {
-	display: inline-block;
-    position: relative;
-    height: 16px;
-    width: 16px;
+/* ТУЛТИПЫ: */
+/* Состояния и эффекты кнопки-маркера */
+.btn-tooltip {
+  height: 16px;
+  width: 16px;
+  padding: 0;
+  border: none;
 	vertical-align: middle;
-    border-radius: 50%;
-    outline: 1px solid var(--violet-middle);
-    background-color: transparent;
-    cursor: pointer;
+  border-radius: 50%;
+  outline: 1px solid var(--violet-middle);
+  background-color: transparent;
+  cursor: pointer;
 	background-image: url('../img/projects/i.svg');
 	background-position: center;
 	background-size: auto;
@@ -330,71 +324,43 @@ body {
 	transition-timing-function: ease;
 }
 
-.tooltip-marker::before {
-    position: absolute;
-    content: '';
-    max-width: 264px;
-    width: max-content;
-    top: -15px;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    padding: 8px 11px;
-    font-size: 12px;
-	font-weight: 600;
-    line-height: 16px;
-    background-color: var(--violet-middle);
-    color: var(--white);
-    text-align: center;
-    opacity: 0;
-    visibility: hidden;
-    transition-property: opacity, visibility;
-    transition-duration: 0.25s;
-    transition-timing-function: ease;
-}
-
-.tooltip-marker::after {
-    content: ''; 
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 10px solid transparent; 
-    border-top: 10px solid var(--violet-middle);
-	opacity: 0;
-    visibility: hidden;
-    transition-property: opacity, visibility;
-    transition-duration: 0.25s;
-    transition-timing-function: ease; 
-}
-
 /* HOVER & FOCUS */
-.tooltip-marker:hover,
-.tooltip-marker:focus:not(:active){
+.btn-tooltip:hover,
+.btn-tooltip:focus:not(:active){
 	background-color: var(--violet-super-lite);
 }
 
-.tooltip-marker:hover::before,
-.tooltip-marker:focus::before,
-.tooltip-marker:hover::after,
-.tooltip-marker:focus::after {
-    opacity: 1;
-    visibility: visible;
-}
-
 /* ACTIVE */
-.tooltip-marker:active {
+.btn-tooltip:active {
 	background-color: var(--violet-middle);
 	outline: none;
 	background-image: url('../img/projects/i_white.svg');
 }
 
+/* Стили для попапа тултипа */
+.tippy-box[data-theme~='Blanchard'] {
+  padding: 8px 11px;
+  font-size: 12px;
+	font-weight: 600;
+  line-height: 16px;
+  border-radius: 0;
+  background-color: var(--violet-middle);
+  color: var(--white);
+}
 
-
-
-
-
-
-
+/* Стили для стрелочки-попапа тултипа */
+.tippy-box[data-theme~='Blanchard'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: var(--violet-middle);
+}
+.tippy-box[data-theme~='Blanchard'][data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: var(--violet-middle);
+}
+.tippy-box[data-theme~='Blanchard'][data-placement^='left'] > .tippy-arrow::before {
+  border-left-color: var(--violet-middle);
+}
+.tippy-box[data-theme~='Blanchard'][data-placement^='right'] > .tippy-arrow::before {
+  border-right-color: var(--violet-middle);
+}
 
 
 .main {
@@ -406,17 +372,16 @@ body {
 	padding-bottom: 80px;
 }
 
-
 /* Класс для визуального скрытия элементов (для чекбоксов) */
 .visually-hidden {
-    position: absolute;
-    width: 1px;  
-    height: 1px;  
-    margin: -1px;  
-    border: 0;  
-    padding: 0;
-    clip: rect(0, 0, 0, 0);  
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
 }
 
 /* Временный js-класс для body для запрета скролла на айфонах,
