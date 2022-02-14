@@ -18,18 +18,18 @@
 }
 
 .hd-top__logo-link {
-    flex-shrink: 0;
-    font-size: 0;
-    margin-right: calc(20px + (179 - 20) * ((100vw - 1024px)/ (1920 - 1024)));
+  flex-shrink: 0;
+  font-size: 0;
+  margin-right: calc(20px + (179 - 20) * ((100vw - 1024px)/ (1920 - 1024)));
 }
 
 .hd-top__nav {
-    width: 100%;
-    justify-content: space-between;
+  width: 100%;
+  justify-content: space-between;
 	padding-bottom: 2px;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
 }
 
 /* Кнопка-бургер и состояния */
@@ -91,29 +91,29 @@
 
 .burger.is-opened .burger__line--2 {
 	top: calc(50% + 2px);
-    left: -3px;
+  left: -3px;
 	width: 37px;
-    transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .burger.is-opened .burger__line--3 {
 	top: calc(50% + 2px);
-    left: -3px;
+  left: -3px;
 	width: 37px;
-    transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 
 
 /* Обвертка попапа бургер-меню */
 .hd-top__menu-wrap {
-    width: 100%;
-    justify-content: space-between;
+  width: 100%;
+  justify-content: space-between;
 }
 
 /* Список ссылок главного меню */
 .menu {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .menu__item:not(:last-child) {
@@ -121,21 +121,21 @@
 }
 
 @keyframes menu-open {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes menu-close {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .menu__link-text {
@@ -146,13 +146,13 @@
 
 /* -----Ссылка в ЛК---- */
 .hd-top__lk-link {
-    flex-shrink: 0;
-    font-weight: 400;
+  flex-shrink: 0;
+  font-weight: 400;
 }
 
 .lk-link__content {
-    align-items: baseline;
-    overflow: hidden;
+  align-items: baseline;
+  overflow: hidden;
 	transition: padding, var(--short);
 }
 
@@ -163,20 +163,20 @@
 
 .lk-link__svg-image-arrow {
 	position: relative;
-    transform: translateX(-4px);
-    margin-right: 3px;
-    flex-shrink: 0;
+  transform: translateX(-4px);
+  margin-right: 3px;
+  flex-shrink: 0;
 }
 
 .lk-link:hover .lk-link__content,
 .lk-link:active .lk-link__content {
-    padding-left: 4px;
+  padding-left: 4px;
 }
 
 
 /* Кнопка открытия формы */
 .hd-top__btn-open-search {
-    display: none;
+  display: none;
 }
 
 .btn-search {
@@ -187,46 +187,46 @@
 /* Форма на десктопе сдвинута
  в нижнюю часть шапки */
 .form-search {
-    position: absolute;
-    top: 118px;
-    right: 50px;
+  position: absolute;
+  top: 118px;
+  right: 50px;
 	align-items: flex-end;
 	background-color: transparent;
 	z-index: 3;
-    transform-origin: right;
+  transform-origin: right;
 }
 
 .form-search.is-opened {
-    display: flex;
-    animation-name: search-open;
-    animation-duration: .3s;
+  display: flex;
+  animation-name: search-open;
+  animation-duration: .3s;
 }
 
 .form-search.is-closed {
-    animation-name: search-close;
-    animation-duration: .3s;
+  animation-name: search-close;
+  animation-duration: .3s;
 }
 
 @keyframes search-open {
-    from {
-        transform: translateY(-50%) scaleX(0);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(-50%) scaleX(1);
-        opacity: 1;
-    }
+  from {
+    transform: translateY(-50%) scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-50%) scaleX(1);
+    opacity: 1;
+  }
 }
 
 @keyframes search-close {
-    from {
-        transform: translateY(-50%) scaleX(1);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(-50%) scaleX(0);
-        opacity: 0;
-    }
+  from {
+    transform: translateY(-50%) scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-50%) scaleX(0);
+    opacity: 0;
+  }
 }
 
 
@@ -267,7 +267,7 @@
 
 /* Кнопки отправки и закрытия формы */
 .form-search__btn-submit {
-    margin-right: 10px;
+  margin-right: 10px;
 	order: 1;
 }
 
@@ -371,12 +371,12 @@
 }
 
 .drop-box__dropdown > ul {
-	padding-left: 0;    
+	padding-left: 0;
 }
 
 .drop-box__dropdown.is-active {
 	display: block;
-	animation-name: dropdownOpen;	
+	animation-name: dropdownOpen;
 	animation-duration: 0.4s;
 }
 
@@ -396,9 +396,9 @@
 
 /* Правка фокуса для меню со стилями живописи */
 .drop-box__btn-item.effect-link-1::before {
-    top: 1px;
-    left: -6px;
-    right: -8px;
+  top: 1px;
+  left: -6px;
+  right: -8px;
 	bottom: -1px;
 }
 
@@ -429,7 +429,7 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background-color: rgba(194, 131, 243, 0.4);
+	background-color: var(--semi-transparent-violet);
 	opacity: 0;
 	transition-property: opacity;
 	transition-duration: 0.1s;
@@ -568,75 +568,75 @@
 	}
 
 	.hd-top__box {
-        padding-top: 29px;
-        padding-bottom: 29px;
-    }
+    padding-top: 29px;
+    padding-bottom: 29px;
+  }
 
 	.hd-top__logo-link {
-        margin-right: 4px;
-        order: 2;
-    }
+    margin-right: 4px;
+    order: 2;
+  }
 
 	/* Блок навигации: */
 	.hd-top__nav {
-        width: auto;
-    }
-	
-    .burger {
-        position: relative;
-        z-index: 3;
-        display: block;
-    }
-	
-    .hd-top__menu-wrap {
+    width: auto;
+  }
+
+  .burger {
+    position: relative;
+    z-index: 3;
+    display: block;
+  }
+
+  .hd-top__menu-wrap {
 		display: none;
-        position: fixed;
-        left: 0;
-        top: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
 		right: 0;
 		bottom: 0;
 		flex-direction: column;
 		justify-content: space-between;
-        z-index: 2;
-        width: 100vw;
+    z-index: 2;
+    width: 100vw;
 		height: 100vh;
-        padding: 96px 50px 50px 48px;
-        background-color: rgba(0,0,0, 0.9);
-        transform: translateX(-100%);
-    }
+    padding: 96px 50px 50px 48px;
+    background-color: var(--semi-transparent-black-four);
+    transform: translateX(-100%);
+  }
 
-    .hd-top__menu-wrap.is-opened {
-        display: flex;
-        transform: translateX(0);
-        animation-name: menu-open;
-        animation-duration: .3s;
-    }
+  .hd-top__menu-wrap.is-opened {
+    display: flex;
+    transform: translateX(0);
+    animation-name: menu-open;
+    animation-duration: .3s;
+  }
 
-    .hd-top__menu-wrap.is-closed {
-    	animation-name: menu-close;
-    	animation-duration: .3s;
-    }
+  .hd-top__menu-wrap.is-closed {
+    animation-name: menu-close;
+    animation-duration: .3s;
+  }
 
 	.menu {
-        display: block;
+    display: block;
 		flex-wrap: nowrap;
 		width: 100%;
-        margin: 0;
-        margin-bottom: 25px;
+    margin: 0;
+    margin-bottom: 25px;
 		overflow-x: hidden;
-        overflow-y: auto;
-    }
+    overflow-y: auto;
+  }
 
-    .menu__item {
-        margin-right: 0;
-    }
+  .menu__item {
+    margin-right: 0;
+  }
 
-    .menu__link {
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 64px;
-    }
+  .menu__link {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 64px;
+  }
 
 	/* Ссылка ЛК с иконкой */
 	.hd-top__lk-link {
@@ -646,8 +646,8 @@
 		justify-content: center;
 		align-items: center;
 		padding: 16px;
-        border-radius: 100px;
-        border: 2px solid var(--violet-middle);
+    border-radius: 100px;
+    border: 2px solid var(--violet-middle);
 	}
 
 	.lk-link:hover .lk-link__content {
@@ -663,10 +663,10 @@
 	}
 
 	/* Кнопка отерытия формы */
-    .hd-top__btn-open-search {
-        display: block;
-        order: 3;
-    }
+  .hd-top__btn-open-search {
+    display: block;
+    order: 3;
+  }
 
 	.btn-search__svg-image--open {
 		width: 30px;
@@ -678,7 +678,6 @@
 		position: absolute;
 		top: 50px;
 		right: 50px;
-		
 		padding-right: 6px;
 		display: none;
 		transform: translateY(-50%);
@@ -707,13 +706,14 @@
 		height: 24px;
 		width: 24px;
 	}
-	
+
 	.form-search__btn-close {
 		display: block;
 	}
-    
-    
-    /* Нижний блок шапки */
+
+  /* ххххххххххххххххх */
+  /* НИЖНИЙ БЛОК ШАПКИ */
+
 	.hd-bot {
 		display: none;
 	}
@@ -740,27 +740,26 @@
 		width: 27px;
 	}
 
-    .form-search {
-        left: 50px;
+  .form-search {
+    left: 50px;
 		padding-right: 0;
-        justify-content: space-between;
-        padding-top: 15px;
-        padding-bottom: 18px;
-        z-index: 3;
-        background-color: var(--bg-color-second);
-    }
-    
-	
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    z-index: 3;
+    background-color: var(--black);
+  }
 
 	.form-search__input {
-        width: 100%;
-        min-width: 150px;
-    }
-	
+    width: 100%;
+    min-width: 150px;
+  }
+
 	.btn-search__svg-image--submit {
 		width: 32px;
 		height: 30px;
 	}
+
 	.form-search__btn-close-image {
 		height: 33px;
 		width: 29px;
@@ -863,7 +862,7 @@
 		padding: 14px 15px 19px 57px;
 		display: none;
 		align-items: flex-end;
-		background-color: var(--bg-color-second);
+		/* background-color: var(--black); */
 		transform: translateY(0);
 		transform-origin: top;
 	}
@@ -901,8 +900,6 @@
 			opacity: 0;
 		}
 	}
-
-	
 
 	.form-search__input {
 		margin-right: 32px;

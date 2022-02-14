@@ -3,8 +3,8 @@
 .hero {
 	position: relative;
 	overflow: hidden;
-	background-color: rgb(10, 3, 36);
-	color: var(--font-color-alt);
+	background-color: var(--black);
+	color: var(--white);
 }
 
 .hero-box {
@@ -15,7 +15,6 @@
 }
 
 .hero__header {
-	/* position: relative; */
 	max-width: 597px;
 	margin: 0;
 	font-size: 72px;
@@ -37,7 +36,7 @@
 	display: inline-block;
 	padding: 20px 32px;
 	border-radius: 100px;
-	background-color: var(--color-link-active);
+	background-color: var(--violet-middle);
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 25px;
@@ -51,19 +50,19 @@
 
  /* Ховер */
 .hero__link:hover {
-	border-color: var(--color-hover-lite);
+	border-color: var(--violet-super-lite);
 }
 
 /* Фокус */
 .hero__link:focus {
-	outline-color: var(--color-link-hover);
-	
+	outline-color: var(--violet-light);
+
 }
 
 /* Эктив */
 .hero__link:active {
-	border-color: var(--color-hover-lite);
-	background-color: var(--color-active);
+	border-color: var(--violet-super-lite);
+	background-color: var(--violet-dark);
 }
 
 
@@ -83,7 +82,7 @@
 	-webkit-animation-iteration-count: infinite;
 	        animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;
-	        animation-direction: alternate;  
+	        animation-direction: alternate;
 	z-index: 0;
 }
 
@@ -132,18 +131,22 @@
 		padding-bottom: 113px;
 		padding-top: 114px;
 	}
+
 	.hero__header {
 		margin-bottom: 10px;
 		letter-spacing: normal;
 	}
+
 	.hero__descr {
 		max-width: 661px;
 		letter-spacing: normal;
 		margin-bottom: 134px;
 	}
+
 	.hero__link {
 		letter-spacing: normal;
 	}
+
 	.hero__slide--1 {
 		background-image: url('../img/hero/hero-bg1-1024.jpg')
 	}
@@ -157,18 +160,20 @@
 
 
 
-
 @media (max-width: 768px) {
-	
+
 	.hero__link:focus {
 		border-color: transparent;
 	}
+
 	.hero__link:hover {
 		border-color: transparent;
 	}
+
 	.hero__link::before {
 		display: none;
 	}
+
 	.hero__slide--1 {
 		background-image: url('../img/hero/hero-bg1-768.jpg')
 	}
@@ -195,6 +200,7 @@
 		padding-bottom: 44px;
 		text-align: center;
 	}
+
 	.hero__header {
 		max-width: none;
 		margin-bottom: 14px;
@@ -202,6 +208,7 @@
 		font-weight: 700;
 		line-height: 60px;
 	}
+
 	.hero__descr {
 		min-width: 0;
 		max-width: none;
@@ -213,11 +220,12 @@
 		line-height: 18px;
 		letter-spacing: 0;
 	}
+
 	.hero__link {
 		-ms-flex-item-align: center;
 		    -ms-grid-row-align: center;
-		    align-self: center;
-		padding: 10px 16px;		
+		align-self: center;
+		padding: 10px 16px;
 		font-size: 12px;
 		font-weight: 700;
 		line-height: 16px;
@@ -226,13 +234,13 @@
 
 
 @media (max-width: 500px) {
-	
+
 	.hero__header {
 		font-size: 32px;
 		font-weight: 700;
-		/* letter-spacing: 0.9px; */
 		line-height: 37px;
 	}
+
 	.hero__descr {
 		padding-left: 60px;
 		padding-right: 60px;
@@ -240,7 +248,6 @@
 		font-weight: 400;
 		line-height: 16px;
 	}
-	
 }
 
 
@@ -249,6 +256,7 @@
 		padding-left: 8px;
 		padding-right: 8px;
 	}
+
 	.hero__link {
 		padding: 11px 16px 12px 17px;
 		letter-spacing: normal;
@@ -257,7 +265,6 @@
 }
 
 @media (max-width: 320px) {
-	
 	.hero__slide--1 {
 		background-image: url('../img/hero/hero-bg1-320.jpg')
 	}

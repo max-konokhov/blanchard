@@ -21,23 +21,9 @@
   --semi-transparent-black: rgba(0, 0, 0, 0.4);
 	--semi-transparent-black-two: rgba(0, 0, 0, 0.6);
 	--semi-transparent-black-three: rgba(0, 0, 0, 0.5);
+  --semi-transparent-black-four: rgba(0, 0, 0, 0.9);
 	--semi-transparent-violet: rgba(194, 131, 243, 0.4);
 	--trasparent-grey: rgba(255, 255, 255, 0.2);
-
-
-    /* Старые переменные, вырежу попозже */
-	--bg-color-main: #FFF;
-	--bg-color-second: #000;
-	--bg-link-focus: #7943A4;
-	--bg-color-alt: rgba(0, 0, 0, 0.4);
-	--color-link-hover: #C283F3;
-	--color-link-active: #9D5CD0;
-	--color-hover: #C283F3;
-	--color-hover-lite:#D1A9F0;
-	--color-active: #7943A4;
-	--font-color-main: #333;
-	--font-color-alt: #FFF;
-	--border-grey: #999;
 
   /* Sizes: */
   --container-max: 1700px;
@@ -46,6 +32,7 @@
   /* Transitions: */
   --short: 0.25s ease;
 	}
+
 
 /*  ---------ШРИФТЫ--------- */
 @font-face {

@@ -34,21 +34,14 @@
 .contacts__form {
   display: flex;
   flex-wrap: wrap;
-  /* align-self: center; */
   margin-left: 30px;
   margin-right: 30px;
   gap: 20px;
-
-
-
 }
 
 .contacts__input-box {
   display: flex;
-
 }
-
-
 
 .contacts__input-label {
   position: relative;
@@ -56,10 +49,6 @@
   width: calc(270 * 100vw / 1920);
   max-width: 270px;
 }
-
-/* .contacts__input-label:nth-of-type(1) {
-    margin-right: 20px;
-} */
 
 .contacts__input {
   width: 100%;
@@ -131,13 +120,8 @@
   background-color: var(--violet-dark);
 }
 
-
-
-
-
 .contacts__link-box {
   flex-shrink: 0;
-  /* outline: 1px solid orange; */
 }
 
 .s-links-header {
@@ -179,7 +163,6 @@
   outline: 1px solid var(--violet-dark);
 }
 
-
 .s-links__link--whatsapp {
   background-image: url('../img/contacts/Whatsapp-Icon.svg');
 }
@@ -192,9 +175,6 @@
 /* Карта */
 .map-box {
   width: 100%;
-  /* max-width: 1920px;
-    margin-left: auto;
-    margin-right: auto; */
   height: 700px;
 }
 
@@ -253,8 +233,6 @@
     max-width: calc(650px + (666 - 650) * ((100vw - 767px)/ (768 - 767)));
     min-width: 90%;
   }
-
-
 }
 
 @media(max-width: 600px) {
@@ -331,7 +309,6 @@
 
   .contacts__input-label {
     min-width: 100%;
-    /* width: 100%; */
   }
 
   .contacts__input {

@@ -20,17 +20,20 @@
 		padding-top: 50px;
 		padding-bottom: 50px;
 	}
+
 	.about {
 		padding-bottom: 40px;
 	}
-	
+
 	.header-two-lvl {
 		font-size: 28px;
 		line-height: 38px;
 	}
+
 	.about__header {
 		margin-bottom: 13px;
 	}
+
 	.about__descr {
 		font-size: 14px;
 		line-height: 28px;

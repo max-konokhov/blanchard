@@ -16,7 +16,6 @@
 
 .projects__link {
   position: relative;
-  /* font-weight: 600; */
   color: var(--violet-middle);
   transition: color var(--short);
 }
@@ -103,8 +102,6 @@
   font-size: 12px;
   color: var(--black);
 }
-
-
 
 .projects__btn-nav:hover {
   background-color: var(--violet-super-lite);
@@ -198,43 +195,38 @@
     height: 106px;
     padding: 17px 24px;
   }
-
 }
 
 
-
-
-
-
 @media(max-width: 420px) {
-    .projects {
-        padding-bottom: 25px;
-    }
+  .projects {
+    padding-bottom: 25px;
+  }
 
-    .projects__header {
-        margin-bottom: 12px;
-    }
+  .projects__header {
+    margin-bottom: 12px;
+  }
 
-    .projects__descr {
-        margin-bottom: 9px;
-        letter-spacing: -0.25px;
-    }
+  .projects__descr {
+    margin-bottom: 9px;
+    letter-spacing: -0.25px;
+  }
 
-    .projects__partners-header {
-        margin-bottom: 11px;
-        font-size: 18px;
-        line-height: 32px;
-        font-weight: 600;
-    }
+  .projects__partners-header {
+    margin-bottom: 11px;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 600;
+  }
 
-    .p-swiper {
-        width: calc(195 * 100% / 290);
-    }
+  .p-swiper {
+    width: calc(195 * 100% / 290);
+  }
 
-    .p-swiper__link {
-      height: 65px;
-      padding: 14px 27px;
-    }
+  .p-swiper__link {
+    height: 65px;
+    padding: 14px 27px;
+  }
 }
 
 

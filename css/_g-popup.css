@@ -15,13 +15,8 @@
 	width: 100%;
 	padding: 15px 0;
 	height: 100vh;
-	
 	/* Выравнивать СТРОГО через margin:auto у дочерних элементов,
 	иначе автоскрол не захватывает верх контента */
-
-	/* align-items: center;
-	justify-content: center; */
-
 	overflow-y: auto;
 	overflow-x: hidden;
 	background-color:var(--semi-transparent-black-two);
@@ -43,13 +38,12 @@
 	position: relative;
 	display: none;
 	background-color: var(--white);
-	
+
 }
 
 .g-popup__modal--visible {
 	display: flex;
 }
-
 
 .g-popup__image-box {
 	width: 400px;
@@ -78,14 +72,6 @@
 	background-image: url('../img/gallery/image-slide-6_1920.jpg');
 }
 
-
-
-
-
-
-
-
-
 .g-popup__content-box {
 	display: flex;
 	flex-direction: column;
@@ -93,10 +79,6 @@
 	align-self: center;
 	max-width: 500px;
 }
-
-
-
-
 
 .g-popup__picture-year {
 	margin: 0;
@@ -117,13 +99,10 @@
 	color: var(--black);
 }
 
-
-
 /* ----------МЕДИАЗАПРОСЫ------- */
 
-
 @media (max-width: 1024px) {
-    .g-popup__image-box {
+  .g-popup__image-box {
 		width: 264px;
 		height: 594px;
 	}
@@ -134,7 +113,7 @@
 }
 
 @media (max-width: 768px) {
-    .g-popup__image-box {
+  .g-popup__image-box {
 		width: 301px;
 	}
 
@@ -163,7 +142,7 @@
 }
 
 @media (max-width: 420px) {
-    .g-popup__image-box {
+  .g-popup__image-box {
 		height: 200px;
 	}
 

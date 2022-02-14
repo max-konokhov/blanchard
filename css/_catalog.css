@@ -1,67 +1,67 @@
 /* ---------Секция Catalog---------- */
 
 .catalog {
-    background-color: var(--white);
-    padding-bottom: 40px;
+  background-color: var(--white);
+  padding-bottom: 40px;
 }
 
 .catalog__content-box {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .catalog__header {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .catalog__descr {
-    margin: 0;
+  margin: 0;
 }
 
 .catalog__descr--subtitle {
-    margin-bottom: 39px;
-    max-width: 1080px;
+  margin-bottom: 39px;
+  max-width: 1080px;
 }
 
 /* Левый блок с табами */
 .catalog__painter-info{
-    width: 46.875%;
+  width: 46.875%;
 }
 
 .catalog__painter-tabs {
-    display: none;
-    width: 100%;
+  display: none;
+  width: 100%;
 }
 
 .catalog__painter-tabs.is-active {
-    display: block;
-    animation-name: fadeIn;
-    animation-duration: 0.5s;
+  display: block;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 .catalog__picture {
-    display: inline-block;
-    margin-bottom: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .catalog__painter-name {
-    margin: 0;
-    line-height: 30px;
+  margin: 0;
+  line-height: 30px;
 }
 
 .catalog__painter-years {
-    font-size: 12px;
-    line-height: 16px;
-    color: var(--grey-light-two);
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--grey-light-two);
 }
 
 
@@ -70,73 +70,73 @@
 /* Правый блок с аккордионом */
 
 .catalog__painters {
-    width: 50%;
+  width: 50%;
 }
 
 
 /* Аккордион (список) */
 
 .accordion__item {
-    margin-bottom: -1px;
+  margin-bottom: -1px;
 }
 
 /* Заголовок секции аккордеона */
 .accordion__item-header {
-    margin: 0;
-    font-size: 24px;
+  margin: 0;
+  font-size: 24px;
 }
 
 
 /* Кнопка открытия вложения */
 .accordion__item-btn {
-    position: relative;
-    width: 100%;
-    padding: 41px 70px 41px 0;
-    font-weight: 600;
-    line-height: 32px;
-    border:none;
-    border-top: 1px solid var(--grey-ultra-light);
-    border-bottom: 1px solid var(--grey-ultra-light);
-    color: var(--dark);
-    background-color: transparent;
-    text-align: left;
-    cursor: pointer;
-    transition-property: border-color, color;
-    transition-duration: 0.25s;
-    transition-timing-function: ease;
+  position: relative;
+  width: 100%;
+  padding: 41px 70px 41px 0;
+  font-weight: 600;
+  line-height: 32px;
+  border:none;
+  border-top: 1px solid var(--grey-ultra-light);
+  border-bottom: 1px solid var(--grey-ultra-light);
+  color: var(--dark);
+  background-color: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition-property: border-color, color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
 }
 
 .accordion__item-btn::before {
-    position: absolute;
-    content: '';
-    right: 0px;
-    top: 32px;
-    height: 48px;
-    width: 48px;
-    border-radius: 50%;
-    background-color: var(--grey-ultra-light-two);
-    transition: background-color var(--short);
+  position: absolute;
+  content: '';
+  right: 0px;
+  top: 32px;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: var(--grey-ultra-light-two);
+  transition: background-color var(--short);
 }
 
 .accordion__item-btn:after {
-    position: absolute;
-    content: '';
-    right: 19px;
-    top: 50px;
-    height: 12px;
-    width: 12px;
-    background-color: transparent;
-    border-left: 1px solid var(--black);
-    border-bottom: 1px solid var(--black);
-    transform: rotate(-45deg);
+  position: absolute;
+  content: '';
+  right: 19px;
+  top: 50px;
+  height: 12px;
+  width: 12px;
+  background-color: transparent;
+  border-left: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  transform: rotate(-45deg);
 	transition: transform 0.5s;
 }
 
 .accordion__header-text {
-    display: inline-block;
-    transition-property: background-color, color;
-    transition-duration: 0.25s;
-    transition-timing-function: ease-in;
+  display: inline-block;
+  transition-property: background-color, color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in;
 }
 
 /* Состояния и эффекты для блоков аккордеона: */
@@ -145,24 +145,24 @@
 
  /* цвет заголовка */
 .accordion__item.is-active .accordion__header-text {
-    color: var(--violet-dark);
-    background-color: var(--white);
+  color: var(--violet-dark);
+  background-color: var(--white);
 }
 
 /* цвет бордеров кнопки */
 .accordion__item.is-active .accordion__item-btn {
-    border-color: var(--violet-dark);
+  border-color: var(--violet-dark);
 }
 
 /* цвет обводки и заливки псевдо-кнопки */
 .accordion__item.is-active .accordion__item-btn::before {
-    outline: 2px solid var(--violet-dark);
-    background-color: var(--violet-super-lite);
+  outline: 2px solid var(--violet-dark);
+  background-color: var(--violet-super-lite);
 }
 
 /* поворот стрелки на псепдо-кнопке */
 .accordion__item.is-active .accordion__item-btn::after {
-    transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 
@@ -170,107 +170,91 @@
 /* Не активный блок аккордеона */
 /* HOVER (только на не активный блок)*/
 .accordion__item-btn:hover {
-    border-color: var(--violet-middle);
-    color: var(--violet-middle);
-    z-index: 1;
+  border-color: var(--violet-middle);
+  color: var(--violet-middle);
+  z-index: 1;
 }
 
 .accordion__item-btn:hover::before {
-    background-color: var(--violet-super-lite);
+  background-color: var(--violet-super-lite);
 }
 
 /* FOCUS (частично накладывается на активный блок) */
 .accordion__item-btn:focus {
-    outline: none;
+  outline: none;
 }
 
 .accordion__item-btn:focus::before {
-    background-color: var(--violet-super-lite);
+  background-color: var(--violet-super-lite);
 }
 
 .accordion__item-btn:focus:not(:hover):not(:active) .accordion__header-text {
-    background-color: var(--violet-middle);
-    color: var(--white)
+  background-color: var(--violet-middle);
+  color: var(--white)
 }
 
 /* ACTIVE (дублирует по сути активное состояние блока) */
 .accordion__item-btn:active {
-    border-color: var(--violet-dark);
-    color: var(--violet-dark);
-    z-index: 1;
+  border-color: var(--violet-dark);
+  color: var(--violet-dark);
+  z-index: 1;
 }
 
 .accordion__item-btn:active::before {
-    background-color: var(--violet-super-lite);
-    outline: 2px solid var(--violet-dark);
+  background-color: var(--violet-super-lite);
+  outline: 2px solid var(--violet-dark);
 }
 
 
 /* Контейнер (dropdown) */
 .ac-panel {
-    overflow: hidden;
-    visibility: hidden;
-    transition-property: height, visibility;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
+  overflow: hidden;
+  visibility: hidden;
+  transition-property: height, visibility;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 
 .accordion__item.is-active .ac-panel {
-    visibility: visible;
+  visibility: visible;
 }
 
 /* Список художников */
 .ac-panel__list {
-    
-    column-count: 3;
-    /* padding: 25px 0; */
-    padding: 25px 50px 25px 0;
+  column-count: 3;
+  padding: 25px 50px 25px 0;
 }
-
-/* .ac-panel__item {
-    width: calc(100% / 3 - 20px);
-} */
-
-/* .ac-panel__btn {
-    width: max-content;
-} */
-
-
-
-
-
-
 
 /* кнопка открытия таба с именем художника */
 .ac-panel__btn {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    border-bottom: 1px solid transparent;
-    transition-property: background-color, color, border-color;
-    transition-duration: 0.25s;
-    transition-timing-function: ease;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
 }
 
 /* состояния и эффекты для нее */
 .ac-panel__btn:hover:not(:active) {
-    color: var(--violet-middle);
-    border-color: var(--violet-middle);
+  color: var(--violet-middle);
+  border-color: var(--violet-middle);
 }
 
 .ac-panel__btn:active {
-    color: var(--violet-dark);
+  color: var(--violet-dark);
 }
 
 .ac-panel__btn:focus {
-    outline: none;
+  outline: none;
 }
 
 .ac-panel__btn:focus:not(:hover):not(:active) {
-    color: var(--white);
-    background-color: var(--violet-middle);
+  color: var(--white);
+  background-color: var(--violet-middle);
 }
 
 
@@ -279,68 +263,66 @@
 
 /* Дропдаун для полупустых блоков аккордиона */
 .ac-panel__content {
-    padding: 25px 0;
+  padding: 25px 0;
 }
 
 .ac-panel__picture-box {
-    width: calc(275 * 100% / 800);
-    min-height: 189px;
-    border: 2px solid var(--grey-light-three);
-    padding: 12px;
+  width: calc(275 * 100% / 800);
+  min-height: 189px;
+  border: 2px solid var(--grey-light-three);
+  padding: 12px;
 }
 
 .ac-panel__picture {
-    background-color: var(--grey-light-three);
-    height: 100%;
-    width: 100%;
+  background-color: var(--grey-light-three);
+  height: 100%;
+  width: 100%;
 }
 
 .ac-panel__decr-box {
-    padding-left: 24px;
-    align-self: center;
+  padding-left: 24px;
+  align-self: center;
 }
 
 .ac-panel__descr-title {
-    margin: 0;
-    margin-bottom: 5px;
-    font-size: 24px;
-    font-weight: 600;
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .ac-panel__descr-caption {
-    margin: 0;
-    margin-bottom: 5px;
-    max-width: 275px;
-    line-height: 22px;
-    
+  margin: 0;
+  margin-bottom: 5px;
+  max-width: 275px;
+  line-height: 22px;
 }
 
-
 .link-in-gallery {
-    display: inline-block;
-    font-weight: 600;
-    line-height: 22px;
-    color: var(--violet-middle);
-    transition-property: color, background-color;
-    transition-duration: 0.25s;
-    transition-timing-function: ease;
+  display: inline-block;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--violet-middle);
+  transition-property: color, background-color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
 }
 
 .link-in-gallery:hover:not(:active) {
-    color: var(--violet-light);
+  color: var(--violet-light);
 }
 
 .link-in-gallery:focus {
-    outline: none;
+  outline: none;
 }
 
 .link-in-gallery:focus:not(:hover):not(:active) {
-    color: var(--white);
-    background-color: var(--violet-middle);
+  color: var(--white);
+  background-color: var(--violet-middle);
 }
 
 .link-in-gallery:active {
-    color: var(--violet-dark);
+  color: var(--violet-dark);
 }
 
 
@@ -354,138 +336,139 @@
  в 1-м блоке аккордиона в секции КАТАЛОГ */
 
 @media(max-width: 1500px) {
-    /* Выстраиваем список художников в 2 столбца */
-    .ac-panel__list {
-        column-count: 2;
-        padding-right: 0;
-    }
+  /* Выстраиваем список художников в 2 столбца */
+  .ac-panel__list {
+    column-count: 2;
+    padding-right: 0;
+  }
 
-    /* Прячем элементы заглушки */
-    .ac-panel__item:nth-last-child(-n+3) {
-        display: none;
-    }
+  /* Прячем элементы заглушки */
+  .ac-panel__item:nth-last-child(-n+3) {
+    display: none;
+  }
 }
 
 
 @media(max-width: 1024px) {
-    .catalog__painter-info {
-        width: 47.5%;
-    }
+  .catalog__painter-info {
+    width: 47.5%;
+  }
 
-    .catalog__picture {
-        margin-bottom: 22px;
-    }
+  .catalog__picture {
+    margin-bottom: 22px;
+  }
 
-    .catalog__painters {
-        width: 47.3%;
-    }
+  .catalog__painters {
+    width: 47.3%;
+  }
 
-    .ac-panel__picture-box {
-        width: calc(189 * 100% / 437);
-        padding: 8px;
-        min-height: 130px;
-    }
+  .ac-panel__picture-box {
+    width: calc(189 * 100% / 437);
+    padding: 8px;
+    min-height: 130px;
+  }
 }
 
 @media(max-width: 970px) {
-    .catalog__content-box {
-        flex-direction: column-reverse;
-    }
+  .catalog__content-box {
+    flex-direction: column-reverse;
+  }
 
-    .catalog__painter-info,
-    .catalog__painters {
-        width: 100%;
-    }
+  .catalog__painter-info,
+  .catalog__painters {
+    width: 100%;
+  }
 
-    .catalog__descr--subtitle {
-        margin-bottom: 19px;
-    }
-    .catalog__painters {
-        margin-bottom: 52px;
-    }
+  .catalog__descr--subtitle {
+    margin-bottom: 19px;
+  }
+  .catalog__painters {
+    margin-bottom: 52px;
+  }
 
-    .ac-panel__list {
-        column-count: 3;
-    }
+  .ac-panel__list {
+    column-count: 3;
+  }
 
-    /* Показываем элементы заглушки */
-    .ac-panel__item:nth-last-child(-n+3) {
-        display: block;
-    }
+  /* Показываем элементы заглушки */
+  .ac-panel__item:nth-last-child(-n+3) {
+    display: block;
+  }
 
-    .ac-panel__picture-box {
-        max-width: 275px;
-        padding: 12px;
-        min-height: 189px;
-    }
-}   
+  .ac-panel__picture-box {
+    max-width: 275px;
+    padding: 12px;
+    min-height: 189px;
+  }
+}
 
 @media(max-width: 760px) {
-    .ac-panel__list {
-        column-count: 2;
-    }
-    /* Прячем элементы заглушки */
-    .ac-panel__item:nth-last-child(-n+3) {
-        display: none;
-    }
-    .ac-panel__btn {
-        letter-spacing: -0.5px;
-    }
+  .ac-panel__list {
+    column-count: 2;
+  }
+
+  /* Прячем элементы заглушки */
+  .ac-panel__item:nth-last-child(-n+3) {
+    display: none;
+  }
+
+  .ac-panel__btn {
+    letter-spacing: -0.5px;
+  }
 }
 
 @media(max-width: 420px) {
-    .catalog__header {
-        margin-bottom: 12px;
-    }
+  .catalog__header {
+    margin-bottom: 12px;
+  }
 
-    .catalog__descr--subtitle {
-        display: none;
-    }
+  .catalog__descr--subtitle {
+    display: none;
+  }
 
-    .catalog__picture {
-        margin-bottom: 13px;
-    }
+  .catalog__picture {
+    margin-bottom: 13px;
+  }
 
-    .catalog__painter-name {
-        margin-bottom: 5px;
-    }
-    .accordion__item-btn {
-        padding: 19px 40px 19px 0;
-    }
+  .catalog__painter-name {
+    margin-bottom: 5px;
+  }
+  .accordion__item-btn {
+    padding: 19px 40px 19px 0;
+  }
 
-    .accordion__item-btn::before {
-        width: 28px;
-        height: 28px;
-        top: 23px;
-        
-    }
+  .accordion__item-btn::before {
+    width: 28px;
+    height: 28px;
+    top: 23px;
+  }
 
-    .accordion__item-btn:after {
-        width: 7px;
-        height: 7px;
-        top: 34px;
-        right: 11px;
-    }
+  .accordion__item-btn:after {
+    width: 7px;
+    height: 7px;
+    top: 34px;
+    right: 11px;
+  }
 
-    .accordion__header-text {
-        font-size: 18px;
-    }
+  .accordion__header-text {
+    font-size: 18px;
+  }
 
-    .ac-panel__list {
-        column-count: 1;
-        padding: 20px 0;
-    }
-    .ac-panel__btn {
-        letter-spacing: normal;
-    }
+  .ac-panel__list {
+    column-count: 1;
+    padding: 20px 0;
+  }
+  .ac-panel__btn {
+    letter-spacing: normal;
+  }
 
-    .ac-panel__picture-box {
-        max-width: 130px;
-        padding: 6px;
-        min-height: 90px;
-    }
-    
-    .ac-panel__descr-title {
-        font-size: 16px;
-    }
+  .ac-panel__picture-box {
+    max-width: 130px;
+    padding: 6px;
+    min-height: 90px;
+  }
+
+  .ac-panel__descr-title {
+    font-size: 16px;
+  }
 }

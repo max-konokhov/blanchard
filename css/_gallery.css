@@ -44,15 +44,14 @@
 	font-size: 16px;
 	min-height: 40px;
 	line-height: 32px;
-    border: 1px solid var(--white);
-    border-radius: 6px;
+  border: 1px solid var(--white);
+  border-radius: 6px;
 	background-color: transparent;
-	
 }
 
 /* Отключаю элемент-плейсхордер (первый опшин) из списка */
 #choices--g-select-item-choice-1 {
-    display: none;
+  display: none;
 }
 
 /* Отключаю стрелку из плагина */
@@ -62,17 +61,17 @@
 
 /* Добавляю свою стрелку */
 .choices[data-type*=select-one]::before {
-    content: '';
-    height: 7px;
-    width: 7px;
-    border-left: 1px solid var(--white);
-    border-bottom: 1px solid var(--white); 
-    position: absolute;
-    right: 14px;
-    top: 43%;
-    transform: rotate(-45deg);
+  content: '';
+  height: 7px;
+  width: 7px;
+  border-left: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+  position: absolute;
+  right: 14px;
+  top: 43%;
+  transform: rotate(-45deg);
 	transition: transform 0.5s;
-    z-index: 3;
+  z-index: 3;
 }
 
 /* Стрелка в активном положении */
@@ -107,7 +106,7 @@
 .is-focused.choices {
 	background-color: var(--trasparent-grey);
 	border-color: var(--white);
-	
+
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
@@ -134,54 +133,54 @@
 /* Фильтр по веку */
 
 .filter-century__list {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .filter-century__label {
-    position: relative;
-    padding-left: 24px;
-    cursor: pointer;
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
 }
 
 .filter-century__span {
-    display: inline-block;
+  display: inline-block;
 	transition: color var(--short);
 }
 
 .filter-century__span::before {
-    position: absolute;
-    content: '';
-    width: 12px;
-    height: 12px;
-    left: 0;
-    top: calc(50% - 5px);
-    border: 1px solid var(--white);
-    transition: border-color var(--short);
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  left: 0;
+  top: calc(50% - 5px);
+  border: 1px solid var(--white);
+  transition: border-color var(--short);
 }
 
 .filter-century__input:checked + .filter-century__span::before {
-    border: 1px solid var(--violet-light);
+  border: 1px solid var(--violet-light);
 }
 
 .filter-century__span::after {
-    position: absolute;
-    content: '';
-    width: 4px;
-    height: 4px;
-    top: calc(50% - 1px);
-    left: 4px;
-    border-radius: 50%;
-    background-color: var(--violet-light);
-    opacity: 0;
-    transition: opacity var(--short);
+  position: absolute;
+  content: '';
+  width: 4px;
+  height: 4px;
+  top: calc(50% - 1px);
+  left: 4px;
+  border-radius: 50%;
+  background-color: var(--violet-light);
+  opacity: 0;
+  transition: opacity var(--short);
 }
 
 .filter-century__input:checked + .filter-century__span::after {
-    opacity: 1;
+  opacity: 1;
 }
 
 .filter-century__input:checked + .filter-century__span {
-    color: var(--violet-light);
+  color: var(--violet-light);
 }
 
 /* Состояние focus для скрытого input */
@@ -205,7 +204,7 @@
 .g-swiper {
 	width: calc(1150 / 1600 * 100%);
 	margin-right: 0;
-    padding-top: 17px;
+  padding-top: 17px;
 }
 
 .g-swiper-box {
@@ -214,7 +213,7 @@
 
 .g-swiper__navigation {
 	display: inline-flex;
-    min-width: 130px;
+  min-width: 130px;
 	align-items: center;
 	margin-bottom: 29px;
 }
@@ -222,7 +221,6 @@
 .g-swiper__pagination {
 	margin-right: 10px;
 	text-align: center;
-	
 }
 
 .g-swiper__btn-nav {
@@ -231,35 +229,26 @@
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
-    background-color: var(--grey-dark);
-    transition: background-color var(--short), box-shadow var(--short);
+  background-color: var(--grey-dark);
+  transition: background-color var(--short), box-shadow var(--short);
 }
 
 .g-swiper__btn-nav:hover:not(.swiper-button-disabled):not(:active) {
-    background-color: var(--violet-middle);
+  background-color: var(--violet-middle);
 }
 
 .g-swiper__btn-nav:focus:not(.swiper-button-disabled) {
-    outline: none;
-    box-shadow: inset 0 0 0 2px var(--black);
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--black);
 }
 
 .g-swiper__btn-nav:active {
-    background-color: var(--violet-dark);
-    box-shadow: inset 0 0 0 2px var(--black);
+  background-color: var(--violet-dark);
+  box-shadow: inset 0 0 0 2px var(--black);
 }
-
-/* не работает стили для своих классов(   */
-
-/* .g-swiper__btn-nav--disabled {
-    background-color: var(--grey-dark-semi-transparent);
-}
-.green {
-    background-color: greenyellow !important;
-} */
 
 .swiper-button-disabled {
-    background-color: var(--grey-dark-semi-transparent);
+  background-color: var(--grey-dark-semi-transparent);
 }
 
 .g-swiper__btn-nav::before {
@@ -292,8 +281,8 @@
 	position: relative;
 	overflow: hidden;
 	background-color: var(--violet-dark);
-    font-size: 0;
-    line-height: 0;
+  font-size: 0;
+  line-height: 0;
 }
 
 .g-swiper__link-slide::before {
@@ -354,34 +343,13 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   /* Адаптивная высота слайда регулируется относительно его ширины с помощью padding-top в % для псевдоэлемента ::before */
-
 
 @media (max-width: 1024px) {
 	.g-filters {
 		width: calc(280 / 924 * 100%);
 	}
-	
+
 	.filter-century {
 		position: relative;
 	}
@@ -408,7 +376,7 @@
 	.gallery {
 		padding-bottom: 80px;
 	}
-	
+
 	.gallery-box {
 		flex-direction: column;
 	}
@@ -436,7 +404,7 @@
 	.g-swiper {
 		padding: 0;
 	}
-	
+
 	.g-swiper__link-slide::before {
 		padding-top: calc(104.8% - 6px);
 	}
