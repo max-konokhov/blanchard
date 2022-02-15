@@ -10,7 +10,9 @@
     <link href="css/simplebar.min.css" rel="stylesheet">
     <link href="css/swiper-bundle.min.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/main-style.css" rel="stylesheet">
     <title>Blanchard - художественная галерея</title>
 </head>
 
@@ -18,15 +20,15 @@
     <header class="header">
 
         <!-- ###############  ВЕРХНИЙ БЛОК ШАПКИ (HD-TOP)  #################  -->
-        <div class="hd-top">
+        <div class="header__top hd-top">
             <div class="hd-top__box container flex">
 
                 <!-- хххххххххххххх  ЛОГОТИП  хххххххххххххххххх  -->
                 <a class="hd-top__logo-link">
                     <picture class="hd-top__logo-picture">
-                        <source media="(max-width: 500px)" srcset="img/header/logo_320.svg">
-                        <source media="(max-width: 1024px)" srcset="img/header/logo_1024.svg">
-                        <source media="(min-width: 1025px)" srcset="img/header/logo_big.svg">
+                        <source media="(max-width: 576px)" srcset="img/header/logo_320.svg">
+                        <source media="(max-width: 970px)" srcset="img/header/logo_1024.svg">
+                        <source media="(min-width: 1281px)" srcset="img/header/logo_big.svg">
                         <img class="hd-top__logo-image" src="img/header/logo_1024.svg" alt="Логотип Blanchard">
                     </picture>
                 </a>
@@ -63,11 +65,6 @@
                             <li class="menu__item">
                                 <a class="menu__link effect-link-1 scroll-to" href="#events">
                                     <span class="menu__link-text">События</span>
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link effect-link-1 scroll-to" href="#editions">
-                                    <span class="menu__link-text">Издания</span>
                                 </a>
                             </li>
                             <li class="menu__item">
@@ -143,7 +140,7 @@
                             <!-- Контейнер для элементов списка (тело списка) -->
                             <div class="drop-box__dropdown" data-target="one">
                                 <!-- Обвертка для кастомного скролла -->
-                                <div class="drop-box__dropdown-wrap" id="bar-1" data-simplebar>
+                                <div class="drop-box__dropdown-wrap js-simplebar" data-simplebar>
 
                                     <!-- Список с элементами -->
                                     <ul class="drop-box__drop-list list-reset">
@@ -201,7 +198,7 @@
                             <!-- Контейнер для элементов списка -->
                             <div class="drop-box__dropdown" data-target="two">
                                 <!-- Обвертка для кастомного скролла -->
-                                <div class="drop-box__dropdown-wrap" id="bar-2" data-simplebar>
+                                <div class="drop-box__dropdown-wrap js-simplebar" data-simplebar>
 
                                     <!-- Список с элементами -->
                                     <ul class="drop-box__drop-list">
@@ -259,7 +256,7 @@
                             <!-- Контейнер для элементов списка -->
                             <div class="drop-box__dropdown" data-target="three">
                                 <!-- Обвертка для кастомного скролла -->
-                                <div class="drop-box__dropdown-wrap" id="bar-3" data-simplebar>
+                                <div class="drop-box__dropdown-wrap js-simplebar" data-simplebar>
 
                                     <!-- Список с элементами -->
                                     <ul class="drop-box__drop-list">
@@ -305,7 +302,7 @@
                             <!-- Контейнер для элементов списка -->
                             <div class="drop-box__dropdown" data-target="four">
                                 <!-- Обвертка для кастомного скролла -->
-                                <div class="drop-box__dropdown-wrap" id="bar-4" data-simplebar>
+                                <div class="drop-box__dropdown-wrap js-simplebar" data-simplebar>
 
                                     <!-- Список с элементами -->
                                     <ul class="drop-box__drop-list">
@@ -363,7 +360,7 @@
                             <!-- Контейнер для элементов списка -->
                             <div class="drop-box__dropdown" data-target="five">
                                 <!-- Обвертка для кастомного скролла -->
-                                <div class="drop-box__dropdown-wrap" id="bar-5" data-simplebar>
+                                <div class="drop-box__dropdown-wrap js-simplebar" data-simplebar>
 
                                     <!-- Список с элементами -->
                                     <ul class="drop-box__drop-list">
@@ -425,7 +422,7 @@
             <div class="container hero-box">
                 <h1 class="hero__header">Прикоснитесь к&nbsp;прекрасному</h1>
                 <p class="hero__descr">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
-                <a class="hero__link scroll-to" href="#">Подписаться на&nbsp;рассылку</a>
+                <a class="hero__link scroll-to" href="#contacts">Подписаться на&nbsp;рассылку</a>
             </div>
 
             <!-- Слайдер фоновых картинок в Hero -->
