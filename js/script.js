@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  // БУРГЕР
+  // -------HEADER------
 
+  // БУРГЕР
   // здесь мы определяем функцию, которая отвечает за работу меню, в ней не нужно ничего менять
   function setBurger(params) {
     const btn = document.querySelector(`.${params.btnClass}`);
@@ -40,10 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
   // ФОРМА ПОИСКА
-
   function setSearch(params) {
     const openBtn = document.querySelector(`.${params.openBtnClass}`);
     const search = document.querySelector(`.${params.searchClass}`);
@@ -159,8 +157,8 @@ setMenuListener();
     })
   }
 
-  //  -----СЕКЦИЯ "HERO"--------
 
+  //  -----СЕКЦИЯ "HERO"--------
 
   // Скрипт для слайдера в Hero
   const swiperHero = new Swiper('.hero__swiper', {
@@ -176,24 +174,7 @@ setMenuListener();
   });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // Переназначем значение атрибута
-  // let simplebarLabel = document.querySelector(".simplebar-content-wrapper");
-  // simplebarLabel.setAttribute("aria-label", "Прокручиваемый список художников");
-
+  //  -----СЕКЦИЯ "GALLERY"--------
 
   //Кастомный список на основе библиотеки Choise.js
   // Pass single element
@@ -206,7 +187,383 @@ setMenuListener();
   });
 
 
+  // Слайдер галереи
+  let gallerySlider = new Swiper(".g-swiper-box", {
+    slidesPerView: 1,
+    spaceBetween: 15,
+    slidesPerGroup: 1,
+    pagination: {
+      el: ".g-swiper__pagination",
+      type: "fraction"
+    },
+    navigation: {
+      nextEl: ".g-swiper__btn-nav--next",
+      prevEl: ".g-swiper__btn-nav--prev",
+    },
 
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 500px
+      500: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        slidesPerGroup: 2,
+      },
+
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 38,
+        slidesPerGroup: 2,
+      },
+
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 34,
+        slidesPerGroup: 2,
+      },
+
+      // when window width is >= 1301px
+      1281: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        slidesPerGroup: 3
+      },
+    },
+
+    a11y: false,
+    keyboard: true, // можно управлять с клавиатуры стрелками влево/вправо
+
+    // Дальнейшие надстройки делают слайды вне области видимости не фокусируемыми
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    slideVisibleClass: 'slide-visible',
+
+    on: {
+      init: function () {
+        this.slides.forEach(slide => {
+          if (!slide.classList.contains('slide-visible')) {
+            slide.tabIndex = '-1';
+          } else {
+            slide.tabIndex = '';
+          }
+        });
+      },
+      slideChange: function () {
+        this.slides.forEach(slide => {
+          if (!slide.classList.contains('slide-visible')) {
+            slide.tabIndex = '-1';
+          } else {
+            slide.tabIndex = '';
+          }
+        });
+      }
+    }
+  });
+
+
+  //  -----СЕКЦИЯ "CATALOG"--------
+
+  // Функция для табов с параметрами
+  function setTabs (dataPath, dataTarget) {
+    const painterBtn = document.querySelectorAll(`.ac-panel__btn[${dataPath}]`);
+    const painterContent = document.querySelectorAll(`.js-tab-content[${dataTarget}]`);
+
+    painterBtn.forEach((btn) => {
+      btn.addEventListener('click', function (evt) {
+        const path = this.getAttribute(dataPath);
+        console.log(path);
+        const target = document.querySelector(`.js-tab-content[${dataTarget}="${path}"]`);
+
+
+        painterBtn.forEach((currentBtn) => {
+          currentBtn.classList.remove('is-active');
+        });
+
+        this.classList.add('is-active');
+
+        painterContent.forEach((content) => {
+          content.classList.remove('is-active');
+        });
+
+        target.classList.add('is-active');
+      });
+    });
+  }
+
+  // в аргументах функции передаем индивидуальные data атрибуты, которые установлены в разметке для кнопок и вкладок
+  setTabs('data-painters-path', 'data-painters-target');
+
+  // new Accordion('.accordion-container');
+  new Accordion('.accordion', {
+    duration: 600,
+    openOnInit: [0]
+  });
+
+
+
+  //  -----СЕКЦИЯ "EVENTS"--------
+
+  // Слайдер событий
+  let eventsSlider = new Swiper(".events__swiper", {
+    speed: 400,
+    slidesPerView: 1,
+    spaceBetween: 15,
+    lidesPerGroup: 1,
+    navigation: {
+      nextEl: ".events__btn-nav--next",
+      prevEl: ".events__btn-nav--prev",
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      },
+
+      // Responsive breakpoints
+    breakpoints: {
+
+      // when window width is >= 600px
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        slidesPerGroup: 2,
+      },
+
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 34,
+        slidesPerGroup: 2,
+      },
+
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 27,
+        slidesPerGroup: 3,
+      },
+
+      // when window width is >= 1280px
+      1280: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        slidesPerGroup: 3,
+      },
+    },
+  });
+
+
+  //  -----СЕКЦИЯ "PROJECTS"--------
+
+  // Инициализация плагина тултипов
+  tippy('.js-btn-tooltip', {
+    theme: 'Blanchard',
+    maxWidth: 264,
+  });
+
+  // Инициализация слайдера партнеров
+  const projectsSlider = new Swiper(".js-partners-slider", {
+    speed: 400,
+    slidesPerView: 1,
+    spaceBetween: 15,
+    navigation: {
+      nextEl: ".projects__btn-nav--next",
+      prevEl: ".projects__btn-nav--prev",
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+
+      // when window width is >= 601px
+      601: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        slidesPerGroup: 2,
+      },
+
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 34,
+        slidesPerGroup: 2,
+      },
+
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+        slidesPerGroup: 2,
+      },
+
+      // when window width is >= 1281px
+      1281: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        slidesPerGroup: 3,
+      },
+    },
+  });
+
+
+  //  -----СЕКЦИЯ "CONTACTS"--------
+
+  // Скрипт инициализации плагина Inputmask с маской телефона
+  var selector = document.getElementById("tel");
+  var im = new Inputmask("+7(999) -999-99-99");
+
+  im.mask(selector);
+
+
+  // Скрипт для валидации полей формы
+  new JustValidate('.contacts__form', {
+    rules: {
+      name: {
+        required: true,
+        minLength: 2,
+        maxLength: 15
+      },
+
+      tel: {
+        required: true,
+        function: (name, value) => {
+          const phone = selector.inputmask.unmaskedvalue()
+          return Number(phone) && phone.length === 10
+        }
+      }
+    },
+
+    messages: {
+      name: {
+        required: 'Обязательное поле для заполнения',
+        minLength: 'Имя должно состоять минимум из 2 символов',
+        maxLength: 'Имя не должно превышать 15 символлов',
+      },
+
+      tel: {
+        required: 'Обязательное поле для заполнения',
+        function: 'Телефон должен содержать 10 цифр',
+      }
+    }
+  });
+
+
+  //Яндекс-карта с кастомной меткой
+
+  // Функция ymaps.ready() будет вызвана, когда
+  // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+  ymaps.ready(init);
+  function init() {
+    // Создание карты.
+    const mapElem = document.querySelector('#map');
+    const myMap = new ymaps.Map(
+      "map",
+          {
+          center: [55.760223, 37.614741],
+          zoom: 14,
+          controls: ['geolocationControl', 'zoomControl']
+          },
+          {
+          suppressMapOpenBlock: true,
+          geolocationControlSize: "large",
+          geolocationControlPosition:  { top: "200px", right: "20px" },
+          geolocationControlFloat: 'none',
+          zoomControlSize: "small",
+          zoomControlFloat: "none",
+          zoomControlPosition: { top: "120px", right: "20px" }
+          }
+    );
+
+    myMap.behaviors.disable('scrollZoom');
+
+    // Создание геообъекта с типом точка (метка).
+    const myPlacemark = new ymaps.Placemark(
+      [55.760223, 37.614741],
+      {},
+      {
+        iconLayout: "default#image",
+        iconImageHref: 'img/contacts/map-marker.svg',
+        iconImageSize: [20, 20],
+        iconImageOffset: [-10, -10],
+      }
+    );
+
+    myMap.geoObjects.add(myPlacemark);
+
+    setTimeout(() => {
+      myMap.container.fitToViewport();
+    }, 5000);
+  }
+
+
+
+  //  -----POPUP ДЛЯ ГАЛЕРЕИ--------
+
+  // Скрипт на модальное окно в галерее с отключением
+  // скролла у Body и отменой прыжка в начало страницы
+
+	const modalBtnOpen = document.querySelectorAll('.g-swiper__link-slide');
+	const modalBtnClose = document.querySelectorAll('.g-popup__btn-close');
+	const modalWrap = document.querySelector('.g-popup__wrap');
+	const modalBox = document.querySelectorAll('.g-popup__modal');
+	const body = document.body;
+
+  let disableScroll = function () {
+		let pagePosition = window.scrollY;
+		document.body.classList.add('disable-scroll');
+		document.body.dataset.position = pagePosition;
+		document.body.style.top = -pagePosition + 'px';
+	}
+
+	let enableScroll = function () {
+		let pagePosition = parseInt(document.body.dataset.position, 10);
+		document.body.style.top = 'auto';
+		document.body.classList.remove('disable-scroll');
+		window.scroll({ top: pagePosition, left: 0 });
+		document.body.removeAttribute('data-position');
+	}
+
+	modalBtnOpen.forEach((el) => {
+		el.addEventListener('click', (e) => {
+
+			let path = e.currentTarget.getAttribute('data-path');
+			modalBox.forEach((el) => {
+				el.classList.remove('g-popup__modal--visible');
+			});
+
+			document.querySelector(`[data-target="${path}"]`).classList.add('g-popup__modal--visible');
+			modalWrap.classList.add('g-popup__wrap--visible');
+
+			// отключаем скролл
+			disableScroll();
+		});
+	});
+
+
+	//   Закрываю попап по кнопке "закрыть" через удаление класса
+  modalBtnClose.forEach((elem) => {
+    elem.addEventListener('click', function(){
+			modalWrap.classList.remove('g-popup__wrap--visible');
+
+			// включаем скролл
+			enableScroll();
+		});
+  });
+
+	//   Закрываю попап на клик по обвертке через удаление класса
+	modalWrap.addEventListener('click', (e) => {
+
+		if (e.target == modalWrap) {
+			modalWrap.classList.remove('g-popup__wrap--visible');
+			modalBox.forEach((el) => {
+				el.classList.remove('g-popup__modal--visible');
+			});
+
+			// включаем скролл
+			enableScroll();
+		}
+	});
 
 
 });
