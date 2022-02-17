@@ -139,7 +139,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-setMenuListener();
+  setMenuListener();
+
 
   // Плавный переход по якорным ссылкам
   const anchors = document.querySelectorAll('a.scroll-to')
