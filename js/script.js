@@ -2,41 +2,142 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // -------HEADER------
 
-  // БУРГЕР
-  // здесь мы определяем функцию, которая отвечает за работу меню, в ней не нужно ничего менять
+  // Декоратор debounce
+  function debounce(f, ms) {
+    let isCooldown = false;
+
+    return function() {
+      if (isCooldown) return;
+
+      f.apply(this, arguments);
+      isCooldown = true;
+
+      setTimeout(() => isCooldown = false, ms);
+    };
+  }
+
+  // Глобальная функция getWindowWidth
+  function getWindowWidth () {
+    return Math.max(
+      document.body.scrollWidth,
+      document.documentElement.scrollWidth,
+      document.body.offsetWidth,
+      document.documentElement.offsetWidth,
+      document.body.clientWidth,
+      document.documentElement.clientWidth
+    );
+  }
+
+
+  const MOBILE_WIDTH = 576;
+  const TABLET_WIDTH = 1280;
+
+  // Функция для плавного скролла по ссылкам - не сработала(
+
+  // function scrollToContent (link, isMobile) {
+  //   if (isMobile && window.getWindowWidth() > window.MOBILE_WIDTH) {
+  //     return;
+  //   }
+
+  //   const href = link.getAttribute('href').substring(1);
+  //   if (Boolean(href)) {
+  //     const scrollTarget = document.getElementById(href);
+  //     const elementPosition = scrollTarget.getBoundingClientRect().top;
+
+  //     window.scrollBy({
+  //         top: elementPosition,
+  //         behavior: 'smooth'
+  //     });
+  //   }
+  // }
+
+  // document.querySelectorAll('.scroll to').forEach(link => {
+  //   link.addEventListener('click', function(e) {
+  //       e.preventDefault();
+
+  //       scrollToContent(this, false);
+  //   });
+  // });
+
+
+  // Плавный переход по якорным ссылкам
+
+  //АЛЬТЕРНАТИВНЫЙ СКРИПТ
+  const anchors = document.querySelectorAll('a.scroll-to')
+
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+
+      const blockID = anchor.getAttribute('href')
+
+      document.querySelector(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    })
+  }
+
+
+  window.debounce = debounce;
+  window.getWindowWidth = getWindowWidth;
+  window.TABLET_WIDTH = TABLET_WIDTH;
+  window.MOBILE_WIDTH = MOBILE_WIDTH;
+
+
+
+  // БУРГЕР-МЕНЮ
+
+  // здесь мы определяем функцию, которая отвечает за работу меню
   function setBurger(params) {
     const btn = document.querySelector(`.${params.btnClass}`);
     const menu = document.querySelector(`.${params.menuClass}`);
+    const links = document.querySelectorAll(`.${params.linksClass}`);
+
+    function onBtnClick () {
+      if (window.getWindowWidth() <= window.TABLET_WIDTH) {
+
+        btn.classList.toggle(params.activeClass);
+
+        if (
+          !menu.classList.contains(params.activeClass) &&
+          !menu.classList.contains(params.hiddenClass)
+        ) {
+          menu.classList.add(params.activeClass);
+          document.body.style.overflow = 'hidden';
+          btn.setAttribute('aria-label', 'Закрыть бургер-меню');
+        } else {
+          menu.classList.add(params.hiddenClass);
+          document.body.removeAttribute('style');
+          // btn.classList.toggle(params.hiddenClass);
+          btn.setAttribute('aria-label', 'Открыть бургер-меню');
+        }
+      }
+    }
 
     menu.addEventListener("animationend", function () {
       if (this.classList.contains(params.hiddenClass)) {
           this.classList.remove(params.activeClass);
           this.classList.remove(params.hiddenClass);
+          // btn.classList.remove(params.hiddenClass);
       }
     });
 
-    btn.addEventListener("click", function () {
-      this.classList.toggle(params.activeClass);
 
-      if (
-        !menu.classList.contains(params.activeClass) &&
-        !menu.classList.contains(params.hiddenClass)
-      ) {
-        menu.classList.add(params.activeClass);
-        document.body.style.overflow = 'hidden';
-      } else {
-        menu.classList.add(params.hiddenClass);
-        document.body.removeAttribute('style');
-      }
+    btn.addEventListener("click", window.debounce(onBtnClick, 450));
+
+    links.forEach((link) => {
+      link.addEventListener("click", window.debounce(onBtnClick, 450));
     });
   }
 
   // здесь мы вызываем функцию и передаем в нее классы наших элементов
   setBurger({
-    btnClass: "burger", // класс бургера
-    menuClass: "hd-top__menu-wrap", // класс меню
+    btnClass: "js-burger", // класс бургера
+    menuClass: "js-menu-wrap", // класс меню
     activeClass: "is-opened", // класс открытого состояния
-    hiddenClass: "is-closed" // класс закрывающегося состояния (удаляется сразу после закрытия)
+    hiddenClass: "is-closed", // класс закрывающегося состояния (удаляется сразу после закрытия)
+    linksClass: "js-menu-link", //класс ссылки меню
   });
 
 
@@ -141,22 +242,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setMenuListener();
 
-
-  // Плавный переход по якорным ссылкам
-  const anchors = document.querySelectorAll('a.scroll-to')
-
-  for (let anchor of anchors) {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault()
-
-      const blockID = anchor.getAttribute('href')
-
-      document.querySelector(blockID).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      })
-    })
-  }
 
 
   //  -----СЕКЦИЯ "HERO"--------
