@@ -2154,12 +2154,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  outline: 1px solid var(--grey-ultra-light);
-  outline-offset: -1px;
+  border: 1px solid var(--grey-ultra-light);
 }
 
 .e-slide__top {
-  min-height: 300px;
+  min-height: 299px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2190,8 +2189,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 13px 50px 0 50px;
-  margin-bottom: 13px;
+  padding: 14px 50px 0 50px;
+  margin-bottom: 12px;
 }
 
 .e-slide__label {
@@ -2214,12 +2213,12 @@ body {
 }
 
 .e-slide__header {
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 /* подстраиваю отступ под макетный баг */
 .header-layout-bug {
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .e-slide__descr {
@@ -3185,7 +3184,7 @@ body {
   }
 
   .e-slide__top {
-    min-height: 200px;
+    min-height: 199px;
   }
 
   .e-slide__top--1 {
@@ -3240,7 +3239,7 @@ body {
   }
 
   .e-slide__link-box {
-    padding-top: 20px;
+    padding-top: 19px;
   }
 
   /* ------PROJECTS------ */
@@ -3503,7 +3502,7 @@ body {
   }
 
   .e-slide__link-box {
-    padding-top: 24px;
+    padding-top: 22px;
   }
 
   /* ------PROJECTS------ */
@@ -3628,14 +3627,8 @@ body {
   }
 
   .e-slide__bottom {
-    padding: 0 23px 49px 23px;
+    padding: 0 23px 46px 23px;
   }
-
-  /* ------CONTACTS------ */
-  /* .contacts__form {
-    max-width: calc(650px + (666 - 650) * ((100vw - 767px)/ (768 - 767)));
-    min-width: 90%;
-  } */
 
   /* ---G-POPUP--- */
   .g-popup__modal {
@@ -3787,8 +3780,8 @@ body {
   /* Новая анимация появления формы */
   @-webkit-keyframes search-open-2 {
     from {
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
+      -webkit-transform: translateY(-99%);
+      transform: translateY(-99%);
       opacity: 0;
     }
 
@@ -3801,8 +3794,8 @@ body {
 
   @keyframes search-open-2 {
     from {
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
+      -webkit-transform: translateY(-99%);
+      transform: translateY(-99%);
       opacity: 0;
     }
 
@@ -4167,7 +4160,7 @@ body {
   }
 
   .e-slide__link-box {
-    padding-left: 7px;
+    padding-left: 5px;
   }
 
   .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {

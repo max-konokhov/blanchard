@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  // -------HEADER------
+  // -----GLOBAL-------
 
-  // Декоратор debounce
+  // Глобальный декоратор debounce
   function debounce(f, ms) {
     let isCooldown = false;
 
@@ -28,41 +28,15 @@ document.addEventListener('DOMContentLoaded', function() {
     );
   }
 
-
+  // Глобальные константы ширины
   const MOBILE_WIDTH = 576;
+  const HALFDESKTOP_WIDTH = 970;
   const TABLET_WIDTH = 1280;
 
-  // Функция для плавного скролла по ссылкам - не сработала(
 
-  // function scrollToContent (link, isMobile) {
-  //   if (isMobile && window.getWindowWidth() > window.MOBILE_WIDTH) {
-  //     return;
-  //   }
-
-  //   const href = link.getAttribute('href').substring(1);
-  //   if (Boolean(href)) {
-  //     const scrollTarget = document.getElementById(href);
-  //     const elementPosition = scrollTarget.getBoundingClientRect().top;
-
-  //     window.scrollBy({
-  //         top: elementPosition,
-  //         behavior: 'smooth'
-  //     });
-  //   }
-  // }
-
-  // document.querySelectorAll('.scroll to').forEach(link => {
-  //   link.addEventListener('click', function(e) {
-  //       e.preventDefault();
-
-  //       scrollToContent(this, false);
-  //   });
-  // });
-
+  // -------HEADER------
 
   // Плавный переход по якорным ссылкам
-
-  //АЛЬТЕРНАТИВНЫЙ СКРИПТ
   const anchors = document.querySelectorAll('a.scroll-to')
 
   for (let anchor of anchors) {
@@ -83,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
   window.getWindowWidth = getWindowWidth;
   window.TABLET_WIDTH = TABLET_WIDTH;
   window.MOBILE_WIDTH = MOBILE_WIDTH;
+  window.HALFDESKTOP_WIDTH = HALFDESKTOP_WIDTH;
 
 
 
@@ -109,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
           menu.classList.add(params.hiddenClass);
           document.body.removeAttribute('style');
-          // btn.classList.toggle(params.hiddenClass);
           btn.setAttribute('aria-label', 'Открыть бургер-меню');
         }
       }
@@ -119,10 +93,8 @@ document.addEventListener('DOMContentLoaded', function() {
       if (this.classList.contains(params.hiddenClass)) {
           this.classList.remove(params.activeClass);
           this.classList.remove(params.hiddenClass);
-          // btn.classList.remove(params.hiddenClass);
       }
     });
-
 
     btn.addEventListener("click", window.debounce(onBtnClick, 450));
 
@@ -310,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
         slidesPerGroup: 2,
       },
 
-      // when window width is >= 1301px
+      // when window width is >= 1281px
       1281: {
         slidesPerView: 3,
         spaceBetween: 50,
@@ -385,6 +357,32 @@ document.addEventListener('DOMContentLoaded', function() {
   new Accordion('.accordion', {
     duration: 600,
     openOnInit: [0]
+  });
+
+
+  // Функция для плавного скролла к табу художников
+  // на ширине 970px и ниже в секции "Каталог"
+  function scrollToContent (link, isMobile) {
+    if (isMobile && window.getWindowWidth() > window.HALFDESKTOP_WIDTH) {
+      return;
+    }
+
+    const scrollPath = link.getAttribute('data-scroll-path');
+    if (Boolean(scrollPath)) {
+      const scrollTarget = document.getElementById(scrollPath);
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+
+      window.scrollBy({
+          top: elementPosition,
+          behavior: 'smooth'
+      });
+    }
+  }
+
+  document.querySelectorAll('.js-mobile-scroll').forEach(btn => {
+    btn.addEventListener('click', function() {
+      scrollToContent(this, true);
+    });
   });
 
 
