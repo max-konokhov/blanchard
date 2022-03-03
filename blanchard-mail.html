@@ -39,6 +39,31 @@
 			mso-table-rspace: 0pt;
 		}
 
+    .box {
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 22px;
+    }
+
+    .link-box {
+      display: block;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 45px;
+      border-radius: 48px;
+      /* background-color: #9D5CD0; */
+      text-align: center;
+      height: 45px;
+      width: 240px;
+
+    }
+
+    .link-box a {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
     @media(max-width: 620px)  {
       .table-600 {
         width: 280px !important;
@@ -60,24 +85,65 @@
         height: 300px !important;
       }
 
-      .about-box {
+      .about-box,
+      .gallery-box,
+      .info-box{
         padding-left: 18px !important;
         padding-right: 18px !important;
       }
 
+      .about-box {
+        padding-bottom: 32px !important;
+      }
+
+      .table-520 {
+        width: 244px !important;
+      }
+
+      .gallery-image {
+        width: 244px !important;
+        height: 84px !important;
+        margin-bottom: 11px !important;
+      }
+
+      .painter-header {
+        margin-bottom: 1px !important;
+      }
+
+      .painter-header-bug {
+        margin-bottom: 9px !important;
+      }
+
+      .renuar-caption {
+        max-width: 240px !important;
+      }
+
+      .info-cell {
+        display: block !important;
+        width: 100% !important;
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      .info-cell-1,
+      .info-cell-2 {
+        margin-bottom: 24px !important;
+      }
+
+      .info-cell-3 {
+        margin-bottom: 15px !important;
+      }
     }
 	</style>
 </head>
 
 <body style="margin: 0; padding: 0;">
-	<div style="font-size:0px;font-color:#ffffff;opacity:0;visibility:hidden;width:0;height:0;display:none;">Письмо от Blanchard</div>
+	<div style="font-size:0px; color:#ffffff;opacity:0;visibility:hidden;width:0;height:0;display:none;">Письмо от Blanchard</div>
 
   <!-- Таблица-контейнер для всего письма -->
 	<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ededed">
     <tr>
       <td>
-
-        <!-- СТРОКА1 -->
 
         <!-- Таблица-контейнер для контента письма -->
         <table class="table-600" align="center" cellpadding="0" cellspacing="0" width="600">
@@ -109,9 +175,9 @@
             </td>
           </tr>
 
-          <!-- Строка-котейнер для таблицы с картинами -->
+          <!-- Gallery -->
           <tr>
-            <td align="center" bgcolor="#000000" style="padding-right: 40px; padding-left: 40px;">
+            <td class="gallery-box" align="center" bgcolor="#000000" style="padding-right: 40px; padding-left: 40px;">
               <table class="table-520" cellpadding="0" cellspacing="0" width="520">
 
                 <!-- Строка с заголовком секции -->
@@ -124,8 +190,8 @@
                 <!-- Картина №1 -->
                 <tr>
                   <td style="padding-bottom: 21px;">
-                    <img class="hero-image" src="http://mk-blanchard.tmweb.ru/img/mail/picture-1.jpg" width="520" height="180" alt="Картина Поля Гогена" style="margin-bottom: 21px;">
-                    <h3 style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 24px; font-weight: 700; color: #ffffff;">Поль Гоген</h3>
+                    <img class="gallery-image" src="http://mk-blanchard.tmweb.ru/img/mail/picture-1.jpg" width="520" height="180" alt="Картина Поля Гогена" style="margin-bottom: 21px;">
+                    <h3 class="painter-header" style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 24px; font-weight: 700; color: #ffffff;">Поль Гоген</h3>
                     <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #ffffff;">Прежде всего, разбавленное изрядной долей эмпатии, рациональное мышление в значительной степени обусловливает важность укрепления моральных ценностей.</p>
                   </td>
                 </tr>
@@ -133,17 +199,17 @@
                 <!-- Картина №2 -->
                 <tr>
                   <td style="padding-bottom: 21px;">
-                    <img class="hero-image" src="http://mk-blanchard.tmweb.ru/img/mail/picture-2.jpg" width="520" height="180" alt="Картина Поля Гогена" style="margin-bottom: 21px;">
-                    <h3 style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 24px; font-weight: 700; color: #ffffff;">Огюст Ренуар</h3>
-                    <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #ffffff;">А также сделанные на базе интернет-аналитики выводы освещают чрезвычайно интересные особенности картины в целом.</p>
+                    <img class="gallery-image" src="http://mk-blanchard.tmweb.ru/img/mail/picture-2.jpg" width="520" height="180" alt="Картина Поля Гогена" style="margin-bottom: 21px;">
+                    <h3 class="painter-header" style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 24px; font-weight: 700; color: #ffffff;">Огюст Ренуар</h3>
+                    <p class="renuar-caption" style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #ffffff;">А также сделанные на базе интернет-аналитики выводы освещают чрезвычайно интересные особенности картины в целом.</p>
                   </td>
                 </tr>
 
                 <!-- Картина №3 -->
                 <tr>
                   <td style="padding-bottom: 21px;">
-                    <img class="hero-image" src="http://mk-blanchard.tmweb.ru/img/mail/picture-3.jpg" width="520" height="180" alt="Картина Поля Гогена" style="margin-bottom: 21px;">
-                    <h3 style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 24px; font-weight: 700; color: #ffffff;">Клод Моне</h3>
+                    <img class="gallery-image" src="http://mk-blanchard.tmweb.ru/img/mail/picture-3.jpg" width="520" height="180" alt="Картина Поля Гогена" style="margin-bottom: 21px;">
+                    <h3 class="painter-header" style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 24px; font-weight: 700; color: #ffffff;">Клод Моне</h3>
                     <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #ffffff;">Современная методология разработки однозначно фиксирует необходимость системы массового участия.</p>
                   </td>
                 </tr>
@@ -151,8 +217,8 @@
                 <!-- Картина №4 -->
                 <tr>
                   <td style="padding-bottom: 21px;">
-                    <img class="hero-image" src="http://mk-blanchard.tmweb.ru/img/mail/picture-4.jpg" width="520" height="180" alt="Картина Поля Гогена" style="margin-bottom: 21px;">
-                    <h3 style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 24px; font-weight: 700; color: #ffffff;">Эдуард Мане</h3>
+                    <img class="gallery-image" src="http://mk-blanchard.tmweb.ru/img/mail/picture-4.jpg" width="520" height="180" alt="Картина Поля Гогена" style="margin-bottom: 21px;">
+                    <h3 class="painter-header painter-header-bug" style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 24px; font-weight: 700; color: #ffffff;">Эдуард Мане</h3>
                     <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #ffffff;">Но социально-экономическое развитие является качественно новой ступенью вывода текущих активов.</p>
                   </td>
                 </tr>
@@ -160,8 +226,8 @@
                 <!-- Картина №5 -->
                 <tr>
                   <td style="padding-bottom: 26px;">
-                    <img class="hero-image" src="http://mk-blanchard.tmweb.ru/img/mail/picture-5.jpg" width="520" height="180" alt="Картина Поля Гогена" style="margin-bottom: 21px;">
-                    <h3 style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 24px; font-weight: 700; color: #ffffff;">Винсент Ван Гог</h3>
+                    <img class="gallery-image" src="http://mk-blanchard.tmweb.ru/img/mail/picture-5.jpg" width="520" height="180" alt="Картина Поля Гогена" style="margin-bottom: 21px;">
+                    <h3 class="painter-header painter-header-bug" style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 24px; font-weight: 700; color: #ffffff;">Винсент Ван Гог</h3>
                     <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #ffffff;">Повседневная практика показывает, что разбавленное изрядной долей эмпатии, рациональное мышление требует анализа поставленных обществом задач.</p>
                   </td>
                 </tr>
@@ -169,31 +235,81 @@
             </td>
           </tr>
 
-          <!-- Секция с подробностями и ссылкой -->
+          <!-- INFO -->
           <tr>
-            <td align="center" bgcolor="#FFFFFF" style="padding-right: 40px; padding-left: 40px;">
+            <td class="info-box" bgcolor="#FFFFFF" style="padding-top: 30px; padding-bottom: 10px; padding-right: 40px; padding-left: 40px;">
+              <!-- INFO-таблица-1 -->
               <table class="table-520" cellpadding="0" cellspacing="0" width="520">
+
+                <!-- Строка-заголовок -->
                 <tr>
-                  <td style="padding-top: 30px; padding-bottom: 10px;">
+                  <td class="row-title" style="padding-bottom: 10px">
                     <h3 style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 16px; line-height: 24px; font-weight: 400; color: #515151;">И это ещё не всё!</h3>
                   </td>
                 </tr>
 
+                <!-- Строка с таблицей иконок и информации -->
                 <tr>
-                  <td width="140" style="padding-right: 27px; vertical-align: top;">
-                    <img src="http://mk-blanchard.tmweb.ru/img/mail/ico-1.png" alt="Иконка1" width="36" height="36" style="margin-bottom: 11px;">
-                    <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #515151;">Уникальные подборки работ с авторскими рецензиями</p>
+                  <td>
+                    <table class="table-520" cellpadding="0" cellspacing="0" width="520">
+                      <tr>
+
+                        <!-- Ячейка-1 -->
+                        <td  class="info-cell info-cell-1" width="140" style="padding-right: 27px; vertical-align: top;">
+                          <img src="http://mk-blanchard.tmweb.ru/img/mail/ico-1.png" alt="Иконка1" width="36" height="36" style="margin-bottom: 11px;">
+                          <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #515151;">Уникальные подборки работ с авторскими рецензиями</p>
+                        </td>
+
+                        <!-- Ячейка-2 -->
+                        <td class="info-cell info-cell-2" width="157" style="padding-right: 27px; vertical-align: top;">
+                          <img src="http://mk-blanchard.tmweb.ru/img/mail/ico-2.png" alt="Иконка2" width="36" height="36" style="margin-bottom: 11px;">
+                          <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #515151;">Возможность настроить нашу рассылку под свой личный вкус</p>
+                        </td>
+
+                        <!-- Ячейка-3 -->
+                        <td class="info-cell info-cell-3" style="padding-right: 30px; vertical-align: top;">
+                          <img src="http://mk-blanchard.tmweb.ru/img/mail/ico-3.png" alt="Иконка3" width="36" height="36" style="margin-bottom: 11px;">
+                          <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #515151;">У вас есть пожелания и предложения?</p>
+                          <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #515151;">Напишите нам в ответ на это письмо!</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Строка с сылкой -->
+                <tr class="box" align="center">
+                  <td class="link-box" align="center" bgcolor="#9D5CD0">
+                    <a class="link"  href="#" style="color:#ffffff; display:block; font-family: arial, 'Open Sans', sans-serif; font-size:14px; font-weight:700; line-height:45px; text-align:center; text-decoration:none;; -webkit-text-size-adjust:none;">Узнать все подробности</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" bgcolor="#000000" style="padding-top: 27px; padding-bottom: 6px;">
+
+              <!-- Footer-social-link -->
+              <table class="table-143" cellpadding="0" cellspacing="0" width="143" style="border-color:black">
+                <tr>
+                  <td align="left" width="35" height="35" style="vertical-align: top;">
+                    <a href="#">
+                      <img src="http://mk-blanchard.tmweb.ru/img/mail/s-ico-1.png" alt="Иконка ВКонтанте" width="35" height="35">
+                    </a>
                   </td>
 
-                  <td width="157" style="padding-right: 27px; vertical-align: top;">
-                    <img src="http://mk-blanchard.tmweb.ru/img/mail/ico-2.png" alt="Иконка2" width="36" height="36" style="margin-bottom: 11px;">
-                    <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #515151;">Возможность настроить нашу рассылку под свой личный вкус</p>
+                  <td align="center" width="35" height="35" style="vertical-align: top;">
+                    <a href="#">
+                      <img src="http://mk-blanchard.tmweb.ru/img/mail/s-ico-2.png" alt="Иконка ВКонтанте" width="35" height="35">
+                    </a>
                   </td>
 
-                  <td style=" padding-right: 30px; vertical-align: top;">
-                    <img src="http://mk-blanchard.tmweb.ru/img/mail/ico-3.png" alt="Иконка3" width="36" height="36" style="margin-bottom: 11px;">
-                    <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #515151;">У вас есть пожелания и предложения?</p>
-                    <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 18px; font-weight: 400; color: #515151;">Напишите нам в ответ на это письмо!</p>
+                  <td align="right" width="35" height="35" style="vertical-align: top;">
+                    <a href="#">
+                      <img src="http://mk-blanchard.tmweb.ru/img/mail/s-ico-3.png" alt="Иконка ВКонтанте" width="35" height="35">
+                    </a>
                   </td>
                 </tr>
               </table>
@@ -201,20 +317,18 @@
           </tr>
 
           <tr>
-            <td align="center" bgcolor="#FFFFFF">
-              <table class="table-520" cellpadding="0" cellspacing="0" width="520">
-                <tr>
-                  <td align="center" style="padding-top: 32px; padding-bottom: 32px;">
-                    <a href="#" style="background-color:#9D5CD0; border-radius:48px; color:#ffffff; display:block; font-family: arial, 'Open Sans', sans-serif; font-size:14px; font-weight:700; line-height:45px; text-align:center; text-decoration:none; width:240px; -webkit-text-size-adjust:none;">Узнать все подробности</a>
-                  </td>
-                </tr>
-              </table>
+            <td align="center" bgcolor="#000000" style="padding-bottom: 8px;">
+              <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 12px; line-height: 24px; font-weight: 400; color: #757575;">Blanchard © 2020 / Все права защищены</p>
             </td>
           </tr>
 
-
-
-
+          <tr>
+            <td align="center" bgcolor="#ffffff">
+              <p style="margin-top: 0; margin-bottom: 0; font-family: arial, 'Open Sans', sans-serif; font-size: 10px; line-height: 20px; font-weight: 400; color: #757575;">Вы можете так же
+                <a href="#" style="color: #9D5CD0">отписаться от рассылки</a>
+              </p>
+            </td>
+          </tr>
 
         </table>
       </td>
